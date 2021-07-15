@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration
+PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-config.dtd">
+
+<configuration>
+	<typeAliases>
+		<typeAlias type="fnp.kr.co.kosmo.mvc.dto.MemberDTO" alias="memberDto"/>
+		<typeAlias type="fnp.kr.co.kosmo.mvc.dto.BookStartDTO" alias="bsDto"/>
+		<typeAlias type="fnp.kr.co.kosmo.mvc.dto.BankBookDTO" alias="bbDto"/>
+		<typeAlias type="fnp.kr.co.kosmo.mvc.dto.CalendarDTO" alias="cldDto"/>
+	</typeAliases>
+</configuration>
+
+
+ 

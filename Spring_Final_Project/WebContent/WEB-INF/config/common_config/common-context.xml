@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="EUC-KR"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:aop="http://www.springframework.org/schema/aop"
+	xmlns:mvc="http://www.springframework.org/schema/mvc"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:tx="http://www.springframework.org/schema/tx"
+	xsi:schemaLocation="http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc.xsd
+		http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd
+		http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop.xsd
+		http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx.xsd">
+
+	<aop:aspectj-autoproxy />
+	<context:annotation-config />
+	<tx:annotation-driven transaction-manager="tm"/>
+
+
+	<!-- DataSource 설정 -->
+	<bean id="dataSource"
+		class="org.springframework.jndi.JndiObjectFactoryBean">
+		<property name="jndiName" value="java:comp/env/jdbc/myora" />
+	</bean>
+	
+	<!-- 
+		Spring에서 트랜잭션 처리
+		1. Service Class에서 @Transactional Annotation 추가
+		2. Bean(공통빈)에서    DataSourceTransactionManager Bean 추가
+		3. 이때 기존의 DataSource(JNDI)를 DI받아야 함
+		4. @Transactional Annotation이 사용 될 수 있도록 설정 
+	-->
+	
+	<bean id="tm" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
+		<property name="dataSource" ref="dataSource"/>
+	</bean>
+	
+	<!-- MyBatis 설정 -> SqlSessionFactoryBean은 1. DB에 연결할 정보(dataSource) 2. configuration정보(config.xml) 
+		3. mapper들의 정보(mapper가 있는 위치) 2번과 3번의 차이는 환경설정파일은 한개이므로 <classpath:>이지만, 
+		mapper의 정보는 여러개가 될 수 있으므로 <classpath*:>이 되어야 함 와일드카드(*)를 사용해서 여러개가 될 수 있다는 
+		정보를 주어야 함 -->
+	<bean id="factoryBean" class="org.mybatis.spring.SqlSessionFactoryBean">
+		<property name="dataSource" ref="dataSource" />
+		<property name="configLocation" value="classpath:fnp/kr/co/kosmo/mvc/config/config.xml" />
+		<property name="mapperLocations" value="classpath*:fnp/kr/co/kosmo/mvc/mapper/*.xml" />
+	</bean>
+
+	<bean id="ss" class="org.mybatis.spring.SqlSessionTemplate">
+		<constructor-arg ref="factoryBean" />
+	</bean>
+	
+
+	<!-- 파일 업로드 설정 -->
+	<bean id="multipartResolver"
+		class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
+		<property name="uploadTempDir" value="/resources/fileUpload/" />
+	</bean>
+
+</beans>

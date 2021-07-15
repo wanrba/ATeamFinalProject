@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:aop="http://www.springframework.org/schema/aop"
+	xmlns:mvc="http://www.springframework.org/schema/mvc"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:tx="http://www.springframework.org/schema/tx"
+	xmlns:mybatis-spring="http://mybatis.org/schema/mybatis-spring"
+	xsi:schemaLocation="http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc.xsd
+		http://mybatis.org/schema/mybatis-spring http://mybatis.org/schema/mybatis-spring-1.2.xsd
+		http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd
+		http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop.xsd
+		http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx.xsd">
+	
+	<!--
+		kosmo-web.xml : IOC & DI관련 bean이 싱글톤레지스터리에 등록되어서 DispatcherServlet이 스프링 컨테이너로 빈들을 생성 한 후 관리하는 빈의 정보
+		IOC & DI관련 bean이 싱글톤레지스터리에 등록되어서 관리
+		<context:component-scan base-package="kr.co.kosmo.mvc" />
+		@Controller, @Service, @Component, @Repository
+		@Autowired ->	<bean id="controller" class="MyController" ref="dao"/>
+						<bean id="dao" class="MyDao" />
+	-->
+	<aop:aspectj-autoproxy />
+	<context:component-scan base-package="fnp.kr.co.kosmo.mvc" />
+	<context:annotation-config />
+	<mvc:annotation-driven />
+	
+	<!-- resources의 location :: 해당 폴더의 밑에 정적파일(css, js등)이 위치해야함 -->
+	<mvc:resources location="/resources/" mapping="/resources/**" />
+	
+	<!-- tiles 설정 -->
+	<bean id="tilesViewResolver" class="org.springframework.web.servlet.view.UrlBasedViewResolver">
+		<property name="viewClass" value="org.springframework.web.servlet.view.tiles3.TilesView" />
+		<property name="order" value="0" />
+	</bean>
+	
+	<bean id="tilesConfigurer" class="org.springframework.web.servlet.view.tiles3.TilesConfigurer">
+		<property name="definitions" >
+			<list>
+				<value>/WEB-INF/config/tiles/tiles-definitions.xml</value>
+			</list>
+		</property>
+	</bean>
+	
+	<!-- View의 Type을 결정하는 viewResolver설정 이동하려는 .jsp파일의 경로 및 이름 : /WEB-INF/views/[hello].jsp -->
+	<bean id="viewResolver"
+		class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+		<property name="prefix" value="/WEB-INF/views/" />
+		<property name="suffix" value=".jsp" />
+	</bean>
+
+<!-- 여기부터 공통Bean 내용 -->
+
+ 
+
+<!-- 여기까지 공통Bean 내용 (이었던것) -->
+
+
+</beans>

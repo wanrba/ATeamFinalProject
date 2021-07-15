@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+ "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+ <mapper namespace="member">
+ 	
+ 	<insert id="signup" parameterType="memberDto">
+ 		INSERT INTO MEMBER(USER_NUM, USER_ID, USER_PWD, USER_NICKNAME, USER_NAME, USER_PHONE, USER_BIRTH,USER_AGE,USER_GENDER,USER_PRIMARYKEY,USER_DDAY) VALUES(MEMBER_SEQ.nextVal, #{user_id}, #{user_pwd}, #{user_nickname}, #{user_name}, #{user_phone}, #{user_birth},#{user_age},#{user_gender},#{user_primarykey},#{user_dday})
+ 	</insert>
+ 	
+ 	<select id="idchek" resultType="int" parameterType="String">
+ 		select count(USER_ID) from member where USER_ID = #{user_id}
+ 	</select>
+ 	
+ 	<select resultType="memberDto" parameterType="memberDto" id="login">
+ 		select * from member where user_id=#{user_id} and user_pwd=#{user_pwd} 
+ 	</select>
+ 	
+ 	<select id="random" resultType="int" parameterType="String">
+ 		select count(*) from member where user_primarykey = #{pk}
+ 	</select>
+ 	
+ 	<select id="seluser" resultType="int" parameterType="String">
+ 		select USER_NUM from member where user_primarykey = #{pk}
+ 	</select>
+ 	
+ 	<update id="requestMatch" parameterType="memberDto">
+ 		update member set USER_MATCH = 1,USER_NOWMATCH = #{user_nowmatch},USER_ANSWER = 1 where user_num = #{user_num}
+ 	</update>
+ </mapper>
