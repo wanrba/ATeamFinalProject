@@ -1,5 +1,5 @@
 <script>
 	location.href = "index.do";
 	// Test Code
-	//```````````````````````gkgkgk
+	//000000000000000000000000000000000
 </script>
