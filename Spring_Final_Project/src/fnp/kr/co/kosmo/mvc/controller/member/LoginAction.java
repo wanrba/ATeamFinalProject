@@ -67,8 +67,6 @@ public class LoginAction {
 	@GetMapping({"/usermach.do"})
 	@ResponseBody
 	public void usermatch(MemberDTO dto, HttpServletResponse response) {
-		System.out.println("user_num"+dto.getUser_num());
-		System.out.println("primarykey"+dto.getUser_primarykey());
 		
 		// 0 : 신청 실패(난수를 가진 사용자가 없다, 1 : 신청 선공 
 		int num = loginServiceInter.requestMatch(dto);

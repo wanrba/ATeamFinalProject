@@ -22,7 +22,7 @@ public class SignUpDao implements SignupDaoInter{
 	//회원가입하는 메서드
 	@Override
 	public void signup(MemberDTO dto) {
-		System.out.println("Dao실행");
+
 		ss.insert("member.signup",dto);
 		
 	}

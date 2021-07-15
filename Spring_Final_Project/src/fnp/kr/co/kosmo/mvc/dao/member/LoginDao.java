@@ -28,7 +28,7 @@ public class LoginDao implements LoginDaoInter{
 	//난수를 가지고있는사람 체크
 	@Override
 	public int seluser(String pk) {
-		System.out.println(pk);
+
 		return ss.selectOne("member.seluser",pk);
 	}
 

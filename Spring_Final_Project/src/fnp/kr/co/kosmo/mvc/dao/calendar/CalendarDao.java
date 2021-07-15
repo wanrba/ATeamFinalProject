@@ -28,7 +28,7 @@ public class CalendarDao implements CalendarDaoInter{
 	@Override
 	public List<CalendarDTO> getScheduleList(int user_cupleNum) {
 		// TODO Auto-generated method stub
-		System.out.println("getScheduleList");
+		
 		return sqlSessionTemplate.selectList("calendar.getCalendarList", user_cupleNum);
 	}
 

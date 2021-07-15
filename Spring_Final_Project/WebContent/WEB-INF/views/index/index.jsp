@@ -2,23 +2,10 @@
 	pageEncoding="EUC-KR"%>
 	<link href="resources/common/calendar/css/fullcalendar.min.css" rel='stylesheet'/>
 	
-<!-- 	<script> -->
-<%-- // 		if("${msg}" != "") { --%>
-<%-- // 			alert("${msg}") --%>
-<!-- // 		} -->
-<!-- 	</script> -->
-	
 	<script>
 	
 		$(document).ready(function() {
 			$(function() {
-// 				var scheduleList = JSON.parse('${scheduleList}');
-// 				console.log(scheduleList.event)
-// 				for(var i = 0; i < scheduleList.length; i++) {
-// 					console.log(scheduleList[i].cidx)
-// 				}
-// 				$('#calendar').fullCalendar('renderEvent', eventData, true);
-// 				$("#calendar").fullCalendar()
 				get_calendar();
 			});
 		});

@@ -26,11 +26,9 @@ public class SignUpAction {
 	//회원가입 메서드
 	@PostMapping("/signupAction.do")
 	public ModelAndView signUp(MemberDTO dto) {
-		System.out.println("");
 		//==========현재 날짜 구해서 민증번호로 생년월일 출력
 		Calendar cal = Calendar.getInstance();
 		String year = String.valueOf(cal.get(Calendar.YEAR));
-		//System.out.println(year);         2021 : type String
 		String[] years = year.split("");
 		int yearone = Integer.parseInt(years[0]+years[1]);
 		int yeartwo = Integer.parseInt(years[2]+years[3]);
@@ -47,7 +45,7 @@ public class SignUpAction {
 			dto.setUser_age(yeartwo-useryear+1);
 		}
 		sb.append(birth[0]+birth[1]).append("-").append(birth[2]+birth[3]).append("-").append(birth[4]+birth[5]);
-		//System.out.println(sb.toString());
+
 		dto.setUser_birth(sb.toString());
 		//================ end =================
 		
@@ -58,8 +56,8 @@ public class SignUpAction {
 		}else {
 			dto.setUser_gender("남자");
 		}
-		//System.out.println(dto.getUser_age());		나이 현재나이
-		//System.out.println(dto.getUser_gender());     성별
+
+
 		//============== end ========================= 
 		String pk=signupServiceInter.signup(dto);
 		ModelAndView mav = new ModelAndView();
@@ -74,7 +72,7 @@ public class SignUpAction {
 	@RequestMapping(value = "/loginAction.do")
 	@ResponseBody
 	public void login(String user_id, HttpServletResponse response) {
-		//System.out.println(user_id);
+
 		int num = signupServiceInter.idcheck(user_id);
 		int checknum;
 		try {
