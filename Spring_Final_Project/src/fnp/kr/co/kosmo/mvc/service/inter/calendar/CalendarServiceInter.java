@@ -22,4 +22,11 @@ public interface CalendarServiceInter {
 	 */
 	public List<CalendarDTO> getScheduleList(int user_cupleNum);
 	
+	/**
+	 * calendar에 등록된 일정 클릭 시 상세보기 페이지로 이동해서 보여줄 정보를 가져옴
+	 * @param cidx
+	 * @return
+	 */
+	public CalendarDTO getDetailScheduleInfo(int cidx);
+	
 }

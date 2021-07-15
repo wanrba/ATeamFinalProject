@@ -33,10 +33,11 @@ public class CalendarRestfulController {
 		JSONArray ja = new JSONArray();
 
 		try {
-			List<CalendarDTO> list = calendarServiceInter
-					.getScheduleList(Integer.parseInt((String) session.getAttribute("USER_NUM")));
+//			List<CalendarDTO> list = calendarServiceInter.getScheduleList(Integer.parseInt((String) session.getAttribute("USER_NUM")));
+			List<CalendarDTO> list = calendarServiceInter.getScheduleList(1);
 			for (int i = 0; i < list.size(); i++) {
 				JSONObject jo = new JSONObject();
+				jo.put("id", list.get(i).getCidx());
 				jo.put("title", list.get(i).getcTitle());
 				jo.put("start", list.get(i).getcStartDay());
 				jo.put("color", list.get(i).getcColor());
@@ -44,7 +45,7 @@ public class CalendarRestfulController {
 				ja.add(jo);
 			}
 
-			event.put("id", list.get(0).getUser_cuplenum());
+			event.put("member_id", list.get(0).getUser_cuplenum());
 			event.put("event", ja);
 		} catch (Exception e) {
 			System.out.println(e.getMessage());

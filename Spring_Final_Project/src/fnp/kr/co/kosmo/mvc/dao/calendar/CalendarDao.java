@@ -32,4 +32,16 @@ public class CalendarDao implements CalendarDaoInter{
 		return sqlSessionTemplate.selectList("calendar.getCalendarList", user_cupleNum);
 	}
 
+	/**
+	 * calendar에 등록된 일정 클릭 시 상세보기 페이지로 이동해서 보여줄 정보를 가져옴
+	 * @param cidx
+	 * @return
+	 */
+	@Override
+	public CalendarDTO getDetailScheduleInfo(int cidx) {
+		// TODO Auto-generated method stub
+		System.out.println("dao's cidx ::: " + cidx);
+		return sqlSessionTemplate.selectOne("calendar.getCalendarDetailInfo", cidx);
+	}
+
 }
