@@ -1,3 +1,3 @@
 <script>
-	location.href = "index.do";
+	location.href = "index.do";asdasd
 </script>
