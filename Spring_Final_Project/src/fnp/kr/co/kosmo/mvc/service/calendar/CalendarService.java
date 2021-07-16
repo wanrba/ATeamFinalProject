@@ -11,37 +11,35 @@ import fnp.kr.co.kosmo.mvc.dto.CalendarDTO;
 import fnp.kr.co.kosmo.mvc.service.inter.calendar.CalendarServiceInter;
 
 @Service
-public class CalendarService implements CalendarServiceInter{
-	
+public class CalendarService implements CalendarServiceInter {
+
 	@Autowired
 	private CalendarDaoInter calendarDaoInter;
-	
+
 //	public List<CalendarDTO> insertCalendar(CalendarDTO cdto) {
 //		
 //		return calendarDao.insertCalendar(cdto);
 //	}
-
 	/**
-	 * 사용자가 등록한 스케줄 상세정보를 DB에 입력
-	 * 사용자가 입력한 값을 처리 및 로직 처리
+	 * 사용자가 등록한 스케줄 상세정보를 DB에 입력 사용자가 입력한 값을 처리 및 로직 처리
 	 */
 	@Override
 	public void insertScheduleInfo(CalendarDTO cdto) throws SQLException {
 		// TODO Auto-generated method stub
-		
+
 		// 중요도에 따른 색상처리
-		switch(cdto.getcColor()) {
-			case "high" :
-				cdto.setcColor("red");
-				break;
-			case "middle" :
-				cdto.setcColor("yellow");
-				break;
-			case "low" :
-				cdto.setcColor("pink");
-				break;
+		switch (cdto.getcColor()) {
+		case "high":
+			cdto.setcColor("red");
+			break;
+		case "middle":
+			cdto.setcColor("yellow");
+			break;
+		case "low":
+			cdto.setcColor("pink");
+			break;
 		}
-		
+
 		calendarDaoInter.insertCalendar(cdto);
 //		return calendarDaoInter.insertCalendar(cdto) > 0 ? true : false;
 	}
@@ -50,6 +48,19 @@ public class CalendarService implements CalendarServiceInter{
 	public List<CalendarDTO> getScheduleList(int user_cupleNum) {
 		// TODO Auto-generated method stub
 		return calendarDaoInter.getScheduleList(user_cupleNum);
+	}
+
+	/**
+	 * calendar에 등록된 일정 클릭 시 상세보기 페이지로 이동해서 보여줄 정보를 가져옴
+	 * 
+	 * @param cidx
+	 * @return
+	 */
+	@Override
+	public CalendarDTO getDetailScheduleInfo(int cidx) {
+		// TODO Auto-generated method stub
+		System.out.println("service's cidx ::: " + cidx);
+		return calendarDaoInter.getDetailScheduleInfo(cidx);
 	}
 
 }

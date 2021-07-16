@@ -15,11 +15,11 @@ import fnp.kr.co.kosmo.mvc.service.inter.calendar.CalendarServiceInter;
 
 @RestController
 public class CalendarRestfulController {
-
 	@Autowired
 	private CalendarServiceInter calendarServiceInter;
 
 	/**
+	 * 2021-07-15 YoungJin
 	 * fullCalendar에 출력할 스케줄 정보를 가져오기 위한 메소드 session : 유저의 고유번호 JSONArray :
 	 * calendar에서 출력하는 형태
 	 * 
@@ -28,15 +28,16 @@ public class CalendarRestfulController {
 	 */
 	@PostMapping(value = { "/getCalendarList.do" })
 	public JSONArray getScheduleList(HttpSession session) {
-
 		JSONObject event = new JSONObject();
 		JSONArray ja = new JSONArray();
 
 		try {
-			List<CalendarDTO> list = calendarServiceInter
-					.getScheduleList(Integer.parseInt((String) session.getAttribute("USER_NUM")));
+//			List<CalendarDTO> list = calendarServiceInter.getScheduleList(Integer.parseInt((String) session.getAttribute("USER_NUM")));
+//			List<CalendarDTO> list = calendarServiceInter.getScheduleList(Integer.parseInt((String) session.getAttribute("USER_NUM")));
+			List<CalendarDTO> list = calendarServiceInter.getScheduleList(1);
 			for (int i = 0; i < list.size(); i++) {
 				JSONObject jo = new JSONObject();
+				jo.put("id", list.get(i).getCidx());
 				jo.put("title", list.get(i).getcTitle());
 				jo.put("start", list.get(i).getcStartDay());
 				jo.put("color", list.get(i).getcColor());
@@ -45,13 +46,11 @@ public class CalendarRestfulController {
 			}
 
 			event.put("id", list.get(0).getUser_cuplenum());
+			event.put("member_id", list.get(0).getUser_cuplenum());
 			event.put("event", ja);
 		} catch (Exception e) {
 			System.out.println(e.getMessage());
 		}
-
 		return ja;
-
 	}
-
 }

@@ -28,6 +28,24 @@ public class CalendarController {
 
 		return "calendar/calendarForm";
 	}
+	
+	/**
+	 * 2021-07-15 YoungJin
+	 * @param request
+	 * @param m
+	 * @return
+	 */
+	@GetMapping(value = { "/updateCalendarDetailForm.do" })
+	public String updateCalendarDetailForm(HttpServletRequest request, Model m) {
+
+		CalendarDTO cdto = calendarServiceInter.getDetailScheduleInfo(Integer.parseInt(request.getParameter("cidx")));
+
+		m.addAttribute("cdto",
+				calendarServiceInter.getDetailScheduleInfo(Integer.parseInt(request.getParameter("cidx"))));
+
+		return "calendar/updateCalendarForm";
+	}
+
 
 	@PostMapping(value = { "/insertCalendar.do" })
 	public String insertCalendar(CalendarDTO cdto, HttpSession session) throws SQLException {

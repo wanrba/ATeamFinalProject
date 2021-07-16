@@ -1,4 +1,4 @@
-package fnp.kr.co.kosmo.mvc.controller;
+package fnp.kr.co.kosmo.mvc.controller.index;
 
 import java.util.List;
 

@@ -2,7 +2,6 @@
 <!DOCTYPE mapper
 PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-
 <mapper namespace="calendar">
 
 	<!-- 	해당 커플이 등록한 일정 조회 -->
@@ -11,9 +10,14 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 		FROM CALENDAR
 		WHERE USER_CUPLENUM = #{user_cuplenum}
 	</select>
-	
+
+	<select id="getCalendarDetailInfo" parameterType="int" resultType="cldDto">
+		SELECT CIDX, USER_CUPLENUM, CTITLE, '20' || REPLACE(CSTARTDAY, '/', '-') AS CSTARTDAY, '20' || REPLACE(CENDDAY, '/', '-') AS CENDDAY, CLOCAL, CCONTENT, CCOLOR
+		FROM CALENDAR
+		WHERE CIDX = #{cidx}
+	</select>
+
 	<insert id="insertCalendar" parameterType="cldDto">
 		INSERT INTO CALENDAR VALUES(CALENDAR_CIDX_SEQ.NEXTVAL, #{user_cuplenum}, #{cTitle}, to_date(#{cStartDay}, 'YYYY-MM-DD'), to_date(#{cEndDay}, 'YYYY-MM-DD'), #{cLocal}, #{cContent}, 'red')
 	</insert>	
-
 </mapper>
