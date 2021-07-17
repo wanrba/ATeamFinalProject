@@ -46,7 +46,6 @@ public class CalendarController {
 		return "calendar/updateCalendarForm";
 	}
 
-
 	@PostMapping(value = { "/insertCalendar.do" })
 	public String insertCalendar(CalendarDTO cdto, HttpSession session) throws SQLException {
 
