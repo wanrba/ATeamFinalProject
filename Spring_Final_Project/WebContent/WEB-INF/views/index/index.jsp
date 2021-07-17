@@ -1,13 +1,17 @@
 <%@ page language="java" contentType="text/html; charset=EUC-KR"
 	pageEncoding="EUC-KR"%>
-	<link href="resources/common/calendar/css/fullcalendar.min.css" rel='stylesheet'/>
+<link href="resources/common/calendar/css/fullcalendar.min.css" rel='stylesheet'/>
 	
 <!-- 	<script> -->
 <%-- // 		if("${msg}" != "") { --%>
 <%-- // 			alert("${msg}") --%>
 <!-- // 		} -->
 <!-- 	</script> -->
-	
+<style>
+	.fc-past {
+		background-color: gray;
+	}
+</style>
 	<script>
 	
 		$(document).ready(function() {
