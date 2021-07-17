@@ -23,14 +23,11 @@ public class SignUpAction {
 	private SignupServiceInter signupServiceInter;
 	
 	
-	//ȸ������ �޼���
 	@PostMapping("/signupAction.do")
 	public ModelAndView signUp(MemberDTO dto) {
 		System.out.println("");
-		//==========���� ��¥ ���ؼ� ������ȣ�� ������� ���
 		Calendar cal = Calendar.getInstance();
 		String year = String.valueOf(cal.get(Calendar.YEAR));
-		//System.out.println(year);         2021 : type String
 		String[] years = year.split("");
 		int yearone = Integer.parseInt(years[0]+years[1]);
 		int yeartwo = Integer.parseInt(years[2]+years[3]);
@@ -51,23 +48,18 @@ public class SignUpAction {
 		dto.setUser_birth(sb.toString());
 		//================ end =================
 		
-		//===============���� �ڿ� ���ڸ��� ���� ���===========
 		int gen = Integer.parseInt(usersplit[1]);
 		if(gen%2 ==0) {
-			dto.setUser_gender("����");
-		}else {
-			dto.setUser_gender("����");
-		}
-		//System.out.println(dto.getUser_age());		���� ���糪��
-		//System.out.println(dto.getUser_gender());     ����
-		//============== end ========================= 
+			dto.setUser_gender("남자");
+		}else 
+			dto.setUser_gender("여자");
+		
 		String pk=signupServiceInter.signup(dto);
 		ModelAndView mav = new ModelAndView();
 		mav.addObject("num", 1);
 		mav.addObject("pk", pk);
 		mav.setViewName("member/signup");
 		return mav;
-
 	}
 	
 	// ���̵� üũ

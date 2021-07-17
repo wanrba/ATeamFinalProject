@@ -28,7 +28,6 @@ public class CalendarController {
 
 		return "calendar/calendarForm";
 	}
-	
 	/**
 	 * 2021-07-15 YoungJin
 	 * @param request

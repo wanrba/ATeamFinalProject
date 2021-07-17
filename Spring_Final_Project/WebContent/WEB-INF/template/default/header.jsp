@@ -39,13 +39,14 @@
                                         <li><a href="contact.html">Contact</a></li>
                                         <li>
                                         	<c:choose>
-                                        		<c:when test="${sessionScope.USER_ID eq null }">
+                                        		<c:when test="${sessionScope.sessionID eq null }">
                                         			<a href = "loginForm.do">Login</a>
                                         		</c:when>
                                         		<c:otherwise>
                                         			<a href = "myPage.do">MyPage</a>
                                         		</c:otherwise>
                                         	</c:choose>
+                                        
                                         </li>
                                     </ul>
                                 </nav>
