@@ -244,6 +244,36 @@ h3 {
   z-index: -1;
   opacity: 0.2;
 }
+/*  모바일 버전 추가 코드 0717 하늘 & 영진 */
+@media (min-width: 768px) and (max-width: 991px) {
+  /* line 46, ../../Arafath/CL/CL september/212. Wedding/HTML/scss/_btn.scss */
+  .overlay2::before {
+    position: absolute;
+  content: "";
+  background-color: #fff;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  opacity: 0.2;
+  }
+}
+/*  모바일 버전 추가 코드 0717 하늘 & 영진 */
+@media (max-width: 767px) {
+  /* line 46, ../../Arafath/CL/CL september/212. Wedding/HTML/scss/_btn.scss */
+  .overlay2::before {
+    position: absolute;
+  content: "";
+  background-color: #fff;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  opacity: 0.2;
+  }
+}
 
 /* line 181, ../../Arafath/CL/CL september/212. Wedding/HTML/scss/theme-default.scss */
 .overlay3 {
@@ -981,9 +1011,10 @@ h3 {
   color: #C78665;
 }
 
+/* banner 사진 변경 0717 하늘 & 영진 */
 /* line 1, ../../Arafath/CL/CL september/212. Wedding/HTML/scss/_slider.scss */
 .slider_bg_1 {
-  background-image: url(../image/logo_banner/banner.png);
+  background-image: url(../image/logo_banner/lovediscovery01.JPG);
 }
 
 /* line 4, ../../Arafath/CL/CL september/212. Wedding/HTML/scss/_slider.scss */
