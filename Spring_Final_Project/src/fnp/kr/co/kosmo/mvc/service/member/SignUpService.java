@@ -7,9 +7,9 @@ import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.context.annotation.Primary;
 import org.springframework.stereotype.Service;
 
-import fnp.kr.co.kosmo.mvc.daointer.SignupDaoInter;
+import fnp.kr.co.kosmo.mvc.dao.member.inter.SignupDaoInter;
 import fnp.kr.co.kosmo.mvc.dto.MemberDTO;
-import fnp.kr.co.kosmo.mvc.service.inter.SignupServiceInter;
+import fnp.kr.co.kosmo.mvc.service.member.inter.SignupServiceInter;
 @Service
 public class SignUpService implements SignupServiceInter{
 	

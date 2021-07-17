@@ -1,4 +1,4 @@
-package fnp.kr.co.kosmo.mvc.service.inter.calendar;
+package fnp.kr.co.kosmo.mvc.service.calendar.inter;
 
 import java.sql.SQLException;
 import java.util.List;
@@ -8,7 +8,7 @@ import fnp.kr.co.kosmo.mvc.dto.CalendarDTO;
 public interface CalendarServiceInter {
 
 	/**
-	 * »ç¿ëÀÚ°¡ µî·ÏÇÑ ½ºÄÉÁÙ »ó¼¼Á¤º¸¸¦ DB¿¡ ÀÔ·Â
+	 * ï¿½ï¿½ï¿½ï¿½Ú°ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ DBï¿½ï¿½ ï¿½Ô·ï¿½
 	 * 
 	 * @param cdto
 	 * @return
@@ -18,7 +18,7 @@ public interface CalendarServiceInter {
 
 	/**
 	 * 2021-07-15 YoungJin
-	 * calendar¿¡ »ç¿ëÀÚ°¡ µî·ÏÇÑ ½ºÄÉÁÙ ¸ñ·ÏÀ» °¡Á®¿È
+	 * calendarï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½Ú°ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 	 * 
 	 * @param session
 	 * @return List<CalendarDTO>
@@ -27,7 +27,7 @@ public interface CalendarServiceInter {
 
 	/**
 	 * 2021-07-15 YoungJin
-	 * calendar¿¡ µî·ÏµÈ ÀÏÁ¤ Å¬¸¯ ½Ã »ó¼¼º¸±â ÆäÀÌÁö·Î ÀÌµ¿ÇØ¼­ º¸¿©ÁÙ Á¤º¸¸¦ °¡Á®¿È
+	 * calendarï¿½ï¿½ ï¿½ï¿½Ïµï¿½ ï¿½ï¿½ï¿½ï¿½ Å¬ï¿½ï¿½ ï¿½ï¿½ ï¿½ó¼¼ºï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ìµï¿½ï¿½Ø¼ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 	 * 
 	 * @param cidx
 	 * @return

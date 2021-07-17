@@ -6,15 +6,15 @@ import org.springframework.web.bind.annotation.GetMapping;
 public class MemberDefault {
 
 	
-	//·Î±×ÀÎ
-	@GetMapping(value= {"/login.do"})
+	//ï¿½Î±ï¿½ï¿½ï¿½
+	@GetMapping(value= {"/loginForm.do"})
 	public String LoginsignupForm() {
-		return "member/login/login";
+		return "member/login";
 	}
-	//È¸¿ø°¡ÀÔ
+	//È¸ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 	@GetMapping(value= {"/signup.do"})
 	public String signupForm() {
-		return "member/signup/signup";
+		return "member/signup";
 	}
 
 }

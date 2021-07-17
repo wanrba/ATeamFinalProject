@@ -5,7 +5,7 @@ import org.mybatis.spring.SqlSessionTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
-import fnp.kr.co.kosmo.mvc.daointer.LoginDaoInter;
+import fnp.kr.co.kosmo.mvc.dao.member.inter.LoginDaoInter;
 import fnp.kr.co.kosmo.mvc.dto.MemberDTO;
 @Repository
 public class LoginDao implements LoginDaoInter{
@@ -13,26 +13,26 @@ public class LoginDao implements LoginDaoInter{
 	@Autowired
 	private SqlSessionTemplate ss;
 	
-	//·Î±×ÀÎ±â´É
+	//ï¿½Î±ï¿½ï¿½Î±ï¿½ï¿½
 	@Override
 	public MemberDTO login(MemberDTO dto) {
 		return ss.selectOne("member.login",dto);
 	}
 
-	//³­¼ö À¯¹«
+	//ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
 	@Override
 	public int random(String pk) {
 		return ss.selectOne("member.random",pk);
 	}
 	
-	//³­¼ö¸¦ °¡Áö°íÀÖ´Â»ç¶÷ Ã¼Å©
+	//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ö´Â»ï¿½ï¿½ Ã¼Å©
 	@Override
 	public int seluser(String pk) {
 		System.out.println(pk);
 		return ss.selectOne("member.seluser",pk);
 	}
 
-	//¸ÅÄª ½ÅÃ»
+	//ï¿½ï¿½Äª ï¿½ï¿½Ã»
 	@Override
 	public void requestMatch(MemberDTO dto) {
 		

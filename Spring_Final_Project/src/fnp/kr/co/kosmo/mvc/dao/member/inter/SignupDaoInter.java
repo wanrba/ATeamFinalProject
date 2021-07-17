@@ -1,15 +1,15 @@
-package fnp.kr.co.kosmo.mvc.daointer;
+package fnp.kr.co.kosmo.mvc.dao.member.inter;
 
 import fnp.kr.co.kosmo.mvc.dto.MemberDTO;
 
 public interface SignupDaoInter {
 
-	//È¸¿ø°¡ÀÔ
+	//È¸ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 	public void signup(MemberDTO dto);
 		
 	//idÃ¼Å©
 	public int idcheck(String user_id);
 	
-	//Æ¯ÀÌ¹®ÀÚ Æ÷ÇÔ ³­¼ö ¹ß»ý
+	//Æ¯ï¿½Ì¹ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ß»ï¿½
 	public int random(String randomnum);
 }

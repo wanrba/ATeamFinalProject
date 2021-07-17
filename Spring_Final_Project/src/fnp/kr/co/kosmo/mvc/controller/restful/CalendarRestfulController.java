@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import fnp.kr.co.kosmo.mvc.dto.CalendarDTO;
-import fnp.kr.co.kosmo.mvc.service.inter.calendar.CalendarServiceInter;
+import fnp.kr.co.kosmo.mvc.service.calendar.inter.CalendarServiceInter;
 
 @RestController
 public class CalendarRestfulController {
@@ -20,8 +20,8 @@ public class CalendarRestfulController {
 
 	/**
 	 * 2021-07-15 YoungJin
-	 * fullCalendar¿¡ Ãâ·ÂÇÒ ½ºÄÉÁÙ Á¤º¸¸¦ °¡Á®¿À±â À§ÇÑ ¸Þ¼Òµå session : À¯ÀúÀÇ °íÀ¯¹øÈ£ JSONArray :
-	 * calendar¿¡¼­ Ãâ·ÂÇÏ´Â ÇüÅÂ
+	 * fullCalendarï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Þ¼Òµï¿½ session : ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½È£ JSONArray :
+	 * calendarï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½Ï´ï¿½ ï¿½ï¿½ï¿½ï¿½
 	 * 
 	 * @param session
 	 * @return JSONArray

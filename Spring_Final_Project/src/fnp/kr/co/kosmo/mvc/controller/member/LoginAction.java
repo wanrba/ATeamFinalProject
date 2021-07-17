@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.ModelAndView;
 
 import fnp.kr.co.kosmo.mvc.dto.MemberDTO;
-import fnp.kr.co.kosmo.mvc.service.inter.LoginServiceInter;
+import fnp.kr.co.kosmo.mvc.service.member.inter.LoginServiceInter;
 @Controller
 public class LoginAction {
 	
@@ -25,8 +25,8 @@ public class LoginAction {
 		MemberDTO map = loginServiceInter.login(dto);
 		ModelAndView mav = new ModelAndView();
 		if (map==null) {
-			mav.setViewName("member/login/login");
-			mav.addObject("emsg", "¿Ã¹Ù¸¥ È¸¿øÁ¤º¸°¡ ¾Æ´Õ´Ï´Ù.");
+			mav.setViewName("member/login");
+			mav.addObject("emsg", "ï¿½Ã¹Ù¸ï¿½ È¸ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Æ´Õ´Ï´ï¿½.");
 		}else {
 			switch(map.getUser_match()) {
 				case 0:
@@ -34,11 +34,11 @@ public class LoginAction {
 					session.setAttribute("sessionpk", map.getUser_primarykey());
 					session.setAttribute("sessionID", map.getUser_id());
 					session.setAttribute("sessionName", map.getUser_name());
-					mav.addObject("chk", "½ÂÀÎÀÌÀü");
+					mav.addObject("chk", "ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½");
 					mav.setViewName("index");
 					break;
 				case 1:
-					mav.addObject("chk", "½ÂÀÎÁß");
+					mav.addObject("chk", "ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½");
 					mav.setViewName("index");
 					break;
 				case 2:
@@ -70,7 +70,7 @@ public class LoginAction {
 		System.out.println("user_num"+dto.getUser_num());
 		System.out.println("primarykey"+dto.getUser_primarykey());
 		
-		// 0 : ½ÅÃ» ½ÇÆÐ(³­¼ö¸¦ °¡Áø »ç¿ëÀÚ°¡ ¾ø´Ù, 1 : ½ÅÃ» ¼±°ø 
+		// 0 : ï¿½ï¿½Ã» ï¿½ï¿½ï¿½ï¿½(ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½Ú°ï¿½ ï¿½ï¿½ï¿½ï¿½, 1 : ï¿½ï¿½Ã» ï¿½ï¿½ï¿½ï¿½ 
 		int num = loginServiceInter.requestMatch(dto);
 		try {
 			response.setContentType("text/html; charset=euc-kr");

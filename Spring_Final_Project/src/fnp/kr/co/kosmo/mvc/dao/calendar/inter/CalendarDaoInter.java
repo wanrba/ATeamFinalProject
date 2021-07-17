@@ -1,18 +1,18 @@
-package fnp.kr.co.kosmo.mvc.dao.inter.calendar;
+package fnp.kr.co.kosmo.mvc.dao.calendar.inter;
 import java.util.List;
 import java.sql.SQLException;
 import fnp.kr.co.kosmo.mvc.dto.CalendarDTO;
 public interface CalendarDaoInter {
 	
 	/**
-	 * »ç¿ëÀÚ°¡ µî·ÏÇÑ ½ºÄÉÁÙ »ó¼¼Á¤º¸¸¦ DB¿¡ ÀÔ·Â
+	 * ï¿½ï¿½ï¿½ï¿½Ú°ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ DBï¿½ï¿½ ï¿½Ô·ï¿½
 	 */
 	public void insertCalendar(CalendarDTO cdto) throws SQLException;
 
 	public List<CalendarDTO> getScheduleList(int user_cupleNum);
 
 	/**
-	 * calendar¿¡ µî·ÏµÈ ÀÏÁ¤ Å¬¸¯ ½Ã »ó¼¼º¸±â ÆäÀÌÁö·Î ÀÌµ¿ÇØ¼­ º¸¿©ÁÙ Á¤º¸¸¦ °¡Á®¿È
+	 * calendarï¿½ï¿½ ï¿½ï¿½Ïµï¿½ ï¿½ï¿½ï¿½ï¿½ Å¬ï¿½ï¿½ ï¿½ï¿½ ï¿½ó¼¼ºï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ìµï¿½ï¿½Ø¼ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 	 * @param cidx
 	 * @return
 	 */

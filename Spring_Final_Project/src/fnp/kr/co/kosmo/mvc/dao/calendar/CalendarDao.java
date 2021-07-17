@@ -4,7 +4,8 @@ import java.util.List;
 import org.mybatis.spring.SqlSessionTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
-import fnp.kr.co.kosmo.mvc.dao.inter.calendar.CalendarDaoInter;
+
+import fnp.kr.co.kosmo.mvc.dao.calendar.inter.CalendarDaoInter;
 import fnp.kr.co.kosmo.mvc.dto.CalendarDTO;
 
 @Repository
@@ -14,7 +15,7 @@ public class CalendarDao implements CalendarDaoInter {
 	private SqlSessionTemplate sqlSessionTemplate;
 
 	/**
-	 * »ç¿ëÀÚ°¡ µî·ÏÇÑ ½ºÄÉÁÙ »ó¼¼Á¤º¸¸¦ DB¿¡ ÀÔ·Â
+	 * ï¿½ï¿½ï¿½ï¿½Ú°ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ DBï¿½ï¿½ ï¿½Ô·ï¿½
 	 */
 	public void insertCalendar(CalendarDTO cdto) {
 		cdto.setUser_cuplenum(1);
@@ -31,7 +32,7 @@ public class CalendarDao implements CalendarDaoInter {
 
 	/**
 	 * 2021-07-15 YoungJin
-	 * calendar¿¡ µî·ÏµÈ ÀÏÁ¤ Å¬¸¯ ½Ã »ó¼¼º¸±â ÆäÀÌÁö·Î ÀÌµ¿ÇØ¼­ º¸¿©ÁÙ Á¤º¸¸¦ °¡Á®¿È
+	 * calendarï¿½ï¿½ ï¿½ï¿½Ïµï¿½ ï¿½ï¿½ï¿½ï¿½ Å¬ï¿½ï¿½ ï¿½ï¿½ ï¿½ó¼¼ºï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ìµï¿½ï¿½Ø¼ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 	 * 
 	 * @param cidx
 	 * @return

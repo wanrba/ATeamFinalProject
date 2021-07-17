@@ -6,9 +6,9 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import fnp.kr.co.kosmo.mvc.dao.inter.calendar.CalendarDaoInter;
+import fnp.kr.co.kosmo.mvc.dao.calendar.inter.CalendarDaoInter;
 import fnp.kr.co.kosmo.mvc.dto.CalendarDTO;
-import fnp.kr.co.kosmo.mvc.service.inter.calendar.CalendarServiceInter;
+import fnp.kr.co.kosmo.mvc.service.calendar.inter.CalendarServiceInter;
 
 @Service
 public class CalendarService implements CalendarServiceInter {
@@ -21,13 +21,13 @@ public class CalendarService implements CalendarServiceInter {
 //		return calendarDao.insertCalendar(cdto);
 //	}
 	/**
-	 * »ç¿ëÀÚ°¡ µî·ÏÇÑ ½ºÄÉÁÙ »ó¼¼Á¤º¸¸¦ DB¿¡ ÀÔ·Â »ç¿ëÀÚ°¡ ÀÔ·ÂÇÑ °ªÀ» Ã³¸® ¹× ·ÎÁ÷ Ã³¸®
+	 * ï¿½ï¿½ï¿½ï¿½Ú°ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ DBï¿½ï¿½ ï¿½Ô·ï¿½ ï¿½ï¿½ï¿½ï¿½Ú°ï¿½ ï¿½Ô·ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ Ã³ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ Ã³ï¿½ï¿½
 	 */
 	@Override
 	public void insertScheduleInfo(CalendarDTO cdto) throws SQLException {
 		// TODO Auto-generated method stub
 
-		// Áß¿äµµ¿¡ µû¸¥ »ö»óÃ³¸®
+		// ï¿½ß¿äµµï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½Ã³ï¿½ï¿½
 		switch (cdto.getcColor()) {
 		case "high":
 			cdto.setcColor("red");
@@ -51,7 +51,7 @@ public class CalendarService implements CalendarServiceInter {
 	}
 
 	/**
-	 * calendar¿¡ µî·ÏµÈ ÀÏÁ¤ Å¬¸¯ ½Ã »ó¼¼º¸±â ÆäÀÌÁö·Î ÀÌµ¿ÇØ¼­ º¸¿©ÁÙ Á¤º¸¸¦ °¡Á®¿È
+	 * calendarï¿½ï¿½ ï¿½ï¿½Ïµï¿½ ï¿½ï¿½ï¿½ï¿½ Å¬ï¿½ï¿½ ï¿½ï¿½ ï¿½ó¼¼ºï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ìµï¿½ï¿½Ø¼ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 	 * 
 	 * @param cidx
 	 * @return

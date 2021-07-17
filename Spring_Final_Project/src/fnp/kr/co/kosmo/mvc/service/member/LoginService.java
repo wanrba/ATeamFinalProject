@@ -1,12 +1,11 @@
 package fnp.kr.co.kosmo.mvc.service.member;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Service;
 
-import fnp.kr.co.kosmo.mvc.daointer.LoginDaoInter;
+import fnp.kr.co.kosmo.mvc.dao.member.inter.LoginDaoInter;
 import fnp.kr.co.kosmo.mvc.dto.MemberDTO;
-import fnp.kr.co.kosmo.mvc.service.inter.LoginServiceInter;
+import fnp.kr.co.kosmo.mvc.service.member.inter.LoginServiceInter;
 
 @Service
 public class LoginService implements LoginServiceInter{

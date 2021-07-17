@@ -15,7 +15,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.ModelAndView;
 
 import fnp.kr.co.kosmo.mvc.dto.MemberDTO;
-import fnp.kr.co.kosmo.mvc.service.inter.SignupServiceInter;
+import fnp.kr.co.kosmo.mvc.service.member.inter.SignupServiceInter;
 @Controller
 public class SignUpAction {
 	
@@ -23,11 +23,11 @@ public class SignUpAction {
 	private SignupServiceInter signupServiceInter;
 	
 	
-	//È¸¿ø°¡ÀÔ ¸Þ¼­µå
+	//È¸ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Þ¼ï¿½ï¿½ï¿½
 	@PostMapping("/signupAction.do")
 	public ModelAndView signUp(MemberDTO dto) {
 		System.out.println("");
-		//==========ÇöÀç ³¯Â¥ ±¸ÇØ¼­ ¹ÎÁõ¹øÈ£·Î »ý³â¿ùÀÏ Ãâ·Â
+		//==========ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Â¥ ï¿½ï¿½ï¿½Ø¼ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½È£ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½
 		Calendar cal = Calendar.getInstance();
 		String year = String.valueOf(cal.get(Calendar.YEAR));
 		//System.out.println(year);         2021 : type String
@@ -51,26 +51,26 @@ public class SignUpAction {
 		dto.setUser_birth(sb.toString());
 		//================ end =================
 		
-		//===============¹ÎÁõ µÚ¿¡ ÇÑÀÚ¸®·Î ¼ºº° Ãâ·Â===========
+		//===============ï¿½ï¿½ï¿½ï¿½ ï¿½Ú¿ï¿½ ï¿½ï¿½ï¿½Ú¸ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½===========
 		int gen = Integer.parseInt(usersplit[1]);
 		if(gen%2 ==0) {
-			dto.setUser_gender("¿©ÀÚ");
+			dto.setUser_gender("ï¿½ï¿½ï¿½ï¿½");
 		}else {
-			dto.setUser_gender("³²ÀÚ");
+			dto.setUser_gender("ï¿½ï¿½ï¿½ï¿½");
 		}
-		//System.out.println(dto.getUser_age());		³ªÀÌ ÇöÀç³ªÀÌ
-		//System.out.println(dto.getUser_gender());     ¼ºº°
+		//System.out.println(dto.getUser_age());		ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ç³ªï¿½ï¿½
+		//System.out.println(dto.getUser_gender());     ï¿½ï¿½ï¿½ï¿½
 		//============== end ========================= 
 		String pk=signupServiceInter.signup(dto);
 		ModelAndView mav = new ModelAndView();
 		mav.addObject("num", 1);
 		mav.addObject("pk", pk);
-		mav.setViewName("member/signup/signup");
+		mav.setViewName("member/signup");
 		return mav;
 
 	}
 	
-	// ¾ÆÀÌµð Ã¼Å©
+	// ï¿½ï¿½ï¿½Ìµï¿½ Ã¼Å©
 	@RequestMapping(value = "/loginAction.do")
 	@ResponseBody
 	public void login(String user_id, HttpServletResponse response) {

@@ -1,4 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=EUC-KR" pageEncoding="EUC-KR"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!--[if lte IE 9]>
             <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
         <![endif]-->
@@ -36,6 +37,16 @@
                                             </ul>
                                         </li>
                                         <li><a href="contact.html">Contact</a></li>
+                                        <li>
+                                        	<c:choose>
+                                        		<c:when test="${sessionScope.USER_ID eq null }">
+                                        			<a href = "loginForm.do">Login</a>
+                                        		</c:when>
+                                        		<c:otherwise>
+                                        			<a href = "myPage.do">MyPage</a>
+                                        		</c:otherwise>
+                                        	</c:choose>
+                                        </li>
                                     </ul>
                                 </nav>
                             </div>

@@ -9,7 +9,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-import fnp.kr.co.kosmo.mvc.dao.inter.calendar.CalendarDaoInter;
+import fnp.kr.co.kosmo.mvc.dao.calendar.inter.CalendarDaoInter;
 import fnp.kr.co.kosmo.mvc.dto.CalendarDTO;
 
 @Controller

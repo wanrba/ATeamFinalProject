@@ -6,7 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Primary;
 import org.springframework.stereotype.Repository;
 
-import fnp.kr.co.kosmo.mvc.daointer.SignupDaoInter;
+import fnp.kr.co.kosmo.mvc.dao.member.inter.SignupDaoInter;
 import fnp.kr.co.kosmo.mvc.dto.MemberDTO;
 
 @Repository
@@ -14,26 +14,26 @@ public class SignUpDao implements SignupDaoInter{
 	@Autowired
 	private SqlSessionTemplate ss;
 
-//	// ÀÌ¸ÞÀÏ(id) Ã¼Å©ÇÏ´Â ¸Þ¼­µå
+//	// ï¿½Ì¸ï¿½ï¿½ï¿½(id) Ã¼Å©ï¿½Ï´ï¿½ ï¿½Þ¼ï¿½ï¿½ï¿½
 //	public int emailchek(String user_id) {
 //			return ss.selectOne("signup.emailchek", user_id);
 //		}
 	
-	//È¸¿ø°¡ÀÔÇÏ´Â ¸Þ¼­µå
+	//È¸ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ï´ï¿½ ï¿½Þ¼ï¿½ï¿½ï¿½
 	@Override
 	public void signup(MemberDTO dto) {
-		System.out.println("Dao½ÇÇà");
+		System.out.println("Daoï¿½ï¿½ï¿½ï¿½");
 		ss.insert("member.signup",dto);
 		
 	}
 
-	//idÃ¼Å©ÇÏ´Â ¸Þ¼­µå
+	//idÃ¼Å©ï¿½Ï´ï¿½ ï¿½Þ¼ï¿½ï¿½ï¿½
 	@Override
 	public int idcheck(String user_id) {
 		return ss.selectOne("member.idchek", user_id);
 	}
 
-	//Æ¯ÀÌ¹®ÀÚ Æ÷ÇÔ ³­¼ö ¹ß»ý
+	//Æ¯ï¿½Ì¹ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ß»ï¿½
 	@Override
 	public int random(String pk) {
 		return ss.selectOne("member.random",pk);
