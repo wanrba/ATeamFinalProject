@@ -14,18 +14,19 @@ public class MyPageDao implements MyPageDaoInter{
 
 	@Override
 	public MemberDTO myInfo(String user_id) {
-		System.out.println("myInfo ï¿½ï¿½ï¿½ï¿½!!!");
+		System.out.println("myInfo ½ÇÇà!!!!");
 		return ss.selectOne("member.myInfo", user_id);
 	}
 
 	@Override
 	public MemberDTO memchk(MemberDTO vo) {
-		System.out.println("memchk Dao ï¿½ï¿½ï¿½ï¿½!");
+		System.out.println("memchk Dao ½ÇÇà!!");
 		return ss.selectOne("member.memchk",vo);
 	}
 
 	@Override
 	public void memUpdate(MemberDTO vo) {
+		System.out.println("memUpdate ½ÇÇà!!");
 		ss.update("member.mUpdate",vo);
 	}
 }

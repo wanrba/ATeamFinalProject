@@ -32,12 +32,8 @@ public class MypageAction {
 	System.out.println("mypageInfo 실행!!");
 	ModelAndView mav = new ModelAndView();
 	String user_id = (String) session.getAttribute("sessionID");
-	//(로그인한 세션 아이디 값을 가져와 사용자 정보 출력)
-	//String user_id = (String) session.getAttribute("sessionID");
-	// 내가 구독하는 관심이웃 목록
-	//mav.addObject("info", memberServiceInter.myInfo(sid)); 
 	mav.addObject("info", myPageServiceInter.myInfo(user_id)); 
-	mav.setViewName("/mypage/mypage");
+	mav.setViewName("mypage/mypage");
 	
 	
 	return mav;
@@ -51,7 +47,7 @@ public class MypageAction {
 	@RequestMapping(value="/mypagepwdchk.do")
 	public String myPageLoginChk() {
 		System.out.println("myPageLoginChk");
-		return "/mypage/mypagepwdchk";
+		return "mypage/mypagepwdchk";
 	}
 	
 	/**
@@ -69,15 +65,21 @@ public class MypageAction {
 			ModelAndView mav = new ModelAndView();
 			
 			if (map == null) {
-				mav.setViewName("/member/mypage/mypagepwdchk");
+				mav.setViewName("member/mypage/mypagepwdchk");
 				mav.addObject("emsg", "인증 실패입니다! 다시 입력해주세요!" );
 			} else {
 				mav.addObject("info", myPageServiceInter.myInfo(vo.getUser_id()));
-				mav.setViewName("/mypage/mypageupdate");
+				mav.setViewName("mypage/mypageupdate");
 			}
 			return mav;
 		}
 		
+		/**
+		 * 0717 하늘 
+		 * 마이페이지 수정폼 => 수정완료 버튼 시 
+		 * @param dto, request 
+		 * @return mvo 
+		 */
 		// 회원정보 수정 
 		@RequestMapping("/updateComplete.do")
 		public ModelAndView updateComplete(MemberDTO mvo, HttpServletRequest request){
