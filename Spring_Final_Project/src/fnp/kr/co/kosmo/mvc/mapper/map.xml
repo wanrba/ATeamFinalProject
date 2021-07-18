@@ -4,21 +4,33 @@
  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
  <mapper namespace="map">
  	
- 	
- 	
+	<!--
+		07-16 gun
+		지도에 마커 생성
+	-->
  	<insert id="markermake" parameterType="markerDto">
- 		insert into marker values(MAKER_SEQ.nextVal, #{marker_mnum} , #{marker_title},#{marker_content},#{marker_picturename}, #{marker_lat}, #{marker_lon}, #{marker_addr}, #{marker_date})
+ 		insert into marker
+ 		values(MARKER_SEQ.nextVal, #{marker_mnum} , #{marker_title},#{marker_content},#{marker_picturename}, #{marker_lat}, #{marker_lon}, #{marker_addr}, #{marker_date})
  	</insert>
  	
- 	
+ 	<!--
+		07-16 gun
+		지도에 생성되어 있는 마커 삭제
+	-->
  	<delete id="delMarker" parameterType="int">
- 		delete from marker where marker_num=#{marker_num}
+ 		delete from marker
+ 		where marker_num=#{marker_num}
  	</delete>
  	
- 	
- 	
+ 	<!--
+		07-16 gun
+		생성되어 있는 마커에 들어갈 상세정보 조회
+	-->
  	<select id="mapform" parameterType="int" resultType="markerDto">
- 		select marker_num,marker_title,marker_content,marker_picture as marker_picturename,marker_lat, marker_lon,marker_address,to_char(marker_date,'yyyy-mm-dd') as marker_date from marker where marker_mnum = #{map_num} order by 1 asc
+ 		select marker_num,marker_title,marker_content,marker_picture as marker_picturename,marker_lat, marker_lon,marker_address,to_char(marker_date,'yyyy-mm-dd') as marker_date
+ 		from marker
+ 		where marker_mnum = #{map_num}
+ 		order by 1 asc
  	</select>
  	
  	

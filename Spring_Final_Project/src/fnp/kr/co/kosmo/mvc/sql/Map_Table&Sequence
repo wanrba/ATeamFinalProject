@@ -1,0 +1,9 @@
+create table map(
+	map_num number constraint map_num_pk primary key,
+	map_cnum number constraint map_cnum_pk unique
+);
+
+
+CREATE SEQUENCE MAP_SEQ
+INCREMENT BY 1
+START WITH 1;

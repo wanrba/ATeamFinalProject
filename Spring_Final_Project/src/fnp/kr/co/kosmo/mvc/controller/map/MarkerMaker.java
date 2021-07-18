@@ -1,4 +1,4 @@
-package fnp.kr.co.kosmo.controller.map;
+package fnp.kr.co.kosmo.mvc.controller.map;
 
 import java.io.File;
 import java.io.IOException;
@@ -39,7 +39,7 @@ public class MarkerMaker {
 		List<MarkerDTO> list=mapServerInter.MapForm(map_num);
 		
 		m.addAttribute("list",list);
-		return "map";
+		return "map/map";
 	}
 	
 	/**
@@ -52,7 +52,7 @@ public class MarkerMaker {
 	@PostMapping(value= {"/markermaker.do"})
 	public String mapMarkerSave( List<MultipartFile> marker_picture , MarkerDTO dto, HttpServletRequest request) {
 		String img_path="resources\\fileUpload";
-		String r_path = "D:\\ikosmo\\mySpring\\workspace\\FinalTest\\WebContent\\";
+		String r_path = "D:\\ikosmo\\STS\\Final_Spring_Project\\LocalRepository\\ATeamFinalProject\\Spring_Final_Project\\WebContent\\";
 		StringBuffer picname = new StringBuffer();
 		for(MultipartFile mf : marker_picture) {
 			String orlFn = mf.getOriginalFilename();

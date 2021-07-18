@@ -1,14 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=EUC-KR"
    pageEncoding="EUC-KR"%>
    <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<!DOCTYPE html>
-<html>
-<head>
-<meta charset="EUC-KR">
-<title>지도에 사용자 컨트롤 올리기</title>
-<link href="resources/css/map.css" rel="stylesheet">
-</head>
-<body>
+<link href="resources/views/map/css/map.css" rel="stylesheet">
 <div id="modal">
 </div>
 <div class="map_wrap">
@@ -22,6 +15,7 @@
 		<input type="hidden" class="num" value="${e.marker_num}">
 	</c:forEach>
 	
+<!-- 레이아웃 입력창 출력 Start -->
 <div id = "banner_online">
     <div id="close_button" style ="cursor: pointer;"> x
     </div>
@@ -51,6 +45,7 @@
     </form>
     <!-- <input type="button" id="close_button" value="취소"> -->
 </div>
+<!-- 레이아웃 입력창 출력 End -->
 	<div style="margin:auto;">
 		<p>
     		<label for="keyword">키워드 </label>
@@ -77,8 +72,6 @@
     </div>
 </div>
 
-<script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=bc2db93d1d6e78124cdecbd147baab8d&libraries=services,clusterer"></script>
-<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
-<script src="resources/script/map.js" type="text/javascript"></script>
-</body>
-</html>
+<script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=5af734516ecff914eb9191e0fb660742&libraries=services,clusterer"></script>
+<!-- <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script> -->
+<script src="resources/views/map/js/map.js" type="text/javascript"></script>

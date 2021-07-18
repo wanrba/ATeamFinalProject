@@ -1,0 +1,19 @@
+create table marker(
+	marker_num number constraint marker_num_pk primary key,
+	marker_mnum number constraint marker_mnum_nn not null,
+	marker_title varchar2(100) constraint marker_title_nn not null,
+	marker_content varchar2(400)  constraint marker_content_nn not null,
+	marker_picture varchar2(100),
+	marker_lat float(24) constraint marker_lat_nn not null,
+	marker_lon float(24) constraint marker_lon_nn not null,
+	marker_address varchar2(50) constraint marker_address_nn not null,
+	marker_date date default sysdate,
+	constraint marker_lat_uq unique(marker_lat),
+	constraint marker_lon_uq unique(marker_lon),
+	CONSTRAINT marker_mnum_fk FOREIGN KEY(marker_mnum) REFERENCES map(map_num)
+);
+
+
+CREATE SEQUENCE MARKER_SEQ
+INCREMENT BY 1
+START WITH 1;
