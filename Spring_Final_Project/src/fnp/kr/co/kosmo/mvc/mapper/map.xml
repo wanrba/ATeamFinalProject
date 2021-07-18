@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+ "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+ <mapper namespace="map">
+ 	
+ 	
+ 	
+ 	<insert id="markermake" parameterType="markerDto">
+ 		insert into marker values(MAKER_SEQ.nextVal, #{marker_mnum} , #{marker_title},#{marker_content},#{marker_picturename}, #{marker_lat}, #{marker_lon}, #{marker_addr}, #{marker_date})
+ 	</insert>
+ 	
+ 	
+ 	<delete id="delMarker" parameterType="int">
+ 		delete from marker where marker_num=#{marker_num}
+ 	</delete>
+ 	
+ 	
+ 	
+ 	<select id="mapform" parameterType="int" resultType="markerDto">
+ 		select marker_num,marker_title,marker_content,marker_picture as marker_picturename,marker_lat, marker_lon,marker_address,to_char(marker_date,'yyyy-mm-dd') as marker_date from marker where marker_mnum = #{map_num} order by 1 asc
+ 	</select>
+ 	
+ 	
+ </mapper>
