@@ -275,6 +275,15 @@ h3 {
   padding-top: 120px;
 }
 
+/*
+	2021-07-18 YoungJin
+	padding 옵션 추가
+	
+ */
+.pt-30 {
+	padding-top : 30px;
+}
+
 /* button style */
 /* line 206, ../../Arafath/CL/CL september/212. Wedding/HTML/scss/theme-default.scss */
 .owl-carousel .owl-nav div {

@@ -16,52 +16,118 @@
         }
 	}
 </script>
-<div>
-	<form action="signupAction.do" method="post" onsubmit="return signup()">
-		<div>
-			<label for="user_id">아이디</label>
-			<input type="text" id="user_id" name="user_id" class="default" value="">
-			<input type="button" id="idcheckBtn" value="중복확인버튼">
-			<div id="target1"></div>
-		</div>
-		<div>
-			<label for="user_pwd">비밀번호</label>
-			<input type="password" id="user_pwd" name="user_pwd" value="" placeholder="">
-			<div id="target2" style="color:red;">비밀번호는 6글자 이상, 16글자 이하 !,@,#,$,% 의 특수문자를 하나이상 사용해주시기 바랍니다"</div>
-		</div>
-		<div>
-			<label for="pwdcheck">비밀번호확인</label>
-			<input type="password" id="pwdcheck" name="pwdcheck" value="">
-			<div id="target3"></div>
-		</div>
-		<div>
-			<label for="user_nickname">상대방 닉네임</label>
-			<input type="text" id="user_nickname" name="user_nickname" value="">
-		</div>
-		<div>
-			<label for="user_name">이름</label>
-			<input type="text" id="user_name" name="user_name" value="">
-		</div>
-		<div>
-			<label for="user_birth">주민등록번호("-"없이 작성해주세요)</label>
-			<input type="text" name="user_birth" id="user_birth" onfocus="OnChecknumber(this)" 
-     		onKeyup="OnChecknumber(this)">
-		</div>
-		<div>
-			<label for="user_phone" style="text-align: left;"><b>연락처("-"없이 작성해주세요)</b><br>
-     		<input type="tel"  name="user_phone" id="user_phone" onfocus="OnCheckPhone(this)" 
-     		onKeyup="OnCheckPhone(this)" size="14" maxlength="14" style="width: 500px;"></label>
-		</div>
-		<div>
-			<label for="user_dday">연인이 된 날짜</label>
-			<input type="date" id="user_dday" name="user_dday" value="">
-		</div>
-		<div>
-			<input type="submit" id="signupbtn" name="signupbtn" value="회원가입버튼">
-			<input type="button" value="로그인버튼">
-		</div>
-	</form>
-</div>
+
+
+<div class="attending_area">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-10 offset-xl-1 col-lg-10 offset-lg-1">
+                    <div class="main_attending_area">
+                        <div class="flower_1 d-none d-lg-block">
+                            <img src="resources/views/index/image/appointment/flower-top.png" alt="">
+                        </div>
+                        <div class="flower_2 d-none d-lg-block">
+                            <img src="resources/views/index/image/appointment/flower-bottom.png" alt="">
+                        </div>
+                        <div class="row justify-content-center">
+                            <div class="col-xl-10 col-lg-8">
+                                <div class="popup_box ">
+                                    <div class="popup_inner">
+                                        <div class="form_heading text-center">
+                                        	<div class = "col-xl-12">
+		                                    	<img src="resources/common/image/logo_banner/logo.png" width="100%" alt="">
+		                                    </div>
+                                        </div>
+                                        <div class = "pt-30"></div>
+                                        <form action="signupAction.do" method="post" onsubmit="return signup()">
+                                            <div class="row">
+                                                <div class="col-xl-12">
+                                                    <input type="text" id="user_id" name="user_id" class="default" placeholder="아이디를 입력하세요" style = "width : 59%">
+													<input type="button" class = "button" id="idcheckBtn" value="중복확인버튼" style = "width : 40%">
+                                                </div>
+                                                <div id="target1" class = "col-xl-12" style = "display: none"></div>
+                                                <div class="col-xl-12">
+                                                    <input type="password" id="user_pwd" name="user_pwd" placeholder="비밀번호를 입력하세요 (6글자 이상, 16글자 이하 !,@,#,$,%의 특수문자를 하나이상 사용)">
+                                                </div>
+                                                <div class = "col-xl-12">
+                                                	<input type="password" id="pwdcheck" name="pwdcheck" placeholder="비밀번호 확인">
+                                                	<div id="target3"></div>
+                                                </div>
+                                                <div class = "col-xl-12">
+                                                	<input type="text" id="user_name" name="user_name" placeholder="이름">
+                                                </div>
+                                                <div class = "col-xl-12">
+                                                	<input type="text" name="user_birth" id="user_birth" onfocus="OnChecknumber(this)" onKeyup="OnChecknumber(this)" placeholder="주민등록번호('-'없이 작성해주세요)">
+                                                </div>
+                                                <div class = "col-xl-12">
+													<input type="text" id="user_nickname" name="user_nickname" placeholder="상대방 닉네임">
+                                                </div>
+                                                <div class = "col-xl-12">
+													<input type="date" id="user_dday" name="user_dday" placeholder="연인이 된 날짜">
+                                                </div>
+                                                <div class="col-xl-12">
+													<input type="submit" id="signupbtn" name="signupbtn" value="회원가입버튼">
+													<input type="button" value="로그인버튼">
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+<!-- <div> -->
+<!-- 	<form action="signupAction.do" method="post" onsubmit="return signup()"> -->
+<!-- 		<div> -->
+<!-- 			<label for="user_id">아이디</label> -->
+<!-- 			<input type="text" id="user_id" name="user_id" class="default" value=""> -->
+<!-- 			<input type="button" id="idcheckBtn" value="중복확인버튼"> -->
+<!-- 			<div id="target1"></div> -->
+<!-- 		</div> -->
+<!-- 		<div> -->
+<!-- 			<label for="user_pwd">비밀번호</label> -->
+<!-- 			<input type="password" id="user_pwd" name="user_pwd" value="" placeholder=""> -->
+<!-- 			<div id="target2" style="color:red;">비밀번호는 6글자 이상, 16글자 이하 !,@,#,$,% 의 특수문자를 하나이상 사용해주시기 바랍니다"</div> -->
+<!-- 		</div> -->
+<!-- 		<div> -->
+<!-- 			<label for="pwdcheck">비밀번호확인</label> -->
+<!-- 			<input type="password" id="pwdcheck" name="pwdcheck" value=""> -->
+<!-- 			<div id="target3"></div> -->
+<!-- 		</div> -->
+<!-- 		<div> -->
+<!-- 			<label for="user_nickname">상대방 닉네임</label> -->
+<!-- 			<input type="text" id="user_nickname" name="user_nickname" value=""> -->
+<!-- 		</div> -->
+<!-- 		<div> -->
+<!-- 			<label for="user_name">이름</label> -->
+<!-- 			<input type="text" id="user_name" name="user_name" value=""> -->
+<!-- 		</div> -->
+<!-- 		<div> -->
+<!-- 			<label for="user_birth">주민등록번호("-"없이 작성해주세요)</label> -->
+<!-- 			<input type="text" name="user_birth" id="user_birth" onfocus="OnChecknumber(this)"  -->
+<!--      		onKeyup="OnChecknumber(this)"> -->
+<!-- 		</div> -->
+<!-- 		<div> -->
+<!-- 			<label for="user_phone" style="text-align: left;"><b>연락처("-"없이 작성해주세요)</b><br> -->
+<!--      		<input type="tel"  name="user_phone" id="user_phone" onfocus="OnCheckPhone(this)"  -->
+<!--      		onKeyup="OnCheckPhone(this)" size="14" maxlength="14" style="width: 500px;"></label> -->
+<!-- 		</div> -->
+<!-- 		<div> -->
+<!-- 			<label for="user_dday">연인이 된 날짜</label> -->
+<!-- 			<input type="date" id="user_dday" name="user_dday" value=""> -->
+<!-- 		</div> -->
+<!-- 		<div> -->
+<!-- 			<input type="submit" id="signupbtn" name="signupbtn" value="회원가입버튼"> -->
+<!-- 			<input type="button" value="로그인버튼"> -->
+<!-- 		</div> -->
+<!-- 	</form> -->
+<!-- </div> -->
 <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
 <script>
 	function signup(){
@@ -127,10 +193,9 @@
 					type:"GET",
 					success:function(data){
 	               		if(data ==1){
-	                		$('#target1').css('color','blue');
-	                		$('#target1').html('사용가능한 아이디');
+	                		$('#target1').css({'color' : 'blue', "display" : ""}).html("사용가능한 아이디입니다.");
+// 	                		$('#target1').html('사용가능한 아이디');
 	                		if(confirm('이 아이디로 사용하시겠습니까?')){
-	                			$('#target1').html('중복체크완료');
 	                			$('#user_id').removeClass();
 	                			$("#user_id").attr("readonly",true);
 	                			$('#idcheckBtn').attr('value','아이디 수정');

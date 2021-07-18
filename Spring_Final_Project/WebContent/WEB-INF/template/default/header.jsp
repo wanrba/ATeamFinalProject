@@ -30,7 +30,10 @@
                                                 <li><a href="single-blog.html">single-blog</a></li>
                                             </ul>
                                         </li>
-                                        <li><a href="#">pages <i class="ti-angle-down"></i></a>
+                                        <li>
+                                        	<a href="#">pages 
+                                        		<i class="ti-angle-down"></i>
+                                        	</a>
                                             <ul class="submenu">
                                                 <li><a href="Accommodation.html">Accommodation</a></li>
                                                 <li><a href="elements.html">elements</a></li>
@@ -38,15 +41,29 @@
                                         </li>
                                         <li><a href="contact.html">Contact</a></li>
                                         <li>
-                                        	<c:choose>
-                                        		<c:when test="${sessionScope.sessionID eq null }">
-                                        			<a href = "loginForm.do">Login</a>
-                                        		</c:when>
-                                        		<c:otherwise>
-                                        			<a href = "myPage.do">MyPage</a>
-                                        		</c:otherwise>
-                                        	</c:choose>
-                                        
+                                        	<a href="#">=  
+                                        		<i class="ti-angle-down"></i>
+                                        	</a>
+                                            <ul class="submenu">
+                                                <c:choose>
+	                                        		<c:when test="${sessionScope.sessionID eq null }">
+	                                        			<li>
+	                                        				<a href = "loginForm.do">Login</a>
+	                                        			</li>
+                                                		<li>
+                                                			<a href="signup.do">Join</a>
+                                                		</li>
+	                                        		</c:when>
+	                                        		<c:otherwise>
+	                                        			<li>
+	                                        				<a href = "myPage.do">MyPage</a>
+	                                        			</li>
+                                                		<li>
+                                                			<a href = "logout.do">Logout</a>
+                                                		</li>
+	                                        		</c:otherwise>
+	                                        	</c:choose>
+                                            </ul>                                        
                                         </li>
                                     </ul>
                                 </nav>
