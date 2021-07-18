@@ -45,10 +45,9 @@ CEDTIME 종료시간
 	 	<p><label for="cContent">내용 <br></label>
 		<textarea id="cContent" name="cContent"rows="5" cols="33" placeholder="내용을 입력"></textarea></p>
 	
-		<p><label for="cColor"><strong>중요도</strong></label> 
-		<input type="radio" name="cColor" value="high">높음
-		<input type="radio" name="cColor" value="middle">보통
-		<input type="radio" name="cColor" value="low">낮음</p>
+		<p><label for="cColor"><strong>중요도</strong></label>
+		>
+		<input type="color" name="cColor" id="cColor">
 	
 	<!-- 	<h4>일정 color! 혹시 몰라서 넣어봄</h4>
 		<input type="color" name="favcolor" value="#CC6600"> -->

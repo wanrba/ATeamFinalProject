@@ -33,7 +33,17 @@ public class LoginDao implements LoginDaoInter{
 		
 		ss.update("member.requestMatch", dto);
 	}
-
+	/**
+	 * id pwd รฃดย dao
+	 */
+	@Override
+	public MemberDTO memberIdFind(MemberDTO dto) {
+		return ss.selectOne("member.memberIdFind",dto);
+	}
+	@Override
+	public MemberDTO memberPwdFind(MemberDTO dto) {
+		return ss.selectOne("member.memberPwdFind",dto);
+	}
 	
 
 	

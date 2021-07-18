@@ -2,6 +2,7 @@ package fnp.kr.co.kosmo.mvc.controller.calendar;
 
 import java.sql.SQLException;
 
+import javax.servlet.ServletRequest;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 
@@ -72,5 +73,34 @@ public class CalendarController {
 
 		return "redirect:/index.do";
 	}
+	
+	/**
+	 * 
+	 * @param cdto
+	 * @return 
+	 * @throws SQLException
+	 * 
+	 */
+		@PostMapping(value = { "/updateCalendar.do" })
+		public String updateCalendar(CalendarDTO cdto) throws SQLException {
+			
+			System.out.println(cdto.getcTitle());
+			System.out.println(cdto.getCidx());
+			calendarServiceInter.updateScheduleInfo(cdto);
+			return "redirect:/index.do";
+		}
+		/**
+		 * 
+		 * @param cdto
+		 * @return 
+		 * @throws SQLException
+		 * 
+		 */
+		@GetMapping(value = { "/deleteCalendar.do" })
+		public String deleteCalendar(ServletRequest request) throws SQLException {
+			int idx=Integer.parseInt(request.getParameter("cidx"));
+			calendarServiceInter.deleteScheduleInfo(idx);
+			return "redirect:/index.do";
+		}
 
 }

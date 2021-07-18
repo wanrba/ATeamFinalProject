@@ -67,7 +67,7 @@
                                                 </div>
                                                 <div class="col-xl-12">
                                                     <input type = "submit" value="로그인">
-                                                    <input type = "button" value="아이디/비밀번호 찾기">
+                                                    <input type = "button" value="아이디/비밀번호 찾기" id="findIdBtn">
                                                     <input type = "button" value = "회원가입" />
                                                 </div>
                                             </div>
@@ -81,3 +81,27 @@
             </div>
         </div>
     </div>
+    
+    <script type="text/javascript">
+	
+		$(document).ready(function() {
+			
+			var openWin;
+			
+			$("#findIdBtn").on("click", function() {
+				openChild();
+			});
+
+			function openChild() {
+				// window.name = "부모창 이름";
+				window.name = "parentForm";
+
+				// window.open("open할 window", "자식창 이름", "팝업창 옵션");
+				openWin = window.open('idpwdFind.do', 'window_name', 'width=1000,height=500,location=yes,status=no,scrollbars=yes');
+				
+			}
+			
+		})
+		
+		
+	</script>

@@ -17,7 +17,19 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 		WHERE CIDX = #{cidx}
 	</select>
 
+	<!-- cColor #{cColor로 변경함} 0716 김성경 -->
 	<insert id="insertCalendar" parameterType="cldDto">
-		INSERT INTO CALENDAR VALUES(CALENDAR_CIDX_SEQ.NEXTVAL, #{user_cuplenum}, #{cTitle}, to_date(#{cStartDay}, 'YYYY-MM-DD'), to_date(#{cEndDay}, 'YYYY-MM-DD'), #{cLocal}, #{cContent}, 'red')
+		INSERT INTO CALENDAR VALUES(CALENDAR_CIDX_SEQ.NEXTVAL, #{user_cuplenum}, #{cTitle}, to_date(#{cStartDay}, 'YYYY-MM-DD'), to_date(#{cEndDay}, 'YYYY-MM-DD'), #{cLocal}, #{cContent},#{cColor})
 	</insert>	
+	
+	<!-- update 0717 form 에서 받은 정보들로 update -->
+	<update id="updateCalendar" parameterType="cldDto">
+	update calendar set ctitle=#{cTitle},clocal=#{cLocal},cstartday=#{cStartDay}, 
+	cendday=#{cEndDay},ccontent=#{cContent},ccolor=#{cColor} where cidx=#{cidx}
+	</update>
+	
+	<!-- delete 0717 form 에서 받은 정보들로 cidx 값 받아서 delete -->
+	<delete id="deleteCalendar" parameterType="int">
+	delete from calendar where cidx=#{cidx}
+	</delete>
 </mapper>

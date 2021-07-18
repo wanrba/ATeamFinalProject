@@ -47,6 +47,19 @@
 	user_phone=#{user_phone}, user_dday=#{user_dday}
 	where user_id = #{user_id}
 </update>
- 	
+
+<!-- 회원 아이디 찾기 -->
+ <select id="memberIdFind" parameterType="memberDto"
+		resultType="memberDto">
+		select user_id from member
+		where user_name=#{user_name} and user_phone=#{user_phone}
+	</select>
+<!-- 회원 비밀번호 찾기 -->
+	<select id="memberPwdFind" parameterType="memberDto"
+		resultType="memberDto">
+		select user_pwd from member
+		where user_id=#{user_id} and user_name=#{user_name} and
+		user_phone=#{user_phone}
+	</select>
  	
  </mapper>
