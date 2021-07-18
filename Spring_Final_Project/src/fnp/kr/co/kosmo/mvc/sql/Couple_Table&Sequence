@@ -1,0 +1,10 @@
+--Couple Table
+CREATE TABLE COUPLE(
+    COUPLE_NUM NUMBER CONSTRAINT C_COUPLE_PK PRIMARY KEY,                                         -- 커플 고유번호
+    FIRSTID VARCHAR2(70) CONSTRAINT COUPLE_M_ID_NN NOT NULL,                                         --등록자아이디
+    SECONDID VARCHAR2(70) CONSTRAINT COUPLE_F_ID_NN NOT NULL                                       --피등록자아이디
+);
+
+CREATE SEQUENCE COUPLE_SEQ
+START WITH 1
+INCREMENT BY 1;

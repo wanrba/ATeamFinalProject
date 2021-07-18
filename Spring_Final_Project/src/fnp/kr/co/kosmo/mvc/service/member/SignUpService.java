@@ -16,17 +16,19 @@ public class SignUpService implements SignupServiceInter {
 	private SignupDaoInter signupDaoInter;
 
 	// 회원가입
+	/**
+	 * 0718 유민기 - 난수 생성 죽임
+	 * @param dto
+	 * @return
+	 */
 	@Override
-	public String signup(MemberDTO dto) {
-		while (true) {
-			String randomnum = randomPassword();
-			int pk = signupDaoInter.random(randomnum);
-			if (pk == 0) {
-				dto.setUser_primarykey(randomnum);
-				signupDaoInter.signup(dto);
-				return randomnum;
-			}
-		}
+	public void signup(MemberDTO dto) {
+		signupDaoInter.signup(dto);
+		
+			//int pk = signupDaoInter.random(randomnum);
+			//if (pk == 0) {
+				//dto.setUser_primarykey(randomnum);
+				//return randomnum;
 	}
 
 	// id체크
@@ -35,24 +37,6 @@ public class SignUpService implements SignupServiceInter {
 
 		int num = signupDaoInter.idcheck(user_id);
 		return num;
-	}
-
-	// 본인 할당번호 (문자+숫자) 난수 생성
-	public String randomPassword() {
-		String pwd = "";
-		StringBuffer sb = new StringBuffer();
-		Random rnd = new Random();
-		for (int i = 0; i < 8; i++) {
-			rnd.nextBoolean();
-			if (rnd.nextBoolean()) {
-				sb.append((char) ((int) (rnd.nextInt(26)) + 97));
-			} else {
-				sb.append(rnd.nextInt(10));
-			}
-		}
-		pwd = sb.toString();
-
-		return pwd;
 	}
 
 }

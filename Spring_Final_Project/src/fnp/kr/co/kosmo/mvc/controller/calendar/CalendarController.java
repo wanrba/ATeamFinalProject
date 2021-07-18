@@ -66,8 +66,8 @@ public class CalendarController {
 	 */
 	@PostMapping(value = { "/insertCalendar.do" })
 	public String insertCalendar(CalendarDTO cdto, HttpSession session) throws SQLException {
-
-		cdto.setUser_cuplenum(Integer.parseInt((String) session.getAttribute("USER_CUPLENUM")));
+		//Integer.parseInt((String) session.getAttribute("USER_CUPLENUM))"
+		cdto.setUser_cuplenum(3);
 
 		calendarServiceInter.insertScheduleInfo(cdto);
 

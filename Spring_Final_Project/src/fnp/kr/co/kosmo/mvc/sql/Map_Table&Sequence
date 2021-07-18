@@ -1,6 +1,6 @@
 create table map(
-	map_num number constraint map_num_pk primary key,
-	map_cnum number constraint map_cnum_pk unique
+	map_num number constraint map_num_pk primary key, -- 지도 번호 0718 은 1이어야
+	map_cnum number constraint map_cnum_pk unique -- 커플 번호
 );
 
 

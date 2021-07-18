@@ -40,14 +40,7 @@
 			<label for="user_name">이름</label>
 			<input type="text" id="user_name" name="user_name" 
 			readonly="readonly" value="${info.user_name}">
-		</div>
-		
-		<div>
-			<label for="user_couplename">연인 이름</label>
-			<input type="text" id="user_couplename" name="user_couplename" 
-			readonly="readonly" value="♡최아린♡">
-		</div>
-		
+		</div>		
 		<div>
 			<label for="user_birth">주민등록번호("-"없이 작성해주세요)</label>
 			<input type="text" name="user_birth" id="user_birth" 

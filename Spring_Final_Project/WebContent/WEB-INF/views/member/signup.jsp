@@ -7,7 +7,6 @@
     		alert("회원가입에 실패 하셨습니다");
     	}else if(txt=="1"){
         	alert("회원가입이 완료되셨습니다");
-        	alert("본인의 고유번호는 :${pk}입니다.");
         	if(confirm('회원가입을 완료했습니다 로그인하시겠습니까?')){
         		location="login.do";
     		}else{
@@ -61,9 +60,6 @@
                                                 </div>
                                                 <div class = "col-xl-12">
                                                 	<input type="text" name="user_birth" id="user_birth" onfocus="OnChecknumber(this)" onKeyup="OnChecknumber(this)" placeholder="주민등록번호('-'없이 작성해주세요)">
-                                                </div>
-                                                <div class = "col-xl-12">
-													<input type="text" id="user_nickname" name="user_nickname" placeholder="상대방 닉네임">
                                                 </div>
                                                 <div class = "col-xl-12">
 													<input type="date" id="user_dday" name="user_dday" placeholder="연인이 된 날짜">
@@ -137,7 +133,6 @@
 		var idv = $("#user_id").val();
 		var pwdv = $("#user_pwd").val();
 		var pwdcheckv = $("#pwdcheck").val();
-		var nicknamev = $("#user_nickname").val();
 		var namev = $("#user_name").val();
 		var birthv = $("#user_birth").val();
 		var phonnumv = $("#user_phone").val();
@@ -164,10 +159,6 @@
 				alert('비밀번호를 다시 확인해주세요')
 				return false;
 			}	
-		}
-		if(!nicknamev){
-			alert("상대방닉네임이 없습니다");
-			return false;
 		}
 		if(!namev){
 			alert("이름이 없습니다");
