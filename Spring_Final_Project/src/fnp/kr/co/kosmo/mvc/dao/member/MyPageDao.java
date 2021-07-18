@@ -12,21 +12,35 @@ public class MyPageDao implements MyPageDaoInter{
 	@Autowired
 	private SqlSessionTemplate ss;
 
+	/**
+	 * 07-17 HN
+	 * 마이페이지 정보 출력
+	 * @param user_id
+	 * @return
+	 */
 	@Override
 	public MemberDTO myInfo(String user_id) {
-		System.out.println("myInfo 실행!!!!");
 		return ss.selectOne("member.myInfo", user_id);
 	}
 
+	/**
+	 * 07-17 HN
+	 * 마이페이지 회원정보 인증
+	 * @param vo
+	 * @return
+	 */
 	@Override
 	public MemberDTO memchk(MemberDTO vo) {
-		System.out.println("memchk Dao 실행!!");
 		return ss.selectOne("member.memchk",vo);
 	}
 
+	/**
+	 * 07-17 HN
+	 * 마이페이지 내 정보 업데이트
+	 * @param vo
+	 */
 	@Override
 	public void memUpdate(MemberDTO vo) {
-		System.out.println("memUpdate 실행!!");
 		ss.update("member.mUpdate",vo);
 	}
 }

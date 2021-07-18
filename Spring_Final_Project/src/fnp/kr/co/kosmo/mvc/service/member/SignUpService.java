@@ -3,59 +3,56 @@ package fnp.kr.co.kosmo.mvc.service.member;
 import java.util.Random;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Qualifier;
-import org.springframework.context.annotation.Primary;
 import org.springframework.stereotype.Service;
 
 import fnp.kr.co.kosmo.mvc.dao.member.inter.SignupDaoInter;
 import fnp.kr.co.kosmo.mvc.dto.MemberDTO;
 import fnp.kr.co.kosmo.mvc.service.member.inter.SignupServiceInter;
+
 @Service
-public class SignUpService implements SignupServiceInter{
-	
+public class SignUpService implements SignupServiceInter {
+
 	@Autowired
 	private SignupDaoInter signupDaoInter;
-	
-	//È¸ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+
+	// È¸¿ø°¡ÀÔ
 	@Override
 	public String signup(MemberDTO dto) {
-		System.out.println("SignUpServiceï¿½ï¿½ï¿½ï¿½");
-		while(true){
+		while (true) {
 			String randomnum = randomPassword();
 			int pk = signupDaoInter.random(randomnum);
-			if(pk == 0) {
-				System.out.println("ï¿½ï¿½ï¿½ï¿½ : "+randomnum);
+			if (pk == 0) {
 				dto.setUser_primarykey(randomnum);
 				signupDaoInter.signup(dto);
 				return randomnum;
 			}
 		}
 	}
-	
+
 	// idÃ¼Å©
 	@Override
 	public int idcheck(String user_id) {
-		
+
 		int num = signupDaoInter.idcheck(user_id);
 		return num;
 	}
-	
-	//ï¿½ï¿½ï¿½ï¿½ ï¿½Ò´ï¿½ï¿½È£ (ï¿½ï¿½ï¿½ï¿½+ï¿½ï¿½ï¿½ï¿½) ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
+
+	// º»ÀÎ ÇÒ´ç¹øÈ£ (¹®ÀÚ+¼ýÀÚ) ³­¼ö »ý¼º
 	public String randomPassword() {
-		String pwd ="";
+		String pwd = "";
 		StringBuffer sb = new StringBuffer();
 		Random rnd = new Random();
-		for(int i=0; i<8; i++) {
+		for (int i = 0; i < 8; i++) {
 			rnd.nextBoolean();
-			if(rnd.nextBoolean()) {
-				sb.append((char)((int)(rnd.nextInt(26))+97));
-			}else {
+			if (rnd.nextBoolean()) {
+				sb.append((char) ((int) (rnd.nextInt(26)) + 97));
+			} else {
 				sb.append(rnd.nextInt(10));
 			}
 		}
-		pwd=sb.toString();
-		
-		return pwd; 
+		pwd = sb.toString();
+
+		return pwd;
 	}
-	
+
 }

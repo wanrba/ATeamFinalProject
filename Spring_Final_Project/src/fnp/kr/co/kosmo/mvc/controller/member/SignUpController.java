@@ -1,7 +1,5 @@
 package fnp.kr.co.kosmo.mvc.controller.member;
 
-
-
 import java.io.IOException;
 import java.util.Calendar;
 
@@ -9,6 +7,7 @@ import javax.servlet.http.HttpServletResponse;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
@@ -16,18 +15,35 @@ import org.springframework.web.servlet.ModelAndView;
 
 import fnp.kr.co.kosmo.mvc.dto.MemberDTO;
 import fnp.kr.co.kosmo.mvc.service.member.inter.SignupServiceInter;
+
 @Controller
-public class SignUpAction {
-	
+public class SignUpController {
+
 	@Autowired
 	private SignupServiceInter signupServiceInter;
-	
-	
+
+	/**
+	 * LeeGun
+	 * @return
+	 */
+	@GetMapping(value = { "/signup.do" })
+	public String signupForm() {
+		return "member/signup";
+	}
+
+	/**
+	 * 07-12 LeeGun
+	 * È¸¿ø°¡ÀÔ ½Ã ÀÔ·ÂÇÑ Á¤º¸¸¦ ¹Þ¾Æ DB¿¡ ÀÔ·Â
+	 * @param dto
+	 * @return
+	 */
 	@PostMapping("/signupAction.do")
 	public ModelAndView signUp(MemberDTO dto) {
-		System.out.println("");
+
+		//==========ÇöÀç ³¯Â¥ ±¸ÇØ¼­ ¹ÎÁõ¹øÈ£·Î »ý³â¿ùÀÏ Ãâ·Â
 		Calendar cal = Calendar.getInstance();
 		String year = String.valueOf(cal.get(Calendar.YEAR));
+		
 		String[] years = year.split("");
 		int yearone = Integer.parseInt(years[0]+years[1]);
 		int yeartwo = Integer.parseInt(years[2]+years[3]);
@@ -44,42 +60,24 @@ public class SignUpAction {
 			dto.setUser_age(yeartwo-useryear+1);
 		}
 		sb.append(birth[0]+birth[1]).append("-").append(birth[2]+birth[3]).append("-").append(birth[4]+birth[5]);
-		//System.out.println(sb.toString());
 		dto.setUser_birth(sb.toString());
 		//================ end =================
 		
+		//===============¹ÎÁõ µÚ¿¡ ÇÑÀÚ¸®·Î ¼ºº° Ãâ·Â===========
 		int gen = Integer.parseInt(usersplit[1]);
 		if(gen%2 ==0) {
-			dto.setUser_gender("ë‚¨ìž");
-		}else 
-			dto.setUser_gender("ì—¬ìž");
-		
+			dto.setUser_gender("¿©ÀÚ");
+		}else {
+			dto.setUser_gender("³²ÀÚ");
+		}
+		//============== end ========================= 
 		String pk=signupServiceInter.signup(dto);
 		ModelAndView mav = new ModelAndView();
 		mav.addObject("num", 1);
 		mav.addObject("pk", pk);
 		mav.setViewName("member/signup");
 		return mav;
+
 	}
-	
-	// ï¿½ï¿½ï¿½Ìµï¿½ Ã¼Å©
-	@RequestMapping(value = "/loginAction.do")
-	@ResponseBody
-	public void login(String user_id, HttpServletResponse response) {
-		//System.out.println(user_id);
-		int num = signupServiceInter.idcheck(user_id);
-		int checknum;
-		try {
-			response.setContentType("text/html; charset=EUC-KR");
-			if (num == 0) {
-				checknum = 1;
-				response.getWriter().print(checknum);
-			} else if (num > 0) {
-				checknum = 2;
-				response.getWriter().print(checknum);
-			}
-		} catch (IOException e) {
-			e.printStackTrace();
-		}
-	}
+
 }

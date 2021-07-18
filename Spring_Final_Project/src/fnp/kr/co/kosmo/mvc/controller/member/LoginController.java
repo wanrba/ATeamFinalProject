@@ -15,13 +15,20 @@ import org.springframework.web.servlet.ModelAndView;
 import fnp.kr.co.kosmo.mvc.dto.MemberDTO;
 import fnp.kr.co.kosmo.mvc.service.member.inter.LoginServiceInter;
 @Controller
-public class LoginAction {
+public class LoginController {
 	
 	@Autowired
 	public LoginServiceInter loginServiceInter;
+	
+	//ï¿½Î±ï¿½ï¿½ï¿½
+	@GetMapping(value= {"/loginForm.do"})
+	public String LoginsignupForm() {
+		return "member/login";
+	}
+	
 	/**
-	 * 0712 í˜•ìš° & í•˜ëŠ˜ 
-	 * ë¡œê·¸ì¸ ê¸°ëŠ¥ + íšŒì›ì •ë³´ í‹€ë ¸ì„ ê²½ìš° ë©”ì‹œì§€ ë‚ ë ¤ì£¼ê¸°
+	 * 0712 ???? & ???? 
+	 * ë¡?ê·¸ì?? ê¸°ë?? + ??????ë³? ???¸ì?? ê²½ì?? ë©???ì§? ???¤ì£¼ê¸?
 	 * @param session, dto
 	 * @return mav
 	 */
@@ -31,25 +38,25 @@ public class LoginAction {
 		ModelAndView mav = new ModelAndView();
 		if (map==null) {
 			mav.setViewName("member/login");
-			mav.addObject("emsg", "ì˜¬ë°”ë¥¸ íšŒì›ì •ë³´ê°€ ì•„ë‹™ë‹ˆë‹¤!");
+			mav.addObject("emsg", "?¬ë?ë¥? ??????ë³´ê? ????????!");
 		}else {
 			switch(map.getUser_match()) {
 				case 0:
-					System.out.println("í…ŒìŠ¤íŠ¸ ì¼€ì´ìŠ¤0");
+					System.out.println("???¤í?? ì¼??´ì??0");
 					session.setAttribute("sessionNum", map.getUser_num());
 					session.setAttribute("sessionpk", map.getUser_primarykey());
 					session.setAttribute("sessionID", map.getUser_id());
 					session.setAttribute("sessionName", map.getUser_name());
-					mav.addObject("chk", "ìŠ¹ì¸ì´ì „");
+					mav.addObject("chk", "?¹ì?¸ì?´ì??");
 					mav.setViewName("index/index");
 					break;
 				case 1:
-					System.out.println("í…ŒìŠ¤íŠ¸ ì¼€ì´ìŠ¤1");
-					mav.addObject("chk", "ìŠ¹ì¸ì¤‘");
+					System.out.println("???¤í?? ì¼??´ì??1");
+					mav.addObject("chk", "?¹ì?¸ì?");
 					mav.setViewName("index/index");
 					break;
 				case 2:
-					System.out.println("í…ŒìŠ¤íŠ¸ ì¼€ì´ìŠ¤2");
+					System.out.println("???¤í?? ì¼??´ì??2");
 					session.setAttribute("sessionNum", map.getUser_num());
 					session.setAttribute("sessionID", map.getUser_id());
 					session.setAttribute("sessionName", map.getUser_name());

@@ -20,7 +20,6 @@ public class LoginService implements LoginServiceInter{
 		return map;
 	}
 
-	//��Ī ��û
 	@Override
 	public int requestMatch(MemberDTO dto) {
 		int usernum = loginDaoInter.random(dto.getUser_primarykey());

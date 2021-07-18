@@ -16,18 +16,16 @@ public class CalendarService implements CalendarServiceInter {
 	@Autowired
 	private CalendarDaoInter calendarDaoInter;
 
-//	public List<CalendarDTO> insertCalendar(CalendarDTO cdto) {
-//		
-//		return calendarDao.insertCalendar(cdto);
-//	}
 	/**
-	 * ï¿½ï¿½ï¿½ï¿½Ú°ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ DBï¿½ï¿½ ï¿½Ô·ï¿½ ï¿½ï¿½ï¿½ï¿½Ú°ï¿½ ï¿½Ô·ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ Ã³ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ Ã³ï¿½ï¿½
+	 * 07-15 YoungJin
+	 * ÀÌº¥Æ®(½ºÄÉÁÙ) ½Å±Ô µî·Ï
+	 * @param cdto
+	 * @throws SQLException
 	 */
 	@Override
 	public void insertScheduleInfo(CalendarDTO cdto) throws SQLException {
 		// TODO Auto-generated method stub
 
-		// ï¿½ß¿äµµï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½Ã³ï¿½ï¿½
 		switch (cdto.getcColor()) {
 		case "high":
 			cdto.setcColor("red");
@@ -41,9 +39,14 @@ public class CalendarService implements CalendarServiceInter {
 		}
 
 		calendarDaoInter.insertCalendar(cdto);
-//		return calendarDaoInter.insertCalendar(cdto) > 0 ? true : false;
 	}
 
+	/**
+	 * 07-15 YoungJin
+	 * È¸¿øº° ÀÌº¥Æ®(½ºÄÉÁÙ) ¸ñ·Ï Á¶È¸
+	 * @param user_cupleNum
+	 * @return
+	 */
 	@Override
 	public List<CalendarDTO> getScheduleList(int user_cupleNum) {
 		// TODO Auto-generated method stub
@@ -51,15 +54,14 @@ public class CalendarService implements CalendarServiceInter {
 	}
 
 	/**
-	 * calendarï¿½ï¿½ ï¿½ï¿½Ïµï¿½ ï¿½ï¿½ï¿½ï¿½ Å¬ï¿½ï¿½ ï¿½ï¿½ ï¿½ó¼¼ºï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ìµï¿½ï¿½Ø¼ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
-	 * 
+	 * 07-15 YoungJin
+	 * ÀÌº¥Æ®(½ºÄÉÁÙ) ¼öÁ¤ ½Ã ¼öÁ¤ÇÒ ÀÌº¥Æ®ÀÇ Á¤º¸ Á¶È¸
 	 * @param cidx
 	 * @return
 	 */
 	@Override
 	public CalendarDTO getDetailScheduleInfo(int cidx) {
 		// TODO Auto-generated method stub
-		System.out.println("service's cidx ::: " + cidx);
 		return calendarDaoInter.getDetailScheduleInfo(cidx);
 	}
 

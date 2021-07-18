@@ -15,19 +15,16 @@ public class MyPageService implements MyPageServiceInter{
 
 	@Override
 	public MemberDTO myInfo(String user_id) {
-		System.out.println("MyPageService = > myInfo!!");
 		return myPageDaoInter.myInfo(user_id);
 	}
 
 	@Override
 	public MemberDTO memchk(MemberDTO vo) {
-		System.out.println("memchk 실행!!");
 		return myPageDaoInter.memchk(vo);
 	}
 
 	@Override
 	public void memUpdate(MemberDTO vo) {
-		System.out.println("memUpdate 실행!!");
 		myPageDaoInter.memUpdate(vo);
 		
 	}

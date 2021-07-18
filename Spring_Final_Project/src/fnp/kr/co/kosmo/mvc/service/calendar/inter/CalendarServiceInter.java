@@ -8,27 +8,24 @@ import fnp.kr.co.kosmo.mvc.dto.CalendarDTO;
 public interface CalendarServiceInter {
 
 	/**
-	 * ï¿½ï¿½ï¿½ï¿½Ú°ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ DBï¿½ï¿½ ï¿½Ô·ï¿½
-	 * 
+	 * 07-15 YoungJin
+	 * ÀÌº¥Æ®(½ºÄÉÁÙ) ½Å±Ô µî·Ï
 	 * @param cdto
-	 * @return
 	 * @throws SQLException
 	 */
 	public void insertScheduleInfo(CalendarDTO cdto) throws SQLException;
 
 	/**
-	 * 2021-07-15 YoungJin
-	 * calendarï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½Ú°ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
-	 * 
-	 * @param session
-	 * @return List<CalendarDTO>
+	 * 07-15 YoungJin
+	 * È¸¿øº° ÀÌº¥Æ®(½ºÄÉÁÙ) ¸ñ·Ï Á¶È¸
+	 * @param user_cupleNum
+	 * @return
 	 */
 	public List<CalendarDTO> getScheduleList(int user_cupleNum);
 
 	/**
-	 * 2021-07-15 YoungJin
-	 * calendarï¿½ï¿½ ï¿½ï¿½Ïµï¿½ ï¿½ï¿½ï¿½ï¿½ Å¬ï¿½ï¿½ ï¿½ï¿½ ï¿½ó¼¼ºï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ìµï¿½ï¿½Ø¼ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
-	 * 
+	 * 07-15 YoungJin
+	 * ÀÌº¥Æ®(½ºÄÉÁÙ) ¼öÁ¤ ½Ã ¼öÁ¤ÇÒ ÀÌº¥Æ®ÀÇ Á¤º¸ Á¶È¸
 	 * @param cidx
 	 * @return
 	 */

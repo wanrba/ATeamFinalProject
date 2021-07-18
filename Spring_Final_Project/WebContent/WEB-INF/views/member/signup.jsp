@@ -57,6 +57,9 @@
                                                 	<input type="text" id="user_name" name="user_name" placeholder="이름">
                                                 </div>
                                                 <div class = "col-xl-12">
+                                                	<input type="tel"  name="user_phone" id="user_phone" placeholder="연락처('-'없이 작성해주세요)" onfocus="OnCheckPhone(this)" onKeyup="OnCheckPhone(this)" size="14" maxlength="14" style="width: 500px;">
+                                                </div>
+                                                <div class = "col-xl-12">
                                                 	<input type="text" name="user_birth" id="user_birth" onfocus="OnChecknumber(this)" onKeyup="OnChecknumber(this)" placeholder="주민등록번호('-'없이 작성해주세요)">
                                                 </div>
                                                 <div class = "col-xl-12">
@@ -194,7 +197,6 @@
 					success:function(data){
 	               		if(data ==1){
 	                		$('#target1').css({'color' : 'blue', "display" : ""}).html("사용가능한 아이디입니다.");
-// 	                		$('#target1').html('사용가능한 아이디');
 	                		if(confirm('이 아이디로 사용하시겠습니까?')){
 	                			$('#user_id').removeClass();
 	                			$("#user_id").attr("readonly",true);
