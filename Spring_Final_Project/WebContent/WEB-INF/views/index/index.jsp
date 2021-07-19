@@ -95,7 +95,8 @@
                 <div class="col-xl-4 col-md-6 col-lg-4">
                     <div class="single_lover_story text-center">
                         <div class="story_thumb">
-                            <img src="resources/views/index/image/face/1.png" alt="">
+                        <!-- 07/19 하늘 홈화면 프로필 사진 변경 -->
+                            <img src="resources/views/index/image/face/eric04.jpg" alt="">
                         </div>
                         <span>Groom</span>
                         <h3>Jack Wonner</h3>
@@ -138,7 +139,8 @@
                 <div class="col-xl-4 col-lg-4">
                     <div class="single_lover_story text-center">
                         <div class="story_thumb">
-                            <img src="resources/views/index/image/face/2.png" alt="">
+                        <!-- 07/19 하늘 홈화면 프로필 사진 변경 -->
+                            <img src="resources/views/index/image/face/jym03.JPG" alt="">
                         </div>
                         <span>Bride</span>
                         <h3>Anjelina Kona</h3>
@@ -177,55 +179,56 @@
             <div class="row grid no-gutters">
                 <div class="col-xl-4 col-md-6 col-lg-6 grid-item">
                     <div class="single_gallery gallery_imag_1">
-                        <a class="popup-image" href="resources/views/index/image/gallery/1.png">
+                    <!-- 07/19 하늘 홈화면 갤러리 이미지  변경 01.JPG~10.JPG -->
+                        <a class="popup-image" href="resources/views/index/image/gallery/01.JPG">
                         </a>
                     </div>
                 </div>
                 <div class="col-xl-3 col-md-6 col-lg-6 grid-item">
                     <div class="single_gallery gallery_imag_2">
-                        <a class="popup-image" href="resources/views/index/image/gallery/2.png">
+                        <a class="popup-image" href="resources/views/index/image/gallery/02.JPG">
                         </a>
                     </div>
                 </div>
                 <div class="col-xl-5 col-md-6 col-lg-6 grid-item">
                     <div class="single_gallery gallery_imag_3">
-                        <a class="popup-image" href="resources/views/index/image/gallery/3.png">
+                        <a class="popup-image" href="resources/views/index/image/gallery/03.JPG">
                         </a>
                     </div>
                 </div>
                 <div class="col-xl-3 col-md-6 col-lg-6 grid-item">
                     <div class="single_gallery gallery_imag_4">
-                        <a class="popup-image" href="resources/views/index/image/gallery/4.png">
+                        <a class="popup-image" href="resources/views/index/image/gallery/04.JPG">
                         </a>
                     </div>
                 </div>
                 <div class="col-xl-5 col-md-6 col-lg-6 grid-item">
                     <div class="single_gallery gallery_imag_5">
-                        <a class="popup-image" href="resources/views/index/image/gallery/5.png">
+                        <a class="popup-image" href="resources/views/index/image/gallery/05.JPG">
                         </a>
                     </div>
                 </div>
                 <div class="col-xl-4 col-md-6 col-lg-6 grid-item">
                     <div class="single_gallery gallery_imag_6">
-                        <a class="popup-image" href="resources/views/index/image/gallery/6.png">
+                        <a class="popup-image" href="resources/views/index/image/gallery/06.JPG">
                         </a>
                     </div>
                 </div>
                 <div class="col-xl-4 col-md-6 col-lg-6 grid-item">
                     <div class="single_gallery gallery_imag_7">
-                        <a class="popup-image" href="resources/views/index/image/gallery/7.png">
+                        <a class="popup-image" href="resources/views/index/image/gallery/07.JPG">
                         </a>
                     </div>
                 </div>
                 <div class="col-xl-3 col-md-6 col-lg-6 grid-item">
                     <div class="single_gallery gallery_imag_8">
-                        <a class="popup-image" href="resources/views/index/image/gallery/8.png">
+                        <a class="popup-image" href="resources/views/index/image/gallery/08.JPG">
                         </a>
                     </div>
                 </div>
                 <div class="col-xl-5 col-md-6 col-lg-6 grid-item">
                     <div class="single_gallery gallery_imag_9">
-                        <a class="popup-image" href="resources/views/index/image/gallery/9.png"></a>
+                        <a class="popup-image" href="resources/views/index/image/gallery/09.JPG"></a>
                     </div>
                 </div>
             </div>

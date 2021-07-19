@@ -1023,7 +1023,7 @@ h3 {
 /* banner 사진 변경 0717 하늘 & 영진 */
 /* line 1, ../../Arafath/CL/CL september/212. Wedding/HTML/scss/_slider.scss */
 .slider_bg_1 {
-  background-image: url(../image/logo_banner/lovediscovery01.JPG);
+  background-image: url(../image/logo_banner/lovediscovery03.JPG);
 }
 
 /* line 4, ../../Arafath/CL/CL september/212. Wedding/HTML/scss/_slider.scss */
@@ -1823,48 +1823,49 @@ h3 {
 }
 
 /* line 37, ../../Arafath/CL/CL september/212. Wedding/HTML/scss/_gallery.scss */
+<!-- 07/19 하늘 홈화면 앨범 사진 변경 gallery/01.JPG ~ 10.JPG -->
 .gallery_imag_1 {
-  background-image: url(../../views/index/image/gallery/1.png);
+  background-image: url(../../views/index/image/gallery/01.JPG);
 }
 
 /* line 40, ../../Arafath/CL/CL september/212. Wedding/HTML/scss/_gallery.scss */
 .gallery_imag_2 {
-  background-image: url(../../views/index/image/gallery/2.png);
+  background-image: url(../../views/index/image/gallery/02.JPG);
 }
 
 /* line 43, ../../Arafath/CL/CL september/212. Wedding/HTML/scss/_gallery.scss */
 .gallery_imag_3 {
-  background-image: url(../../views/index/image/gallery/3.png);
+  background-image: url(../../views/index/image/gallery/03.JPG);
 }
 
 /* line 46, ../../Arafath/CL/CL september/212. Wedding/HTML/scss/_gallery.scss */
 .gallery_imag_4 {
-  background-image: url(../../views/index/image/gallery/4.png);
+  background-image: url(../../views/index/image/gallery/04.JPG);
 }
 
 /* line 49, ../../Arafath/CL/CL september/212. Wedding/HTML/scss/_gallery.scss */
 .gallery_imag_5 {
-  background-image: url(../../views/index/image/gallery/5.png);
+  background-image: url(../../views/index/image/gallery/05.JPG);
 }
 
 /* line 52, ../../Arafath/CL/CL september/212. Wedding/HTML/scss/_gallery.scss */
 .gallery_imag_6 {
-  background-image: url(../../views/index/image/gallery/6.png);
+  background-image: url(../../views/index/image/gallery/06.JPG);
 }
 
 /* line 55, ../../Arafath/CL/CL september/212. Wedding/HTML/scss/_gallery.scss */
 .gallery_imag_7 {
-  background-image: url(../../views/index/image/gallery/7.png);
+  background-image: url(../../views/index/image/gallery/07.JPG);
 }
 
 /* line 58, ../../Arafath/CL/CL september/212. Wedding/HTML/scss/_gallery.scss */
 .gallery_imag_8 {
-  background-image: url(../../views/index/image/gallery/8.png);
+  background-image: url(../../views/index/image/gallery/08.JPG);
 }
 
 /* line 61, ../../Arafath/CL/CL september/212. Wedding/HTML/scss/_gallery.scss */
 .gallery_imag_9 {
-  background-image: url(../../views/index/image/gallery/9.png);
+  background-image: url(../../views/index/image/gallery/09.JPG);
 }
 
 /* line 65, ../../Arafath/CL/CL september/212. Wedding/HTML/scss/_gallery.scss */
