@@ -21,6 +21,7 @@ local.properties
 # ignore properties file
 pom.properties
 MANIFEST.MF
+*.class
 
 # External tool builders
 .externalToolBuilders/
