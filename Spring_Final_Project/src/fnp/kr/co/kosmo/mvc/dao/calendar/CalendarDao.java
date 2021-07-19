@@ -46,5 +46,25 @@ public class CalendarDao implements CalendarDaoInter {
 		// TODO Auto-generated method stub
 		return sqlSessionTemplate.selectOne("calendar.getCalendarDetailInfo", cidx);
 	}
+	/**
+	 * 
+	 * @param cdto
+	 * calendar update cdto 를 받아서 (insert 할 때와 같은 form)
+	 * 0716 김성경
+	 */
+	@Override
+	public void updateCalendar(CalendarDTO cdto) {
+		sqlSessionTemplate.update("calendar.updateCalendar",cdto);
+	}
+	
+	/**
+	 * 
+	 * @param idx
+	 * idx 를 받아서 delete idx = index 번호
+	 */
+	@Override
+	public void deleteCalendar(int idx) {
+		sqlSessionTemplate.delete("calendar.deleteCalendar",idx);
+	}
 
 }

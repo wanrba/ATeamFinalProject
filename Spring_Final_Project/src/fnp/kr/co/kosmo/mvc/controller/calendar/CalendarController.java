@@ -2,6 +2,7 @@ package fnp.kr.co.kosmo.mvc.controller.calendar;
 
 import java.sql.SQLException;
 
+import javax.servlet.ServletRequest;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 
@@ -65,12 +66,41 @@ public class CalendarController {
 	 */
 	@PostMapping(value = { "/insertCalendar.do" })
 	public String insertCalendar(CalendarDTO cdto, HttpSession session) throws SQLException {
-
-		cdto.setUser_cuplenum(Integer.parseInt((String) session.getAttribute("USER_CUPLENUM")));
+		//Integer.parseInt((String) session.getAttribute("USER_CUPLENUM))"
+		cdto.setUser_cuplenum(3);
 
 		calendarServiceInter.insertScheduleInfo(cdto);
 
 		return "redirect:/index.do";
 	}
+	
+	/**
+	 * 
+	 * @param cdto
+	 * @return 
+	 * @throws SQLException
+	 * 
+	 */
+		@PostMapping(value = { "/updateCalendar.do" })
+		public String updateCalendar(CalendarDTO cdto) throws SQLException {
+			
+			System.out.println(cdto.getcTitle());
+			System.out.println(cdto.getCidx());
+			calendarServiceInter.updateScheduleInfo(cdto);
+			return "redirect:/index.do";
+		}
+		/**
+		 * 
+		 * @param cdto
+		 * @return 
+		 * @throws SQLException
+		 * 
+		 */
+		@GetMapping(value = { "/deleteCalendar.do" })
+		public String deleteCalendar(ServletRequest request) throws SQLException {
+			int idx=Integer.parseInt(request.getParameter("cidx"));
+			calendarServiceInter.deleteScheduleInfo(idx);
+			return "redirect:/index.do";
+		}
 
 }

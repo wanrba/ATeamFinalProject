@@ -11,16 +11,10 @@ import fnp.kr.co.kosmo.mvc.dto.MemberDTO;
 public class SignUpDao implements SignupDaoInter{
 	@Autowired
 	private SqlSessionTemplate ss;
-
-//	public int emailchek(String user_id) {
-//			return ss.selectOne("signup.emailchek", user_id);
-//		}
 	
 	@Override
 	public void signup(MemberDTO dto) {
-		System.out.println("Daoï¿½ï¿½ï¿½ï¿½");
 		ss.insert("member.signup",dto);
-		
 	}
 
 	@Override
@@ -28,9 +22,10 @@ public class SignUpDao implements SignupDaoInter{
 		return ss.selectOne("member.idchek", user_id);
 	}
 
-	@Override
-	public int random(String pk) {
-		return ss.selectOne("member.random",pk);
-	}
+	/**
+	 * 0718 À¯¹Î±âpublic int random(String pk) »èÁ¦
+	 * @param pk
+	 * @return
+	 */
 
 }

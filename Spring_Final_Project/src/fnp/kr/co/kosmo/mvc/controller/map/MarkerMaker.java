@@ -35,6 +35,8 @@ public class MarkerMaker {
 	public String maptest(Model m) {
 
 		// 추후 map_num을 가지고 활동 혹은 couple_num을 가지고 활동
+		// 테스트 코드 - session에 들어간 커플 번호를 통해서 맵 번호를 가져오게 변경해야 함
+		// 맵 테이블에 자동으로 커플 번호 생성시 맵 번호 할당하는 트리거 필요할 듯
 		int map_num = 1;
 		List<MarkerDTO> list = mapServerInter.MapForm(map_num);
 
@@ -53,7 +55,8 @@ public class MarkerMaker {
 	@PostMapping(value = { "/markermaker.do" })
 	public String mapMarkerSave(List<MultipartFile> marker_picture, MarkerDTO dto, HttpServletRequest request) {
 		String img_path = "resources\\fileUpload";
-		String r_path = "D:\\ikosmo\\STS\\Final_Spring_Project\\LocalRepository\\ATeamFinalProject\\Spring_Final_Project\\WebContent\\";
+		
+		String r_path = "C:\\Users\\Mingi\\OneDrive\\KOSMO 2021.01~2021.08\\FinalProj\\FinalSpring\\ATeamFinalProject\\Spring_Final_Project\\WebContent\\";
 		StringBuffer picname = new StringBuffer();
 		for (MultipartFile mf : marker_picture) {
 			String orlFn = mf.getOriginalFilename();

@@ -30,5 +30,9 @@ public interface CalendarServiceInter {
 	 * @return
 	 */
 	public CalendarDTO getDetailScheduleInfo(int cidx);
+	
+	public void updateScheduleInfo(CalendarDTO cdto) throws SQLException;
+	public void deleteScheduleInfo(int idx) throws SQLException;
+	
 
 }

@@ -24,5 +24,20 @@ public interface CalendarDaoInter {
 	 * @return
 	 */
 	public CalendarDTO getDetailScheduleInfo(int cidx);
+	
 
+	/**
+	 * calendar update
+	 * @param cdto
+	 * @throws SQLException
+	 * 0717 ±è¼º°æ
+	 */
+	public void updateCalendar(CalendarDTO cdto) throws SQLException;
+	/**
+	 * calendar delete
+	 * @param idx
+	 * @throws SQLException
+	 * 0717 ±è¼º°æ
+	 */
+	public void deleteCalendar(int idx) throws SQLException;
 }

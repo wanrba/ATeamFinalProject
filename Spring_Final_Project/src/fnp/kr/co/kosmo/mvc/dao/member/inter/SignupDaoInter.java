@@ -9,5 +9,10 @@ public interface SignupDaoInter {
 	//id체크
 	public int idcheck(String user_id);
 	
-	public int random(String randomnum);
+	/**
+	 *  0718 유민기 public int random(String randomnum); 삭제
+	 * @param randomnum
+	 * @return
+	 */
+	
 }

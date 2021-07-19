@@ -64,5 +64,21 @@ public class CalendarService implements CalendarServiceInter {
 		// TODO Auto-generated method stub
 		return calendarDaoInter.getDetailScheduleInfo(cidx);
 	}
+	/**
+	 * 0718 seonggyeong
+	 * 상세보기폼 에서 수정, 삭제 기능구현
+	 * @param cdto
+	 * @throws SQLException
+	 */
+	@Override
+	public void updateScheduleInfo(CalendarDTO cdto) throws SQLException {
+		calendarDaoInter.updateCalendar(cdto);
+	}
+
+	@Override
+	public void deleteScheduleInfo(int idx) throws SQLException {
+		calendarDaoInter.deleteCalendar(idx);
+	}
+	
 
 }

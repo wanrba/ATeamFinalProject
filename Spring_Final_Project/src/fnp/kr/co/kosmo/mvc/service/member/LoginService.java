@@ -30,4 +30,14 @@ public class LoginService implements LoginServiceInter{
 		return usernum;
 	}
 	
+	@Override
+	public MemberDTO memberIdFind(MemberDTO dto) {
+		return loginDaoInter.memberIdFind(dto);
+	}
+
+	@Override
+	public MemberDTO memberPwdFind(MemberDTO dto) {
+		return loginDaoInter.memberPwdFind(dto);
+	}
+	
 }

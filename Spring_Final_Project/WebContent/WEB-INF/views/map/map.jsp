@@ -23,7 +23,7 @@
     	<input type="hidden" id="marker_lat" name="marker_lat" value="">
     	<input type="hidden" id="marker_lon" name="marker_lon" value="">
     	<input type="hidden" id="marker_addr" name="marker_addr" value="">
-		<h2>추억 등록 예제</h2>
+		<h2>추억 등록하기</h2>
    		 이미지 등록 수 설정 : <input type="number" id="code" value="0" min="1" step="1" max="5" onchange="addFile()">
     	<div id="target">
     	</div>	
@@ -72,6 +72,6 @@
     </div>
 </div>
 
-<script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=5af734516ecff914eb9191e0fb660742&libraries=services,clusterer"></script>
+<script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=ab7a3b8aceecef00aee6187fd4ed35e6&libraries=services,clusterer"></script>
 <!-- <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script> -->
 <script src="resources/views/map/js/map.js" type="text/javascript"></script>

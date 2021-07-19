@@ -11,4 +11,9 @@ public interface LoginDaoInter {
 	public int seluser(String pk);
 	
 	public void requestMatch(MemberDTO dto);
+	
+	
+	public MemberDTO memberIdFind(MemberDTO dto);
+	
+	public MemberDTO memberPwdFind(MemberDTO dto);
 }
