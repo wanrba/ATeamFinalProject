@@ -1,7 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=EUC-KR"
 	pageEncoding="EUC-KR"%>
 <link href="resources/common/calendar/css/fullcalendar.min.css" rel='stylesheet'/>
-	
+<script src="resources/views/index/js/jquery.counterup.min.js"></script>
 <!-- 	<script> -->
 <%-- // 		if("${msg}" != "") { --%>
 <%-- // 			alert("${msg}") --%>
@@ -28,6 +28,25 @@
 		});
 	</script>
 	
+	<!--
+		07-19 YoungJin
+		헤더의 메인이미지 index로 이동
+	-->
+	<!-- slider_area -->
+    <div class="slider_area ">
+        <div class="slider_area_inner slider_bg_1 overlay2">
+            <div class="slider_text text-center">
+                <div class="text_inner">
+                    <img src="resources/common/image/logo_banner/ornaments.png" alt="">
+                    <h4>14 Jan 2020</h4>
+                    <h3>Anjelina & Jack <br>
+                        Wedding Ceremony</h3>
+                    <span>Get Married</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--/ slider_area -->
 	<section class="ftco-section bg-section" id="groom-bride-section">
 
 	<div class="content-wrapper">
@@ -72,10 +91,66 @@
             </div>
             <div class="row">
                 <div class="col-xl-12">
-                    <div id="clock" class="countdown_area counter_bg ">
+                    <div id="afterRelationShip" class="countdown_area counter_bg">
+                    	<div class="countdown_wrap d-flex">
+                    		<div class="single_countdown">
+                    			<h3 id = "rsDay"></h3>
+                    			<span>Days</span>
+                    		</div>
+                    		<div class="single_countdown">
+                    			<h3 id = "rsHours"></h3>
+                    			<span>Hours</span>
+                    		</div>
+                    		<div class="single_countdown">
+                    			<h3 id = "rsMinutes"></h3>
+                    			<span>Minutes</span>
+                    		</div>
+                    		<div class="single_countdown">
+                    			<h3 id = "rsSeconds"></h3>
+                    			<span>Seconds</span>
+                    		</div>
+                    	</div>
                     </div>
                 </div>
             </div>
+            <script>
+            	// 07-19 YoungJin
+            	// 연애시작일로부터 얼마나 지났는지 카운트업해주는 함수
+            	$(document).ready(function() {
+            		$(function() {
+            			const countUpTimer = function (date) {
+                    		var _vDate = new Date(date); // 전달 받은 일자
+                    		var _second = 1000;
+                    		var _minute = _second * 60;
+                    		var _hour = _minute * 60;
+                    		var _day = _hour * 24;
+                    		var timer;
+                    		console.log(_vDate)
+                    		function showRemaining() {
+                    			console.log("showRemaining")
+                    			var now = new Date();
+                    			var distDt = now - _vDate;
+                    			
+                    			var days = Math.floor(distDt / _day);
+                    			var hours = Math.floor((distDt % _day) / _hour);
+                    			var minutes = Math.floor((distDt % _hour) / _minute);
+                    			var seconds = Math.floor((distDt % _minute) / _second);
+                    			$("#rsDay").text(days);
+                    			$("#rsHours").text(hours);
+                    			$("#rsMinutes").text(minutes);
+                    			$("#rsSeconds").text(seconds);
+                    		}
+                    		
+                    		timer = setInterval(showRemaining, 1000);
+                    	}
+                    	
+                    	var dateObj = new Date();
+                    	dateObj.setDate(dateObj.getDate() + 1);
+                    	countUpTimer("04/02/2020"); // 내일까지
+            		});
+            	});
+            	
+            </script>
         </div>
     </div>
     <!--/ wedding_countdown -->

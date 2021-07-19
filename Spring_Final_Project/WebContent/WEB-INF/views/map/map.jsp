@@ -72,6 +72,6 @@
     </div>
 </div>
 
-<script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=ab7a3b8aceecef00aee6187fd4ed35e6&libraries=services,clusterer"></script>
+<script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=5af734516ecff914eb9191e0fb660742&libraries=services,clusterer"></script>
 <!-- <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script> -->
 <script src="resources/views/map/js/map.js" type="text/javascript"></script>

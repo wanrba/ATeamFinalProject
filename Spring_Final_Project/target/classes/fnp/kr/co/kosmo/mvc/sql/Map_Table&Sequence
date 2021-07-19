@@ -1,9 +1,25 @@
-create table map(
-	map_num number constraint map_num_pk primary key, -- 지도 번호 0718 은 1이어야
-	map_cnum number constraint map_cnum_pk unique -- 커플 번호
-);
-
+-- MAP Table Create SQL
+CREATE TABLE MAP
+(
+    MAP_NUM     NUMBER    NOT NULL, 
+    MAP_CNUM    NUMBER    NULL, 
+    CONSTRAINT PK_MAP PRIMARY KEY (MAP_NUM)
+)
+/
 
 CREATE SEQUENCE MAP_SEQ
-INCREMENT BY 1
-START WITH 1;
+START WITH 1
+INCREMENT BY 1;
+/
+
+
+COMMENT ON TABLE MAP IS 'MAP'
+/
+
+COMMENT ON COLUMN MAP.MAP_CNUM IS '커플 번호'
+/
+
+ALTER TABLE MAP
+    ADD CONSTRAINT FK_MAP_MAP_CNUM_COUPLE_COUPLE_ FOREIGN KEY (MAP_CNUM)
+        REFERENCES COUPLE (COUPLE_NUM)
+/

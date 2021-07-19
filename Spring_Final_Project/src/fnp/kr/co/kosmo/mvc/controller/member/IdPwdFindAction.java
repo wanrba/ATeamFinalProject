@@ -23,8 +23,7 @@ public class IdPwdFindAction {
 	 */
 	@GetMapping("/idpwdFind.do")
 	public String idpwdFind() {
-		System.out.println("¿©±â¿Ö¾È¿È?");
-		return "member/idpwdFind";
+		return "member/find/idPwdFindForm";
 	}
 
 	/**
@@ -33,7 +32,7 @@ public class IdPwdFindAction {
 	 */
 	@GetMapping(value = "/pwdFind.do")
 	public String pwdFind() {
-		return "member/pwdFind";
+		return "member/find/pwdFind";
 	}
 
 	/**

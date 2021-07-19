@@ -1296,11 +1296,6 @@ h3 {
   }
 }
 
-/* line 1, ../../Arafath/CL/CL september/212. Wedding/HTML/scss/_wedding_counter.scss */
-.counter_bg {
-  background-image: url(../img/counter_bg/counter_bg.png);
-}
-
 /* line 4, ../../Arafath/CL/CL september/212. Wedding/HTML/scss/_wedding_counter.scss */
 .weeding_countdown_area {
   padding-top: 150px;
@@ -1820,52 +1815,6 @@ h3 {
 /* line 104, ../../Arafath/CL/CL september/212. Wedding/HTML/scss/_story.scss */
 .love_story_area .weding_time_line .single_time_line:nth-child(4)::before {
   display: none;
-}
-
-/* line 37, ../../Arafath/CL/CL september/212. Wedding/HTML/scss/_gallery.scss */
-<!-- 07/19 하늘 홈화면 앨범 사진 변경 gallery/01.JPG ~ 10.JPG -->
-.gallery_imag_1 {
-  background-image: url(../../views/index/image/gallery/01.JPG);
-}
-
-/* line 40, ../../Arafath/CL/CL september/212. Wedding/HTML/scss/_gallery.scss */
-.gallery_imag_2 {
-  background-image: url(../../views/index/image/gallery/02.JPG);
-}
-
-/* line 43, ../../Arafath/CL/CL september/212. Wedding/HTML/scss/_gallery.scss */
-.gallery_imag_3 {
-  background-image: url(../../views/index/image/gallery/03.JPG);
-}
-
-/* line 46, ../../Arafath/CL/CL september/212. Wedding/HTML/scss/_gallery.scss */
-.gallery_imag_4 {
-  background-image: url(../../views/index/image/gallery/04.JPG);
-}
-
-/* line 49, ../../Arafath/CL/CL september/212. Wedding/HTML/scss/_gallery.scss */
-.gallery_imag_5 {
-  background-image: url(../../views/index/image/gallery/05.JPG);
-}
-
-/* line 52, ../../Arafath/CL/CL september/212. Wedding/HTML/scss/_gallery.scss */
-.gallery_imag_6 {
-  background-image: url(../../views/index/image/gallery/06.JPG);
-}
-
-/* line 55, ../../Arafath/CL/CL september/212. Wedding/HTML/scss/_gallery.scss */
-.gallery_imag_7 {
-  background-image: url(../../views/index/image/gallery/07.JPG);
-}
-
-/* line 58, ../../Arafath/CL/CL september/212. Wedding/HTML/scss/_gallery.scss */
-.gallery_imag_8 {
-  background-image: url(../../views/index/image/gallery/08.JPG);
-}
-
-/* line 61, ../../Arafath/CL/CL september/212. Wedding/HTML/scss/_gallery.scss */
-.gallery_imag_9 {
-  background-image: url(../../views/index/image/gallery/09.JPG);
 }
 
 /* line 65, ../../Arafath/CL/CL september/212. Wedding/HTML/scss/_gallery.scss */
