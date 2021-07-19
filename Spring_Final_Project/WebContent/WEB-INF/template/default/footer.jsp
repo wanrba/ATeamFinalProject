@@ -139,7 +139,14 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
             });
         }
     </script>
-
+    
+<script>
+//±è¹Ì¿¬ Ãªº¿ ¼³Ä¡ ÄÚµå
+    window.dyc = {
+        "chatbotUid": "536d60e6f550ab80"
+    };
+</script>
+<script async src="https://cloudturing.chat/v1.0/chat.js"></script>
 
 
 </body>
