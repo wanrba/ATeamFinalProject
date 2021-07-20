@@ -80,8 +80,8 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
 	
 	<!-- Full Calendar -->
 	<script src='resources/common/calendar/js/moment.min.js'></script>
-	<script src="resources/common/calendar/js/fullcalendar-custom-script.js"></script>
 	<script src='resources/common/calendar/js/fullcalendar.min.js'></script>
+	<script src="resources/common/calendar/js/fullcalendar-custom-script.js"></script>
 
     <script src="resources/views/index/js/main.js"></script>
 

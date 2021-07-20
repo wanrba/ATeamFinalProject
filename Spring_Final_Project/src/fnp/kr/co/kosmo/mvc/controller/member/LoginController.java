@@ -44,7 +44,7 @@ public class LoginController {
 				case 0:
 					System.out.println("???¤í?? ì¼??´ì??0");
 					session.setAttribute("sessionNum", map.getUser_num());
-					session.setAttribute("sessionpk", map.getUser_primarykey());
+//					session.setAttribute("sessionpk", map.getUser_primarykey());
 					session.setAttribute("sessionID", map.getUser_id());
 					session.setAttribute("sessionName", map.getUser_name());
 					mav.addObject("chk", "?¹ì?¸ì?´ì??");
@@ -83,7 +83,7 @@ public class LoginController {
 	@ResponseBody
 	public void usermatch(MemberDTO dto, HttpServletResponse response) {
 		System.out.println("user_num"+dto.getUser_num());
-		System.out.println("primarykey"+dto.getUser_primarykey());
+//		System.out.println("primarykey"+dto.getUser_primarykey());
 		
 		int num = loginServiceInter.requestMatch(dto);
 		try {

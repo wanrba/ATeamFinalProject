@@ -2,56 +2,75 @@
 <!DOCTYPE mapper
  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
- <mapper namespace="member">
- 	
- 	<insert id="signup" parameterType="memberDto">
- 		INSERT INTO MEMBER(USER_NUM, USER_ID, USER_PWD,  USER_NAME, USER_PHONE, USER_BIRTH,USER_DDAY) VALUES(MEMBER_SEQ.nextVal, #{user_id}, #{user_pwd},  #{user_name}, #{user_phone}, #{user_birth},#{user_dday})
- 	</insert>
- 	
- 	<select id="idchek" resultType="int" parameterType="String">
- 		select count(USER_ID) from member where USER_ID = #{user_id}
- 	</select>
- 	
- 	<select id="login" resultType="memberDto" parameterType="memberDto" >
- 		select * from member where user_id=#{user_id} and user_pwd=#{user_pwd} 
- 	</select>
- 	
- 	<update id="requestMatch" parameterType="memberDto">
- 		update member set USER_MATCH = 1,USER_NOWMATCH = #{user_nowmatch},USER_ANSWER = 1 where user_num = #{user_num}
- 	</update>
- 	
- 		<!-- 마이페이지 회원정보 출력 -->
-<select id="myInfo" parameterType="String" resultType="memberDto">
-	 select user_id, user_pwd, user_name, user_phone, user_birth, user_couplenum, 
-	   '20' || REPLACE(user_dday, '/', '-') AS user_dday,  user_adate from member where user_id = #{user_id}
-</select>
- 	
- 	<!-- 회원 인증 -->
-<select id="memchk" resultType="memberDto" 
-   parameterType="memberDto">
-	select user_id, count(*) cnt from member 
-	where user_id=#{user_id} and user_pwd=#{user_pwd} group by user_id
-</select>
+<mapper namespace="member">
 
-<!-- 회원 정보 업데이트 -->
-<update id="mUpdate" parameterType="memberDto">
-	update member set user_pwd = #{user_pwd}, 
-	user_phone=#{user_phone}, user_dday=#{user_dday}
-	where user_id = #{user_id}
-</update>
+	<insert id="signup" parameterType="memberDto">
+		INSERT INTO MEMBER(USER_NUM, USER_ID, USER_PWD, USER_NAME, USER_PHONE,
+		USER_BIRTH,USER_DDAY) VALUES(MEMBER_SEQ.nextVal, #{user_id},
+		#{user_pwd}, #{user_name}, #{user_phone}, #{user_birth},#{user_dday})
+	</insert>
 
-<!-- 회원 아이디 찾기 -->
- <select id="memberIdFind" parameterType="memberDto"
+	<select id="idchek" resultType="int" parameterType="String">
+		select count(USER_ID) from member where USER_ID = #{user_id}
+	</select>
+
+	<select id="login" resultType="memberDto"
+		parameterType="memberDto">
+		select * from member where user_id=#{user_id} and user_pwd=#{user_pwd}
+	</select>
+
+	<update id="requestMatch" parameterType="memberDto">
+		update member set USER_MATCH = 1,USER_NOWMATCH =
+		#{user_nowmatch},USER_ANSWER = 1 where user_num = #{user_num}
+	</update>
+
+
+	<!-- 마이페이지 회원정보 출력 -->
+	<select id="myInfo" parameterType="String"
+		resultType="memberDto">
+		select user_id, user_pwd, user_name, user_phone, user_birth, user_couplenum,
+		'20' || REPLACE(user_dday, '/', '-') AS user_dday, user_adate from
+		member where user_id = #{user_id}
+	</select>
+
+
+	<!-- 마이페이지 회원정보 출력 -->
+	<select id="myInfo" parameterType="String"
+		resultType="memberDto">
+		select user_id, user_pwd, user_name, user_phone, user_birth, user_couplenum,
+		'20' || REPLACE(user_dday, '/', '-') AS user_dday, user_adate from
+		member where user_id = #{user_id}
+	</select>
+
+
+	<!-- 회원 인증 -->
+	<select id="memchk" resultType="memberDto"
+		parameterType="memberDto">
+		select user_id, count(*) cnt from member
+		where user_id=#{user_id} and user_pwd=#{user_pwd} group by user_id
+	</select>
+
+	<!-- 회원 정보 업데이트 -->
+	<update id="mUpdate" parameterType="memberDto">
+		update member set user_pwd = #{user_pwd},
+		user_phone=#{user_phone}, user_dday=#{user_dday}
+		where user_id = #{user_id}
+	</update>
+
+	<!-- 회원 아이디 찾기 -->
+	<select id="memberIdFind" parameterType="memberDto"
 		resultType="memberDto">
 		select user_id from member
-		where user_name=#{user_name} and user_phone=#{user_phone}
+		where user_name=#{user_name} and
+		user_phone=#{user_phone}
 	</select>
-<!-- 회원 비밀번호 찾기 -->
+	<!-- 회원 비밀번호 찾기 -->
 	<select id="memberPwdFind" parameterType="memberDto"
 		resultType="memberDto">
 		select user_pwd from member
-		where user_id=#{user_id} and user_name=#{user_name} and
+		where user_id=#{user_id} and
+		user_name=#{user_name} and
 		user_phone=#{user_phone}
 	</select>
- 	
- </mapper>
+
+</mapper>
