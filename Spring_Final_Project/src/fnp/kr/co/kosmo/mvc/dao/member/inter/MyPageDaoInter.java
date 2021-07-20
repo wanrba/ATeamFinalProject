@@ -10,7 +10,7 @@ public interface MyPageDaoInter {
 	 * @param user_id
 	 * @return
 	 */
-	public MemberDTO myInfo(String user_id);
+	public MemberDTO getUserInfo(String user_id);
 
 	/**
 	 * 07-17 HN

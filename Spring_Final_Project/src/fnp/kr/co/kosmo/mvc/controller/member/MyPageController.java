@@ -31,7 +31,7 @@ public class MyPageController {
 	public ModelAndView mypageInfo(HttpSession session) {
 
 		ModelAndView mav = new ModelAndView();
-		mav.addObject("info", myPageServiceInter.myInfo((String) session.getAttribute("sessionID")));
+		mav.addObject("info", myPageServiceInter.getUserInfo((String) session.getAttribute("sessionID")));
 		mav.setViewName("mypage/mypage");
 
 		return mav;
@@ -68,7 +68,7 @@ public class MyPageController {
 			mav.setViewName("member/mypage/mypagepwdchk");
 			mav.addObject("emsg", "인증 실패입니다! 다시 입력해주세요!");
 		} else {
-			mav.addObject("info", myPageServiceInter.myInfo(vo.getUser_id()));
+			mav.addObject("info", myPageServiceInter.getUserInfo(vo.getUser_id()));
 			mav.setViewName("mypage/mypageupdate");
 		}
 		return mav;

@@ -14,8 +14,8 @@ public class MyPageService implements MyPageServiceInter{
 	private MyPageDaoInter myPageDaoInter;
 
 	@Override
-	public MemberDTO myInfo(String user_id) {
-		return myPageDaoInter.myInfo(user_id);
+	public MemberDTO getUserInfo(String user_id) {
+		return myPageDaoInter.getUserInfo(user_id);
 	}
 
 	@Override

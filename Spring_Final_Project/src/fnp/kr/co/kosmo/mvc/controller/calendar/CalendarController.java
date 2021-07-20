@@ -49,8 +49,10 @@ public class CalendarController {
 	@GetMapping(value = { "/updateCalendarDetailForm.do" })
 	public String updateCalendarDetailForm(HttpServletRequest request, Model m) {
 
-		m.addAttribute("cdto",
-				calendarServiceInter.getDetailScheduleInfo(Integer.parseInt(request.getParameter("cidx"))));
+//		m.addAttribute("cdto",
+//				calendarServiceInter.getDetailScheduleInfo(Integer.parseInt(request.getParameter("cidx"))));
+		
+		m.addAttribute("cdto", 1);
 
 		return "calendar/updateCalendarForm";
 	}
@@ -84,8 +86,6 @@ public class CalendarController {
 		@PostMapping(value = { "/updateCalendar.do" })
 		public String updateCalendar(CalendarDTO cdto) throws SQLException {
 			
-			System.out.println(cdto.getcTitle());
-			System.out.println(cdto.getCidx());
 			calendarServiceInter.updateScheduleInfo(cdto);
 			return "redirect:/index.do";
 		}
