@@ -33,4 +33,9 @@
  		ORDER BY 1 ASC
  	</select>
  	
+ 	<!-- 7/20 김미연  커플번호에 맞는 맵번호 가져오는 쿼리문 -->
+ 	<select id="coupleMapNum" parameterType="int" resultType="int">
+ 		select distinct(m.map_num) from member mem, map m where mem.user_couplenum = m.map_cnum
+ 	</select>
+ 	
  </mapper>
