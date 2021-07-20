@@ -21,10 +21,10 @@
                             <div class="main-menu  d-none d-lg-block">
                                 <nav>
                                     <ul id="navigation">
-                                        <li><a class="active" href="index.do">home</a></li>
-                                        <li><a href="story.html">Our Story</a></li>
-                                        <li><a href="Gallery.html">Gallery</a></li>
-                                        <li><a href="#">blog <i class="ti-angle-down"></i></a>
+                                        <li><a class="active" href="index.do">홈</a></li>
+                                        <li><a href="story.html">커플지도</a></li>
+                                        <li><a href="Gallery.html">갤러리</a></li>
+                                        <li><a href="#">상점<i class="ti-angle-down"></i></a>
                                             <ul class="submenu">
                                                 <li><a href="blog.html">blog</a></li>
                                                 <li><a href="single-blog.html">single-blog</a></li>
@@ -39,7 +39,7 @@
                                                 <li><a href="elements.html">elements</a></li>
                                             </ul>
                                         </li>
-                                        <li><a href="contact.html">Contact</a></li>
+                                        <li><a href="contact.html">고객센터</a></li>
                                         <li>
                                         	<a href="#">=  
                                         		<i class="ti-angle-down"></i>

@@ -6,10 +6,10 @@ for each row
 begin
     -- 커플 테이블에 등록한 커플번호를 나에게 등록
     update member set 
-    USER_CUPLENUM = :new.COUPLE_NUM
+    USER_COUPLENUM = :new.COUPLE_NUM
     where user_id = :new.FIRSTID;
     -- 커플 테이블에 등록한 커플번호를 상대방에게 등록
     update member set 
-    USER_CUPLENUM = :new.COUPLE_NUM
+    USER_COUPLENUM = :new.COUPLE_NUM
     where user_id = :new.SECONDID;
 end;

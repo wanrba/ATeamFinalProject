@@ -22,7 +22,7 @@
  	
  		<!-- 마이페이지 회원정보 출력 -->
 <select id="myInfo" parameterType="String" resultType="memberDto">
-	 select user_id, user_pwd, user_name, user_phone, user_birth, user_cuplenum, 
+	 select user_id, user_pwd, user_name, user_phone, user_birth, user_couplenum, 
 	   '20' || REPLACE(user_dday, '/', '-') AS user_dday,  user_adate from member where user_id = #{user_id}
 </select>
  	
