@@ -48,18 +48,21 @@
                                                 <c:choose>
 	                                        		<c:when test="${sessionScope.sessionID eq null }">
 	                                        			<li>
-	                                        				<a href = "loginForm.do">Login</a>
+	                                        				<a href = "loginForm.do">로그인</a>
 	                                        			</li>
                                                 		<li>
-                                                			<a href="signup.do">Join</a>
+                                                			<a href="signup.do">회원가입</a>
                                                 		</li>
 	                                        		</c:when>
 	                                        		<c:otherwise>
 	                                        			<li>
-	                                        				<a href = "myPage.do">MyPage</a>
+	                                        				<a href = "myPage.do">마이페이지</a>
 	                                        			</li>
                                                 		<li>
-                                                			<a href = "logout.do">Logout</a>
+                                                			<a href = "logout.do">장바구니</a>
+                                                		</li>
+                                                		<li>
+                                                			<a href = "logout.do">로그아웃</a>
                                                 		</li>
 	                                        		</c:otherwise>
 	                                        	</c:choose>
