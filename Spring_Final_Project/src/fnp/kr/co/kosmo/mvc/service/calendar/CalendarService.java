@@ -26,18 +26,6 @@ public class CalendarService implements CalendarServiceInter {
 	public void insertScheduleInfo(CalendarDTO cdto) throws SQLException {
 		// TODO Auto-generated method stub
 
-		switch (cdto.getcColor()) {
-		case "high":
-			cdto.setcColor("red");
-			break;
-		case "middle":
-			cdto.setcColor("yellow");
-			break;
-		case "low":
-			cdto.setcColor("pink");
-			break;
-		}
-
 		calendarDaoInter.insertCalendar(cdto);
 	}
 

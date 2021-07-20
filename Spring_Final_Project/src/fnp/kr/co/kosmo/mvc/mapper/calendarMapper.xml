@@ -12,24 +12,27 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 	</select>
 
 	<select id="getCalendarDetailInfo" parameterType="int" resultType="cldDto">
-		SELECT CIDX, USER_CUPLENUM, CTITLE, '20' || REPLACE(CSTARTDAY, '/', '-') AS CSTARTDAY, '20' || REPLACE(CENDDAY, '/', '-') AS CENDDAY, CLOCAL, CCONTENT, CCOLOR
+		SELECT CIDX, USER_COUPLENUM, CTITLE, '20' || REPLACE(CSTARTDAY, '/', '-') AS CSTARTDAY, '20' || REPLACE(CENDDAY, '/', '-') AS CENDDAY, CLOCAL, CCONTENT, CCOLOR, CIMPORTANCE
 		FROM CALENDAR
 		WHERE CIDX = #{cidx}
 	</select>
 
 	<!-- cColor #{cColor로 변경함} 0716 김성경 -->
 	<insert id="insertCalendar" parameterType="cldDto">
-		INSERT INTO CALENDAR VALUES(CALENDAR_SEQ.NEXTVAL, #{cTitle}, to_date(#{cStartDay}, 'YYYY-MM-DD'), to_date(#{cEndDay}, 'YYYY-MM-DD'), #{cLocal}, #{cContent},#{cColor}, '중요', 1)
+		INSERT INTO CALENDAR
+		VALUES(CALENDAR_SEQ.NEXTVAL, #{cTitle}, #{cStartDay}, #{cEndDay},  #{cLocal}, #{cContent}, #{cColor}, #{cImportance}, #{user_couplenum})
 	</insert>	
 	
 	<!-- update 0717 form 에서 받은 정보들로 update -->
 	<update id="updateCalendar" parameterType="cldDto">
-	update calendar set ctitle=#{cTitle},clocal=#{cLocal},cstartday=#{cStartDay}, 
-	cendday=#{cEndDay},ccontent=#{cContent},ccolor=#{cColor} where cidx=#{cidx}
+		UPDATE CALENDAR
+		SET CTITLE = #{cTitle}, CSTARTDAY = #{cStartDay}, CENDDAY = #{cEndDay}, CLOCAL = #{cLocal}, CCONTENT = #{cContent}, CCOLOR = #{cColor}, CIMPORTANCE = #{cImportance}
+		WHERE CIDX = #{cidx}  
 	</update>
 	
 	<!-- delete 0717 form 에서 받은 정보들로 cidx 값 받아서 delete -->
 	<delete id="deleteCalendar" parameterType="int">
-	delete from calendar where cidx=#{cidx}
+		DELETE FROM CALENDAR
+		WHERE CIDX = #{cidx}
 	</delete>
 </mapper>

@@ -52,7 +52,7 @@ public class CalendarController {
 //		m.addAttribute("cdto",
 //				calendarServiceInter.getDetailScheduleInfo(Integer.parseInt(request.getParameter("cidx"))));
 		
-		m.addAttribute("cdto", 1);
+		m.addAttribute("cdto", calendarServiceInter.getDetailScheduleInfo(1));
 
 		return "calendar/updateCalendarForm";
 	}
@@ -69,7 +69,7 @@ public class CalendarController {
 	@PostMapping(value = { "/insertCalendar.do" })
 	public String insertCalendar(CalendarDTO cdto, HttpSession session) throws SQLException {
 		//Integer.parseInt((String) session.getAttribute("USER_CUPLENUM))"
-		cdto.setUser_cuplenum(3);
+		cdto.setUser_couplenum(3);
 
 		calendarServiceInter.insertScheduleInfo(cdto);
 
