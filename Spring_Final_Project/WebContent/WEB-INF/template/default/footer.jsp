@@ -80,65 +80,22 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
 	
 	<!-- Full Calendar -->
 	<script src='resources/common/calendar/js/moment.min.js'></script>
-	<script src="resources/common/calendar/js/fullcalendar-custom-script.js"></script>
 	<script src='resources/common/calendar/js/fullcalendar.min.js'></script>
+	<script src="resources/common/calendar/js/fullcalendar-custom-script.js"></script>
 
     <script src="resources/views/index/js/main.js"></script>
 
-    <script>
-        $('#clock').countdown('2020/01/07', function (event) {
-            $(this).html(event.strftime(
-                '<div class="countdown_wrap d-flex"><div  class="single_countdown"><h3>%D</h3><span>Days</span></div><div class="single_countdown"><h3>%H</h3><span>Hours</span></div><div class="single_countdown"><h3>%M</h3><span>Minutes</span></div><div class="single_countdown"><h3>%S</h3><span>Seconds</span></div></div>'
-            ));
-        });
-    </script>
-    
-    <script>
-//     	$(document).ready(function() {
-    		
-//     		$(function() {
-//     			alert('1')
-//     			$(".fc-body > tr > td > div > div > div > div > div > table > tbody > tr > td > a").removeProp("data-goto");
-//     			alert('2')
-//     		});
-    		
-//     	});
-    </script>
-    
-    <script>
-        function initMap() {
-            var uluru = {
-                lat: -25.363,
-                lng: 131.044
-            };
-            var grayStyles = [{
-                    featureType: "all",
-                    stylers: [{
-                            saturation: -90
-                        },
-                        {
-                            lightness: 50
-                        }
-                    ]
-                },
-                {
-                    elementType: 'labels.text.fill',
-                    stylers: [{
-                        color: '#ccdee9'
-                    }]
-                }
-            ];
-            var map = new google.maps.Map(document.getElementById('map'), {
-                center: {
-                    lat: -31.197,
-                    lng: 150.744
-                },
-                zoom: 9,
-                styles: grayStyles,
-                scrollwheel: false
-            });
-        }
-    </script>
+			<!--
+				07-19 YoungJin
+				 카운트다운 함수 일단 주석처리
+			-->
+<!--     <script> -->
+<!--         $('#clock').countdown('2021/08/25', function (event) { -->
+<!--             $(this).html(event.strftime( -->
+<!--                 '<div class="countdown_wrap d-flex"><div  class="single_countdown"><h3>%D</h3><span>Days</span></div><div class="single_countdown"><h3>%H</h3><span>Hours</span></div><div class="single_countdown"><h3>%M</h3><span>Minutes</span></div><div class="single_countdown"><h3>%S</h3><span>Seconds</span></div></div>' -->
+<!--             )); -->
+<!--         }); -->
+<!--     </script> -->
     
 <script>
 //김미연 챗봇 설치 코드

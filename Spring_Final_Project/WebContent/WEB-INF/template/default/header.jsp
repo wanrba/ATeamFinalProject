@@ -3,7 +3,6 @@
 <!--[if lte IE 9]>
             <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
         <![endif]-->
-
     <!-- header-->
     <header>
         <div class="header-area ">
@@ -78,19 +77,9 @@
         </div>
     </header>
     <!--/ header-->
-
-    <!-- slider_area -->
-    <div class="slider_area ">
-        <div class="slider_area_inner slider_bg_1 overlay2">
-            <div class="slider_text text-center">
-                <div class="text_inner">
-                    <img src="resources/common/image/logo_banner/ornaments.png" alt="">
-                    <h4>14 Jan 2020</h4>
-                    <h3>Anjelina & Jack <br>
-                        Wedding Ceremony</h3>
-                    <span>Get Married</span>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!--/ slider_area -->
+    
+	<!--
+		07-19 YoungJin
+		헤더에서 메인이미지 각 파일별로 이동
+		메인사진 이미지는 index파일의 최상단부로 이동
+	-->

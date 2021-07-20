@@ -19,7 +19,7 @@ public class MyPageDao implements MyPageDaoInter{
 	 * @return
 	 */
 	@Override
-	public MemberDTO myInfo(String user_id) {
+	public MemberDTO getUserInfo(String user_id) {
 		return ss.selectOne("member.myInfo", user_id);
 	}
 

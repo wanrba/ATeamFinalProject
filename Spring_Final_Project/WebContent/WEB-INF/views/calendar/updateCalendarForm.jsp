@@ -23,7 +23,7 @@ CEDTIME 종료시간
 </head>
 <body>
 	<h4>일정 등록폼</h4>
-	<br><form name="insertCalendar" method="post" action="updateCalendar.do" encType="UTF-8">
+	<br><form name="insertCalendar" method="post" action="updateCalendar.do" encType="EUC-KR">
 	
 	<input type="hidden" id="cidx" name="cidx" class="calendartext" 
 		value="${cdto.cidx }">

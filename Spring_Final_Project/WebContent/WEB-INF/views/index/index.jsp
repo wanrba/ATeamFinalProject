@@ -1,7 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=EUC-KR"
 	pageEncoding="EUC-KR"%>
 <link href="resources/common/calendar/css/fullcalendar.min.css" rel='stylesheet'/>
-	
+<script src="resources/views/index/js/jquery.counterup.min.js"></script>
 <!-- 	<script> -->
 <%-- // 		if("${msg}" != "") { --%>
 <%-- // 			alert("${msg}") --%>
@@ -9,7 +9,7 @@
 <!-- 	</script> -->
 <style>
 	.fc-past {
-		background-color: gray;
+		background-color: blanchedalmond;
 	}
 </style>
 	<script>
@@ -28,6 +28,25 @@
 		});
 	</script>
 	
+	<!--
+		07-19 YoungJin
+		헤더의 메인이미지 index로 이동
+	-->
+	<!-- slider_area -->
+    <div class="slider_area ">
+        <div class="slider_area_inner slider_bg_1 overlay2">
+            <div class="slider_text text-center">
+                <div class="text_inner">
+                    <img src="resources/common/image/logo_banner/ornaments.png" alt="">
+                    <h4>14 Jan 2020</h4>
+                    <h3>Anjelina & Jack <br>
+                        Wedding Ceremony</h3>
+                    <span>Get Married</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--/ slider_area -->
 	<section class="ftco-section bg-section" id="groom-bride-section">
 
 	<div class="content-wrapper">
@@ -65,17 +84,72 @@
                 <div class="col-xl-12">
                     <div class="section_title text-center">
                         <img src="resources/views/index/image/banner/flowers.png" alt="">
-                        <span>14. January. 2020</span>
+                        <span>${mdto.user_dday}</span>
                         <h3>THE. WEDDING. Countdown</h3>
                     </div>
                 </div>
             </div>
             <div class="row">
                 <div class="col-xl-12">
-                    <div id="clock" class="countdown_area counter_bg ">
+                    <div id="afterRelationShip" class="countdown_area counter_bg">
+                    	<div class="countdown_wrap d-flex">
+                    		<div class="single_countdown">
+                    			<h3 id = "rsDay"></h3>
+                    			<span>Days</span>
+                    		</div>
+                    		<div class="single_countdown">
+                    			<h3 id = "rsHours"></h3>
+                    			<span>Hours</span>
+                    		</div>
+                    		<div class="single_countdown">
+                    			<h3 id = "rsMinutes"></h3>
+                    			<span>Minutes</span>
+                    		</div>
+                    		<div class="single_countdown">
+                    			<h3 id = "rsSeconds"></h3>
+                    			<span>Seconds</span>
+                    		</div>
+                    	</div>
                     </div>
                 </div>
             </div>
+            <script>
+            	// 07-19 YoungJin
+            	// 연애시작일로부터 얼마나 지났는지 카운트업해주는 함수
+            	$(document).ready(function() {
+            		$(function() {
+            			const countUpTimer = function (date) {
+                    		var _vDate = new Date(date); // 전달 받은 일자
+                    		var _second = 1000;
+                    		var _minute = _second * 60;
+                    		var _hour = _minute * 60;
+                    		var _day = _hour * 24;
+                    		var timer;
+                    		console.log(_vDate)
+                    		function showRemaining() {
+                    			var now = new Date();
+                    			var distDt = now - _vDate;
+                    			
+                    			var days = Math.floor(distDt / _day);
+                    			var hours = Math.floor((distDt % _day) / _hour);
+                    			var minutes = Math.floor((distDt % _hour) / _minute);
+                    			var seconds = Math.floor((distDt % _minute) / _second);
+                    			$("#rsDay").text(days);
+                    			$("#rsHours").text(hours);
+                    			$("#rsMinutes").text(minutes);
+                    			$("#rsSeconds").text(seconds);
+                    		}
+                    		
+                    		timer = setInterval(showRemaining, 1000);
+                    	}
+                    	
+                    	var dateObj = new Date();
+                    	dateObj.setDate(dateObj.getDate() + 1);
+                    	countUpTimer("${mdto.user_dday}"); // 내일까지
+            		});
+            	});
+            	
+            </script>
         </div>
     </div>
     <!--/ wedding_countdown -->
@@ -303,57 +377,62 @@
     </div>
     <!--/ program_details -->
 
+
+<!--
+	07-20 YoungJin
+	Index Page의 제일 아래 예약하는 section 사용하지 않을 예정이므로 주석처리
+-->
     <!-- attend_area -->
-    <div class="attending_area">
-        <div class="container">
-            <div class="row">
-                <div class="col-xl-10 offset-xl-1 col-lg-10 offset-lg-1">
-                    <div class="main_attending_area">
-                        <div class="flower_1 d-none d-lg-block">
-                            <img src="resources/views/index/image/appointment/flower-top.png" alt="">
-                        </div>
-                        <div class="flower_2 d-none d-lg-block">
-                            <img src="resources/views/index/image/appointment/flower-bottom.png" alt="">
-                        </div>
-                        <div class="row justify-content-center">
-                            <div class="col-xl-7 col-lg-8">
-                                <div class="popup_box ">
-                                    <div class="popup_inner">
-                                        <div class="form_heading text-center">
-                                            <h3>Are You Attending?</h3>
-                                            <p>Kindly respond before 30 August</p>
-                                        </div>
-                                        <form action="#">
-                                            <div class="row">
-                                                <div class="col-xl-12">
-                                                    <input type="text" placeholder="Your Name">
-                                                </div>
-                                                <div class="col-xl-12">
-                                                    <input type="text" placeholder="Email">
-                                                </div>
-                                                <div class="col-xl-12">
-                                                    <select class="form-select wide" id="default-select" class="">
-                                                        <option data-display="1 Guest">1 Guest</option>
-                                                        <option value="1">2 Guest</option>
-                                                        <option value="2">3 Guest</option>
-                                                        <option value="3">4 Guest</option>
-                                                    </select>
-                                                </div>
-                                                <div class="col-xl-12">
-                                                    <textarea placeholder="Additional Message"></textarea>
-                                                </div>
-                                                <div class="col-xl-12">
-                                                    <button type="submit" class="boxed_btn3">R.S.V.P</button>
-                                                </div>
-                                            </div>
-                                        </form>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+<!--     <div class="attending_area"> -->
+<!--         <div class="container"> -->
+<!--             <div class="row"> -->
+<!--                 <div class="col-xl-10 offset-xl-1 col-lg-10 offset-lg-1"> -->
+<!--                     <div class="main_attending_area"> -->
+<!--                         <div class="flower_1 d-none d-lg-block"> -->
+<!--                             <img src="resources/views/index/image/appointment/flower-top.png" alt=""> -->
+<!--                         </div> -->
+<!--                         <div class="flower_2 d-none d-lg-block"> -->
+<!--                             <img src="resources/views/index/image/appointment/flower-bottom.png" alt=""> -->
+<!--                         </div> -->
+<!--                         <div class="row justify-content-center"> -->
+<!--                             <div class="col-xl-7 col-lg-8"> -->
+<!--                                 <div class="popup_box "> -->
+<!--                                     <div class="popup_inner"> -->
+<!--                                         <div class="form_heading text-center"> -->
+<!--                                             <h3>Are You Attending?</h3> -->
+<!--                                             <p>Kindly respond before 30 August</p> -->
+<!--                                         </div> -->
+<!--                                         <form action="#"> -->
+<!--                                             <div class="row"> -->
+<!--                                                 <div class="col-xl-12"> -->
+<!--                                                     <input type="text" placeholder="Your Name"> -->
+<!--                                                 </div> -->
+<!--                                                 <div class="col-xl-12"> -->
+<!--                                                     <input type="text" placeholder="Email"> -->
+<!--                                                 </div> -->
+<!--                                                 <div class="col-xl-12"> -->
+<!--                                                     <select class="form-select wide" id="default-select" class=""> -->
+<!--                                                         <option data-display="1 Guest">1 Guest</option> -->
+<!--                                                         <option value="1">2 Guest</option> -->
+<!--                                                         <option value="2">3 Guest</option> -->
+<!--                                                         <option value="3">4 Guest</option> -->
+<!--                                                     </select> -->
+<!--                                                 </div> -->
+<!--                                                 <div class="col-xl-12"> -->
+<!--                                                     <textarea placeholder="Additional Message"></textarea> -->
+<!--                                                 </div> -->
+<!--                                                 <div class="col-xl-12"> -->
+<!--                                                     <button type="submit" class="boxed_btn3">R.S.V.P</button> -->
+<!--                                                 </div> -->
+<!--                                             </div> -->
+<!--                                         </form> -->
+<!--                                     </div> -->
+<!--                                 </div> -->
+<!--                             </div> -->
+<!--                         </div> -->
+<!--                     </div> -->
+<!--                 </div> -->
+<!--             </div> -->
+<!--         </div> -->
+<!--     </div> -->
     <!-- / attend_area -->

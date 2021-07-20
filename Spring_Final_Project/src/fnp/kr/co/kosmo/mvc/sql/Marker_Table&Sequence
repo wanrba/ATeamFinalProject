@@ -1,19 +1,29 @@
-create table marker(
-	marker_num number constraint marker_num_pk primary key,
-	marker_mnum number constraint marker_mnum_nn not null,
-	marker_title varchar2(100) constraint marker_title_nn not null,
-	marker_content varchar2(400)  constraint marker_content_nn not null,
-	marker_picture varchar2(100),
-	marker_lat float(24) constraint marker_lat_nn not null,
-	marker_lon float(24) constraint marker_lon_nn not null,
-	marker_address varchar2(50) constraint marker_address_nn not null,
-	marker_date date default sysdate,
-	constraint marker_lat_uq unique(marker_lat),
-	constraint marker_lon_uq unique(marker_lon),
-	CONSTRAINT marker_mnum_fk FOREIGN KEY(marker_mnum) REFERENCES map(map_num)
-);
-
+-- MARKER Table Create SQL
+CREATE TABLE MARKER
+(
+    MARKER_NUM        NUMBER           NULL, 
+    MARKER_MNUM       NUMBER           NULL, 
+    MARKER_TITLE      VARCHAR2(100)    NULL, 
+    MARKER_CONTENT    VARCHAR2(400)    NULL, 
+    MARKER_PICTURE    VARCHAR2(100)    NOT NULL, 
+    MARKER_LAT        FLOAT(24)        NULL, 
+    MARKER_LON        FLOAT(24)        NULL, 
+    MARKER_ADDRESS    VARCHAR2(50)     NULL, 
+    MARKER_DATE       DATE             DEFAULT SYSDATE NOT NULL, 
+    CONSTRAINT PK_MARKER PRIMARY KEY (MARKER_NUM)
+)
+/
 
 CREATE SEQUENCE MARKER_SEQ
-INCREMENT BY 1
-START WITH 1;
+START WITH 1
+INCREMENT BY 1;
+/
+
+
+COMMENT ON TABLE MARKER IS 'MARKER'
+/
+
+ALTER TABLE MARKER
+    ADD CONSTRAINT FK_MARKER_MARKER_MNUM_MAP_MAP_ FOREIGN KEY (MARKER_MNUM)
+        REFERENCES MAP (MAP_NUM)
+/
