@@ -25,4 +25,10 @@ public interface MapServerInter {
 	 * @param marker_num
 	 */
 	public void delMarker(int marker_num);
+	
+	/**
+	 * Ä¿ÇÃ¹øÈ£¶û ¸Â´Â ¸Ê¹øÈ£
+	 * @param couplenum
+	 */
+	public int coupleMapNum(int couplenum);
 }

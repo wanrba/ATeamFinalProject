@@ -6,6 +6,7 @@ import java.util.List;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -32,12 +33,9 @@ public class MarkerMaker {
 	 * @return
 	 */
 	@RequestMapping(value = { "/map.do" })
-	public String maptest(Model m) {
-
-		// 추후 map_num을 가지고 활동 혹은 couple_num을 가지고 활동
-		// 테스트 코드 - session에 들어간 커플 번호를 통해서 맵 번호를 가져오게 변경해야 함
-		// 맵 테이블에 자동으로 커플 번호 생성시 맵 번호 할당하는 트리거 필요할 듯
-		int map_num = 1;
+	public String maptest(Model m, HttpSession session) {
+		//세션에 심은 커플번호 받아와서 지도번호 뽑기
+		int map_num = mapServerInter.coupleMapNum((int) session.getAttribute("sessionCoupleNum"));
 		List<MarkerDTO> list = mapServerInter.MapForm(map_num);
 
 		m.addAttribute("list", list);

@@ -21,7 +21,7 @@
                                 <nav>
                                     <ul id="navigation">
                                         <li><a class="active" href="index.do">홈</a></li>
-                                        <li><a href="story.html">커플지도</a></li>
+                                        <li><a href="map.do">커플지도</a></li>
                                         <li><a href="Gallery.html">갤러리</a></li>
                                         <li><a href="#">상점<i class="ti-angle-down"></i></a>
                                             <ul class="submenu">
@@ -38,7 +38,7 @@
                                                 <li><a href="elements.html">elements</a></li>
                                             </ul>
                                         </li>
-                                        <li><a href="contact.html">고객센터</a></li>
+                                        <li><a href="askForm.do">고객센터</a></li>
                                         <li>
                                         	<a href="#">=  
                                         		<i class="ti-angle-down"></i>

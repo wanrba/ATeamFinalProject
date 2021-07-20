@@ -24,4 +24,7 @@ public interface MarkerDaoInter {
 	 * @param marker_num
 	 */
 	public void delMarker(int marker_num);
+	
+	//커플번호에 맞는 맵번호 가져옴
+	public int coupleMapNum(int couplenum);
 }

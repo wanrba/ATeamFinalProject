@@ -44,7 +44,7 @@ public class LoginController {
 				case 0:
 					System.out.println("???¤í?? ì¼??´ì??0");
 					session.setAttribute("sessionNum", map.getUser_num());
-//					session.setAttribute("sessionpk", map.getUser_primarykey());
+					session.setAttribute("sessionCoupleNum", map.getUser_cuplenum());
 					session.setAttribute("sessionID", map.getUser_id());
 					session.setAttribute("sessionName", map.getUser_name());
 					mav.addObject("chk", "?¹ì?¸ì?´ì??");
@@ -75,6 +75,7 @@ public class LoginController {
 		session.removeAttribute("sessionpk");
 		session.removeAttribute("sessionName");
 		session.removeAttribute("sessionID");
+		session.removeAttribute("sessionCoupleNum");
 		return "redirect:/index.do";
 	}
 	

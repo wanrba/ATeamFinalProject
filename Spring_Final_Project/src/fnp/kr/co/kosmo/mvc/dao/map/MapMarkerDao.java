@@ -41,5 +41,15 @@ public class MapMarkerDao implements MarkerDaoInter {
 		ss.delete("map.delMarker", marker_num);
 
 	}
+	
+	/**
+	 * 7/20 ±è¹Ì¿¬
+	 * @param couplenum
+	 */
+	@Override
+	public int coupleMapNum(int couplenum) {
+		return ss.selectOne("map.coupleMapNum", couplenum);
+		
+	}
 
 }

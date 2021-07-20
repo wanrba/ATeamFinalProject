@@ -42,6 +42,17 @@ public class MapMarkerService implements MapServerInter{
 		markerDaoInter.delMarker(marker_num);
 	}
 
+	/**
+	 * Ä¿ÇÃ¹øÈ£¶û ¸Â´Â ¸Ê¹øÈ£
+	 * @param couplenum
+	 */
+	@Override
+	public int coupleMapNum(int couplenum) {
+		int mapnum=markerDaoInter.coupleMapNum(couplenum);
+		return mapnum;
+		
+	}
+
 	
 	
 }
