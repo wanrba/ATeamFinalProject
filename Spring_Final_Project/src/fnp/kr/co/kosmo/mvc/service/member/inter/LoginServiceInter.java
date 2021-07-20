@@ -7,7 +7,6 @@ public interface LoginServiceInter {
 	// login
 	public MemberDTO login(MemberDTO dto);
 
-	public int requestMatch(MemberDTO dto);
 
 	// id find
 	public MemberDTO memberIdFind(MemberDTO dto);
