@@ -3,13 +3,14 @@ package fnp.kr.co.kosmo.mvc.dto;
 public class CalendarDTO {
 
 	private int cidx;
-	private int user_cuplenum;
 	private String cTitle;
 	private String cStartDay;
 	private String cEndDay;
 	private String cLocal;
 	private String cContent;
 	private String cColor;
+	private String cImportance;
+	private int user_couplenum;
 
 	public int getCidx() {
 		return cidx;
@@ -17,14 +18,6 @@ public class CalendarDTO {
 
 	public void setCidx(int cidx) {
 		this.cidx = cidx;
-	}
-
-	public int getUser_cuplenum() {
-		return user_cuplenum;
-	}
-
-	public void setUser_cuplenum(int user_cuplenum) {
-		this.user_cuplenum = user_cuplenum;
 	}
 
 	public String getcTitle() {
@@ -73,6 +66,22 @@ public class CalendarDTO {
 
 	public void setcColor(String cColor) {
 		this.cColor = cColor;
+	}
+
+	public String getcImportance() {
+		return cImportance;
+	}
+
+	public void setcImportance(String cImportance) {
+		this.cImportance = cImportance;
+	}
+
+	public int getUser_couplenum() {
+		return user_couplenum;
+	}
+
+	public void setUser_couplenum(int user_couplenum) {
+		this.user_couplenum = user_couplenum;
 	}
 
 }

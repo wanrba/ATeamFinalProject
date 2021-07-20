@@ -82,8 +82,6 @@ public class LoginController {
 	@GetMapping({"/usermach.do"})
 	@ResponseBody
 	public void usermatch(MemberDTO dto, HttpServletResponse response) {
-		System.out.println("user_num"+dto.getUser_num());
-//		System.out.println("primarykey"+dto.getUser_primarykey());
 		
 		int num = loginServiceInter.requestMatch(dto);
 		try {

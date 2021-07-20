@@ -20,8 +20,6 @@ public class CalendarRestfulController {
 
 	/**
 	 * 2021-07-15 YoungJin
-	 * fullCalendar�� ����� ������ ������ �������� ���� �޼ҵ� session : ������ ������ȣ JSONArray :
-	 * calendar���� ����ϴ� ����
 	 * 
 	 * @param session
 	 * @return JSONArray
@@ -45,8 +43,8 @@ public class CalendarRestfulController {
 				ja.add(jo);
 			}
 
-			event.put("id", list.get(0).getUser_cuplenum());
-			event.put("member_id", list.get(0).getUser_cuplenum());
+			event.put("id", list.get(0).getUser_couplenum());
+			event.put("member_id", list.get(0).getUser_couplenum());
 			event.put("event", ja);
 		} catch (Exception e) {
 			System.out.println(e.getMessage());

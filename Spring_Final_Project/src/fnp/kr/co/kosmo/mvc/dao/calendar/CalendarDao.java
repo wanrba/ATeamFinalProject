@@ -20,7 +20,16 @@ public class CalendarDao implements CalendarDaoInter {
 	 * 신규 이벤트(스케줄) 등록
 	 */
 	public void insertCalendar(CalendarDTO cdto) {
-		cdto.setUser_cuplenum(1);
+		cdto.setUser_couplenum(1);
+		System.out.println(cdto.getcColor());
+		System.out.println(cdto.getcContent());
+		System.out.println(cdto.getcEndDay());
+		System.out.println(cdto.getCidx());
+		System.out.println(cdto.getcImportance());
+		System.out.println(cdto.getcLocal());
+		System.out.println(cdto.getcStartDay());
+		System.out.println(cdto.getcTitle());
+		System.out.println(cdto.getUser_couplenum());
 		sqlSessionTemplate.insert("calendar.insertCalendar", cdto);
 	}
 
