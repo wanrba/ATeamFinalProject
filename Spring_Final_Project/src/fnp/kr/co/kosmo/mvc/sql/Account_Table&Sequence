@@ -1,0 +1,15 @@
+--통장테이블(Bank book)
+CREATE TABLE ACCOUNT(
+    COUPLE_NUM NUMBER CONSTRAINT COUPLE_NUM_NN NOT NULL,             	 -- 연인고유번호
+    ACCOUNT_NAME varchar2(30) CONSTRAINT ACCOUNT_NAME_NN NOT NULL,                          --통장 별칭
+    ACCOUNT_INDEX NUMBER CONSTRAINT  ACCOUNT_INDEX_PK PRIMARY KEY,                    -- 통장 INDEX
+    ACCOUNT_NUM NUMBER CONSTRAINT ACCOUNT_NUM_NN NOT NULL,      -- 통장 계좌번호
+    ACCOUNT_PWD NUMBER CONSTRAINT ACCOUNT_PWD_NN NOT NULL,	              -- 통장 비밀번호(4자리만 받자)
+    ACCOUNT_BAL NUMBER DEFAULT 0,   		  		                               --통장 잔액
+    ACCOUNT_ODATE DATE DEFAULT SYSDATE, 		                               --통장 개설일(OPEN DATE)
+    CONSTRAINT ACCOUNT_COUPLE_NUM_FK FOREIGN KEY(COUPLE_NUM) REFERENCES couple(COUPLE_NUM),
+    CONSTRAINT ACCOUNT_NUM_UQ UNIQUE(ACCOUNT_NUM));
+    
+create sequence ACCOUNT_SEQ
+INCREMENT by 1
+start with 1;
