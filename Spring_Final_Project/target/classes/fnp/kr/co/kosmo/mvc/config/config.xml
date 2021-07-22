@@ -11,6 +11,7 @@ PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
 		<typeAlias type="fnp.kr.co.kosmo.mvc.dto.CalendarDTO" alias="cldDto"/>
 		<typeAlias type="fnp.kr.co.kosmo.mvc.dto.MapDTO" alias="mapDto"/>
 		<typeAlias type="fnp.kr.co.kosmo.mvc.dto.MarkerDTO" alias="markerDto"/>
+		<typeAlias type="fnp.kr.co.kosmo.mvc.dto.CustomerServiceDTO" alias="csDto"/>
 	</typeAliases>
 </configuration>
 

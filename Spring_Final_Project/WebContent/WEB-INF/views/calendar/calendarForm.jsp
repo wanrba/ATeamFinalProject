@@ -57,14 +57,8 @@
                                                <textarea id="cContent" class = "ft-20 ta-size" name="cContent"rows="5" cols="33" placeholder="내용을 입력"></textarea>
                                            </div>
 											<div class="col-xl-12">
-												<input type="date" class = "cal-wd-70 ft-20" id="cEndDay" name="cEndDay" value="${endDate}">
 												<input type="color" class = "cal-wd-29 ft-20" name="cColor" id="cColor">
                                            </div>
-<!--                                            <div class="col-xl-6"> -->
-<!-- 												<span>중요</span><input type = "radio" class = "cal-rb-h10 cal-wd-29" name = "cImportance" value = "high" /> -->
-<!-- 												<span>보통</span><input type = "radio" class = "cal-rb-h10 cal-wd-29" name = "cImportance" value = "middle" /> -->
-<!-- 												<span>낮음</span><input type = "radio" class = "cal-rb-h10 cal-wd-29" name = "cImportance" value = "low" /> -->
-<!--                                            </div> -->
 											<div id="calendarForm">
 												<h2>중요도</h2>
 												<ul>

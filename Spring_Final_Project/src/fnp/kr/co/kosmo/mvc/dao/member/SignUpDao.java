@@ -22,10 +22,6 @@ public class SignUpDao implements SignupDaoInter{
 		return ss.selectOne("member.idchek", user_id);
 	}
 
-	/**
-	 * 0718 ¿ØπŒ±‚public int random(String pk) ªË¡¶
-	 * @param pk
-	 * @return
-	 */
+
 
 }

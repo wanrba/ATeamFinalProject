@@ -44,9 +44,6 @@ public class IdPwdFindAction {
 	@RequestMapping(value = "/findId.do")
 	@ResponseBody
 	public String findId(MemberDTO dto, HttpServletResponse response) {
-		System.out.println("findId.do++++++++++++++++++++++++");
-		System.out.println("user_name: " + URLDecoder.decode(dto.getUser_name()));
-		System.out.println("user_phone: " + dto.getUser_phone());
 
 		MemberDTO list = loginServiceInter.memberIdFind(dto);
 
@@ -69,10 +66,6 @@ public class IdPwdFindAction {
 	@RequestMapping(value = "/findPwd.do")
 	@ResponseBody
 	public String findPwd(MemberDTO dto, HttpServletResponse response) {
-		System.out.println("findPwd.do++++++++++++++++++++++++");
-		System.out.println("user_id: " + dto.getUser_id());
-		System.out.println("user_name: " + URLDecoder.decode(dto.getUser_name()));
-		System.out.println("user_phone: " + dto.getUser_phone());
 
 		MemberDTO list = loginServiceInter.memberPwdFind(dto);
 

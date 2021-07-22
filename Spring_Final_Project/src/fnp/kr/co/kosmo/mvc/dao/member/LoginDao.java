@@ -1,7 +1,6 @@
 package fnp.kr.co.kosmo.mvc.dao.member;
 
 import org.mybatis.spring.SqlSessionTemplate;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
@@ -28,11 +27,6 @@ public class LoginDao implements LoginDaoInter{
 		return ss.selectOne("member.seluser",pk);
 	}
 
-	@Override
-	public void requestMatch(MemberDTO dto) {
-		
-		ss.update("member.requestMatch", dto);
-	}
 	/**
 	 * id pwd รฃดย dao
 	 */

@@ -38,7 +38,18 @@
                                                 <li><a href="elements.html">elements</a></li>
                                             </ul>
                                         </li>
-                                        <li><a href="askForm.do">고객센터</a></li>
+                                        <li>
+                                        	<a href="#">고객센터 
+                                        		<i class="ti-angle-down"></i>
+                                        	</a>
+                                            <ul class="submenu">
+                                                <li><a href="Accommodation.html">공지사항</a></li>
+                                                <li><a href="faqForm.do">자주 묻는 질문</a></li>
+                                                <li><a href="askForm.do">1:1 문의</a></li>
+                                                <li><a href="elements.html">약관 및 정책</a></li>
+                                            </ul>
+                                        </li>
+                                    
                                         <li>
                                         	<a href="#">=  
                                         		<i class="ti-angle-down"></i>

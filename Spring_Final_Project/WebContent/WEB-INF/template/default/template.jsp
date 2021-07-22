@@ -29,7 +29,7 @@
 <link rel="stylesheet" href="resources/common/css/gijgo.css">
 <link rel="stylesheet" href="resources/common/css/slicknav.css">
 <link rel="stylesheet" href="resources/common/css/style.css">
-<!-- <link rel="stylesheet" href="css/responsive.css"> -->
+<link rel="stylesheet" href="resources/common/css/customerService.css">
 
 <script src="resources/views/index/js/vendor/jquery-1.12.4.min.js"></script>
 </head>

@@ -1,75 +1,113 @@
 <%@ page language="java" contentType="text/html; charset=EUC-KR"
 	pageEncoding="EUC-KR"%>
-<!DOCTYPE html>
-<html>
-<head>
-<meta charset="EUC-KR">
-<title>Insert title here</title>
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<link href="resources/common/calendar/css/calendarForm-custom-css.css" rel="stylesheet">
 
-<!-- 
-CIDX
-USER_CUPLENUM
-CTITLE   		O
-CSTARTDAY		O
-CENDDAY			O
-CLOCAL			O
-CCONTENT		O
-CCOLOR 			O 
-** 이 두개 컬럼 추가해야 될 듯
-CSDTIME 시작시간
-CEDTIME 종료시간
--->
 
-</head>
-<body>
-	<h4>일정 등록폼</h4>
-	<br><form name="insertCalendar" method="post" action="updateCalendar.do" encType="EUC-KR">
-	
-	<input type="hidden" id="cidx" name="cidx" class="calendartext" 
-		value="${cdto.cidx }">
+<!-- slider_area -->
+<div class="slider_area ">
+    <div class="slider_area_inner slider_bg_1 overlay2">
+        <div class="slider_text text-center">
+            <div class="text_inner">
+                <img src="resources/common/image/logo_banner/ornaments.png" alt="">
+                <h4>14 Jan 2020</h4>
+                <h3>Anjelina & Jack <br>
+                    Wedding Ceremony</h3>
+                <span>Get Married</span>
+            </div>
+        </div>
+    </div>
+</div>
+<!--/ slider_area -->
+    
+<!-- attend_area -->
+<div class="attending_area">
+    <div class="container">
+        <div class="row">
+            <div class="col-xl-10 offset-xl-1 col-lg-10 offset-lg-1">
+                <div class="main_attending_area">
+                    <div class="flower_1 d-none d-lg-block">
+                        <img src="resources/views/index/image/appointment/flower-top.png" alt="">
+                    </div>
+                    <div class="flower_2 d-none d-lg-block">
+                        <img src="resources/views/index/image/appointment/flower-bottom.png" alt="">
+                    </div>
+                    <div class="row justify-content-center">
+                        <div class="col-xl-10 col-lg-8">
+                            <div class="popup_box ">
+                                <div class="popup_inner">
+<!--                                         <div class="form_heading text-center"> -->
+<!--                                             <h3>Are You Attending?</h3> -->
+<!--                                             <p>Kindly respond before 30 August</p> -->
+<!--                                         </div> -->
+									<form name="insertCalendar" method="post" action="updateCalendar.do" encType="EUC-KR">
+										<input type="hidden" id="cidx" name="cidx" class="calendartext" value="${cdto.cidx }">
+                                       	<div class="row">
+                                           <div class="col-xl-12">
+                                               <input type="text" id="cTitle" name="cTitle" class="ft-20" value="${cdto.cTitle }">
+                                           </div>
+                                           <div class="col-xl-12">
+                                               <input type="text" id="cLocal" name="cLocal" class="ft-20" value="${cdto.cLocal}">
+                                           </div>
+                                           <div class="col-xl-12">
+												<input type="date" class = "cal-wd-70 ft-20" id="cStartDay" name="cStartDay" value="${cdto.cStartDay }">
+												<input type="time" class = "cal-wd-29 ft-20" id="csdtime" name="csdtime" value="">
+                                           </div>
+                                           <div class="col-xl-12">
+												<input type="date" class = "cal-wd-70 ft-20" id="cEndDay" name="cEndDay" value="${cdto.cEndDay }">
+      											<input type="time" class = "cal-wd-29 ft-20" id="cedtime" name="cedtime" value="">
+                                           </div>
+                                           <div class="col-xl-12">
+                                               <textarea id="cContent" class = "ft-20 ta-size" name="cContent"rows="5" cols="33" placeholder="내용을 입력">${cdto.cContent }</textarea>
+                                           </div>
+											<div class="col-xl-12">
+												<input type="color" class = "cal-wd-29 ft-20" name="cColor" id="cColor" value = ${cdto.cColor }>
+                                           </div>
+											<div id="calendarForm">
+												<h2>중요도</h2>
+												<ul>
+													<li>
+														<input type="radio" id="important-high" name="cImportance" <c:if test="${cdto.cImportance == '중요'}">checked</c:if>>
+														<label for="important-high">중요</label>
+														<div class="check"></div>
+													</li>
+													<li>
+														<input type="radio" id="important-middle" name="cImportance" <c:if test="${cdto.cImportance eq '보통'}">checked</c:if>>
+														<label for="important-middle">보통</label>
+														<div class="check">
+															<div class="inside"></div>
+														</div>
+													</li>
+													<li>
+														<input type="radio" id="important-low" name="cImportance" <c:if test="${cdto.cImportance eq '낮음'}">checked</c:if>>
+														<label for="important-low">낮음</label>
+														<div class="check">
+															<div class="inside"></div>
+														</div>
+													</li>
+												</ul>
+											</div>
+											<div class="col-xl-12">
+												<input type="submit" id="calendarinsert" value="수정">	
+												<input type="button" onclick="deleteInfo()" value="삭제">
+                                           </div>
+										</div>
+                                   </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- / attend_area -->
 
-		<p><label for=cTitle><strong>제목</strong></label>  
-		<input type="text" id="cTitle" name="cTitle" class="calendartext" 
-		value="${cdto.cTitle }"><br></p>
 
-		<p><label for="cLocal"><strong>장소</strong></label> 
-		<input type="text" id="cLocal" name="cLocal" class="calendartext" 
-		value="${cdto.cLocal}"><br></p>
-
-		<p><label for="cStartDay"><strong>시작 일시</strong></label> 
-      	<p><input type="date" id="cStartDay" name="cStartDay" value="${cdto.cStartDay }">
-     	 <input type="time" id="csdtime" name="csdtime" value=""></p>
-
-		<p><label for="cEndDay"><strong>종료 일시</strong></label> 
-      	<input type="date" id="cEndDay" name="cEndDay" value="${cdto.cEndDay }">
-      	<input type="time" id="cedtime" name="cedtime" value=""></p>
-
-	 	<p><label for="cContent">내용 <br></label>
-		<textarea id="cContent" name="cContent"rows="5" cols="33" placeholder="내용을 입력">${cdto.cContent }</textarea></p>
-
-		<!-- <p><label for="cColor"><strong>중요도</strong></label>  -->
-		<!-- <input type="radio" name="cColor" value="high">높음
-		<input type="radio" name="cColor" value="middle">보통
-		<input type="radio" name="cColor" value="low">낮음</p 
-		이거 대신 색상표 넣기
-		-->
-		<p><label for="cColor"><strong>중요도</strong></label>
-		>
-		<input type="color" name="cColor" id="cColor">
-
-	<!-- 	<h4>일정 color! 혹시 몰라서 넣어봄</h4>
-		<input type="color" name="favcolor" value="#CC6600"> -->
-
-  		<p><input type="submit" id="calendarinsert" value="수정">	
-	     <input type="button" onclick="deleteInfo()" value="삭제"></p>
-	    <br>
-   	<hr>
-</form>
 <script>
 // 2021_07_06 김성경 삭제로 이동하는 메서드
 function deleteInfo() {
 	location.href="deleteCalendar.do?cidx=" + $('#cidx').val();
 }
 </script>
-</body>
-</html> 
