@@ -23,19 +23,19 @@
                                         <li><a class="active" href="index.do">홈</a></li>
                                         <li><a href="map.do">커플지도</a></li>
                                         <li><a href="Gallery.html">갤러리</a></li>
-                                        <li><a href="#">상점<i class="ti-angle-down"></i></a>
+                                        <li><a href="#">커플상점<i class="ti-angle-down"></i></a>
                                             <ul class="submenu">
-                                                <li><a href="blog.html">blog</a></li>
+                                                <li><a href="blog.html">test</a></li>
                                                 <li><a href="single-blog.html">single-blog</a></li>
                                             </ul>
                                         </li>
                                         <li>
-                                        	<a href="#">pages 
+                                        	<a href="#">커플통장 
                                         		<i class="ti-angle-down"></i>
                                         	</a>
                                             <ul class="submenu">
-                                                <li><a href="Accommodation.html">Accommodation</a></li>
-                                                <li><a href="elements.html">elements</a></li>
+                                                <li><a href="accountForm.do">커플통장 계좌 개설</a></li>
+                                                <li><a href="elements.html">통장 내역 조회</a></li>
                                             </ul>
                                         </li>
                                         <li>

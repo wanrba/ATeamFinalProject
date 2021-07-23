@@ -2,11 +2,7 @@
 	pageEncoding="EUC-KR"%>
 <link href="resources/common/calendar/css/fullcalendar.min.css" rel='stylesheet'/>
 <script src="resources/views/index/js/jquery.counterup.min.js"></script>
-<!-- 	<script> -->
-<%-- // 		if("${msg}" != "") { --%>
-<%-- // 			alert("${msg}") --%>
-<!-- // 		} -->
-<!-- 	</script> -->
+
 <style>
 	.fc-past {
 		background-color: blanchedalmond;
@@ -26,6 +22,23 @@
 				get_calendar();
 			});
 		});
+		
+		//로그인 안하고 커플통장개설 눌렀을경우 알람창 - 김미연 7/23
+		function nologin(){
+			$.ajax({
+				url:"accountForm.do",
+				type:'post',
+				success: function(data){
+					alert(data);
+					
+				},
+				error: function(e){
+					console.log('error: '+e);
+					alert('오류발생!!');
+				}
+			
+			})
+		}
 	</script>
 	
 	<!--
@@ -375,64 +388,5 @@
             </div>
         </div>
     </div>
-    <!--/ program_details -->
 
 
-<!--
-	07-20 YoungJin
-	Index Page의 제일 아래 예약하는 section 사용하지 않을 예정이므로 주석처리
--->
-    <!-- attend_area -->
-<!--     <div class="attending_area"> -->
-<!--         <div class="container"> -->
-<!--             <div class="row"> -->
-<!--                 <div class="col-xl-10 offset-xl-1 col-lg-10 offset-lg-1"> -->
-<!--                     <div class="main_attending_area"> -->
-<!--                         <div class="flower_1 d-none d-lg-block"> -->
-<!--                             <img src="resources/views/index/image/appointment/flower-top.png" alt=""> -->
-<!--                         </div> -->
-<!--                         <div class="flower_2 d-none d-lg-block"> -->
-<!--                             <img src="resources/views/index/image/appointment/flower-bottom.png" alt=""> -->
-<!--                         </div> -->
-<!--                         <div class="row justify-content-center"> -->
-<!--                             <div class="col-xl-7 col-lg-8"> -->
-<!--                                 <div class="popup_box "> -->
-<!--                                     <div class="popup_inner"> -->
-<!--                                         <div class="form_heading text-center"> -->
-<!--                                             <h3>Are You Attending?</h3> -->
-<!--                                             <p>Kindly respond before 30 August</p> -->
-<!--                                         </div> -->
-<!--                                         <form action="#"> -->
-<!--                                             <div class="row"> -->
-<!--                                                 <div class="col-xl-12"> -->
-<!--                                                     <input type="text" placeholder="Your Name"> -->
-<!--                                                 </div> -->
-<!--                                                 <div class="col-xl-12"> -->
-<!--                                                     <input type="text" placeholder="Email"> -->
-<!--                                                 </div> -->
-<!--                                                 <div class="col-xl-12"> -->
-<!--                                                     <select class="form-select wide" id="default-select" class=""> -->
-<!--                                                         <option data-display="1 Guest">1 Guest</option> -->
-<!--                                                         <option value="1">2 Guest</option> -->
-<!--                                                         <option value="2">3 Guest</option> -->
-<!--                                                         <option value="3">4 Guest</option> -->
-<!--                                                     </select> -->
-<!--                                                 </div> -->
-<!--                                                 <div class="col-xl-12"> -->
-<!--                                                     <textarea placeholder="Additional Message"></textarea> -->
-<!--                                                 </div> -->
-<!--                                                 <div class="col-xl-12"> -->
-<!--                                                     <button type="submit" class="boxed_btn3">R.S.V.P</button> -->
-<!--                                                 </div> -->
-<!--                                             </div> -->
-<!--                                         </form> -->
-<!--                                     </div> -->
-<!--                                 </div> -->
-<!--                             </div> -->
-<!--                         </div> -->
-<!--                     </div> -->
-<!--                 </div> -->
-<!--             </div> -->
-<!--         </div> -->
-<!--     </div> -->
-    <!-- / attend_area -->

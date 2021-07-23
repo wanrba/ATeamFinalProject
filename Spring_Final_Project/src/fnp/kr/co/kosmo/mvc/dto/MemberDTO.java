@@ -10,7 +10,7 @@ public class MemberDTO {
 	private String user_birth; // 생년월일
 	private int user_age; // 나이
 	private String user_gender; // 성별
-	private int user_cuplenum; // 커플 고유번호
+	private int user_couplenum; // 커플 고유번호
 	private int user_match; // 연인 매칭 유무 승인이전 0 승인대기 1 승인 이후 2
 	private String user_dday; // 연인이 된 날짜
 	private String user_adate; // 가입일
@@ -79,12 +79,12 @@ public class MemberDTO {
 		this.user_gender = user_gender;
 	}
 
-	public int getUser_cuplenum() {
-		return user_cuplenum;
+	public int getUser_couplenum() {
+		return user_couplenum;
 	}
 
-	public void setUser_cuplenum(int user_cuplenum) {
-		this.user_cuplenum = user_cuplenum;
+	public void setUser_couplenum(int user_couplenum) {
+		this.user_couplenum = user_couplenum;
 	}
 
 	public int getUser_match() {

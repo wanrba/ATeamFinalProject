@@ -32,6 +32,11 @@
 <link rel="stylesheet" href="resources/common/css/customerService.css">
 
 <script src="resources/views/index/js/vendor/jquery-1.12.4.min.js"></script>
+
+<link rel="stylesheet" href="resources/common/css/tailwind.output.css" />
+<link
+	href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+	rel="stylesheet" />
 </head>
 <body>
 	<tiles:insertAttribute name="header" />
