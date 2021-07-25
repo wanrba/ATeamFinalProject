@@ -10,7 +10,7 @@
 		<input type="hidden" class="lon" value=${e.marker_lon }>
 		<input type="hidden" class="title" value="${e.marker_title}">
 		<input type="hidden" class="content" value="${e.marker_content}">
-		<input type="hidden" class="picture" value="${e.marker_picturename}">
+		<input type="hidden" class="picture" value="${e.marker_picture}">
 		<input type="hidden" class="date" value="${e.marker_date}">
 		<input type="hidden" class="num" value="${e.marker_num}">
 	</c:forEach>

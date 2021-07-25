@@ -1,4 +1,4 @@
-package fnp.kr.co.kosmo.mvc.dao.member.inter;
+package fnp.kr.co.kosmo.mvc.dao.member;
 
 import fnp.kr.co.kosmo.mvc.dto.MemberDTO;
 

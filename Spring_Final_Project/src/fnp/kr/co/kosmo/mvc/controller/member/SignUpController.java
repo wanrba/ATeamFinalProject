@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.servlet.ModelAndView;
 
 import fnp.kr.co.kosmo.mvc.dto.MemberDTO;
-import fnp.kr.co.kosmo.mvc.service.member.inter.SignupServiceInter;
+import fnp.kr.co.kosmo.mvc.service.member.SignupServiceInter;
 
 @Controller
 public class SignUpController {

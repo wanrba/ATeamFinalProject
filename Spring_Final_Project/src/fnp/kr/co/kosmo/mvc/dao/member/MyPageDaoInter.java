@@ -1,4 +1,4 @@
-package fnp.kr.co.kosmo.mvc.dao.member.inter;
+package fnp.kr.co.kosmo.mvc.dao.member;
 
 import fnp.kr.co.kosmo.mvc.dto.MemberDTO;
 
@@ -26,4 +26,17 @@ public interface MyPageDaoInter {
 	 * @param vo
 	 */
 	public void memUpdate(MemberDTO vo);
+	
+	/**
+    * 7/24 ±è¹Ì¿¬
+    * È¸¿øÅ»Åð
+    * @param couple_num
+    */
+   public void delInfo(int couple_num);
+	   
+   /**
+    * Ä¿ÇÃµî·Ï Àü¿¡ Å»ÅðÇÒ°æ¿ì  7/24 ±è¹Ì¿¬
+    * @param user_num
+    */
+   public void delInfo2(int user_num);
 }

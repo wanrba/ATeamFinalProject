@@ -17,8 +17,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.multipart.MultipartFile;
 
+import fnp.kr.co.kosmo.mvc.dto.MapDTO;
 import fnp.kr.co.kosmo.mvc.dto.MarkerDTO;
-import fnp.kr.co.kosmo.mvc.service.map.inter.MapServerInter;
+import fnp.kr.co.kosmo.mvc.service.map.MapServerInter;
 
 @Controller
 public class MarkerMaker {
@@ -35,12 +36,13 @@ public class MarkerMaker {
 	@RequestMapping(value = { "/map.do" })
 	public String maptest(Model m, HttpSession session) {
 		//세션에 심은 커플번호 받아와서 지도번호 뽑기
-		int map_num = mapServerInter.coupleMapNum((int) session.getAttribute("sessionCoupleNum"));
-		List<MarkerDTO> list = mapServerInter.MapForm(map_num);
+		MapDTO dto = mapServerInter.coupleMapNum((int) session.getAttribute("sessionCoupleNum"));
+		List<MarkerDTO> list = mapServerInter.MapForm(dto.getMap_num());
 
 		m.addAttribute("list", list);
 		return "map/map";
 	}
+
 
 	/**
 	 * 마커 생성후 정보 등록
@@ -71,7 +73,7 @@ public class MarkerMaker {
 			}
 
 		}
-		dto.setMarker_picturename(picname.toString());
+		dto.setMarker_picture(picname.toString());
 		// 커플의 고유번호로 지도 출력
 		dto.setMarker_mnum(1);
 		mapServerInter.markerMake(dto);

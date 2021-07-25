@@ -4,7 +4,6 @@ import org.mybatis.spring.SqlSessionTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
-import fnp.kr.co.kosmo.mvc.dao.member.inter.MyPageDaoInter;
 import fnp.kr.co.kosmo.mvc.dto.MemberDTO;
 
 @Repository
@@ -43,4 +42,25 @@ public class MyPageDao implements MyPageDaoInter{
 	public void memUpdate(MemberDTO vo) {
 		ss.update("member.mUpdate",vo);
 	}
+	
+
+	/**
+	 * 7/24 ±è¹Ì¿¬
+	 * Ä¿ÇÃÀÌ È¸¿øÅ»Åð
+	 * @param couple_num
+	 */
+	@Override
+	   public void delInfo(int couple_num) {
+	      ss.delete("member.delinfo",couple_num);
+	      
+	   }
+
+	   /**
+	    * Ä¿ÇÃµî·Ï Àü¿¡ Å»ÅðÇÒ°æ¿ì  7/24 ±è¹Ì¿¬
+	    */
+	   @Override
+	   public void delInfo2(int user_num) {
+	      ss.delete("member.delinfo2",user_num);
+	      
+	   }
 }

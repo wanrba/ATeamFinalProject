@@ -1,4 +1,4 @@
-package fnp.kr.co.kosmo.mvc.service.calendar.inter;
+package fnp.kr.co.kosmo.mvc.service.calendar;
 
 import java.sql.SQLException;
 import java.util.List;

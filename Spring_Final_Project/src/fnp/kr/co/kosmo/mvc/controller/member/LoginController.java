@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.servlet.ModelAndView;
 
 import fnp.kr.co.kosmo.mvc.dto.MemberDTO;
-import fnp.kr.co.kosmo.mvc.service.member.inter.LoginServiceInter;
+import fnp.kr.co.kosmo.mvc.service.member.LoginServiceInter;
 
 @Controller
 public class LoginController {

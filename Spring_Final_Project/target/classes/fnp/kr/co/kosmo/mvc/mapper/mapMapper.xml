@@ -10,7 +10,7 @@
 	-->
  	<insert id="markermake" parameterType="markerDto">
  		INSERT INTO MARKER
- 		VALUES(MARKER_SEQ.NEXTVAL, #{marker_mnum}, #{marker_title}, #{marker_content}, #{marker_picturename}, #{marker_lat}, #{marker_lon}, #{marker_addr}, #{marker_date})
+ 		VALUES(MARKER_SEQ.NEXTVAL, #{marker_mnum}, #{marker_title}, #{marker_content}, #{marker_picture}, #{marker_lat}, #{marker_lon}, #{marker_addr}, #{marker_date})
  	</insert>
  	
  	<!--
@@ -27,15 +27,29 @@
 		생성되어 있는 마커에 들어갈 상세정보 조회
 	-->
  	<select id="mapform" parameterType="int" resultType="markerDto">
- 		SELECT MARKER_NUM, MARKER_TITLE, MARKER_CONTENT, MARKER_PICTURE AS MARKER_PICTURENAME, MARKER_LAT, MARKER_LON, MARKER_ADDRESS, TO_CHAR(MARKER_DATE, 'YYYY-MM-DD') AS MARKER_DATE
+ 		SELECT MARKER_NUM, MARKER_TITLE, MARKER_CONTENT, MARKER_PICTURE AS MARKER_PICTURE, MARKER_LAT, MARKER_LON, MARKER_ADDRESS, TO_CHAR(MARKER_DATE, 'YYYY-MM-DD') AS MARKER_DATE
  		FROM MARKER
  		WHERE MARKER_MNUM = #{map_num}
  		ORDER BY 1 ASC
  	</select>
  	
- 	<!-- 7/20 김미연  커플번호에 맞는 맵번호 가져오는 쿼리문 -->
- 	<select id="coupleMapNum" parameterType="int" resultType="int">
- 		select distinct(m.map_num) from member mem, map m where mem.user_couplenum = m.map_cnum
+ 	    <!-- 7/20 김미연  커플번호에 맞는 맵번호 가져오는 쿼리문 -->
+    <select id="coupleMapNum" parameterType="int" resultType="mapDto">
+       select map_num from map where map_cnum = #{map_cnum}
+    </select>
+ 	
+ 	<!-- controller에서 list travelgal에 뿌려주기 0724 김성경 -->
+ 	<select id="markerPD" parameterType="int" resultType="markerDto">
+		select marker_num, to_char(marker_date,'YYYY/MM/DD') marker_date ,marker_picture ,marker_title,marker_content,marker_address,marker_likes  from marker where marker_mnum=#{marker_mnum}
  	</select>
  	
+ 	<!-- marker테이블의 좋아요 컬럼업데이트하기 1로 0724 김성경 -->
+ 	<update id="upDateLike" parameterType="hashMap">
+ 		update marker set marker_likes =1 where marker_num=#{marker_num} and marker_mnum=#{marker_mnum}
+ 	</update>
+ 	
+ 	<!-- marker테이블의 좋아요 컬럼업데이트하기 0으로 0724 김성경 -->
+ 	<update id="downUpdateLike" parameterType="hashMap">
+ 		update marker set marker_likes =0 where marker_num=#{marker_num} and marker_mnum=#{marker_mnum}
+ 	</update>
  </mapper>

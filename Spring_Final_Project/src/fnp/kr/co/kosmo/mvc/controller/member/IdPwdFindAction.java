@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import fnp.kr.co.kosmo.mvc.dto.MemberDTO;
-import fnp.kr.co.kosmo.mvc.service.member.inter.LoginServiceInter;
+import fnp.kr.co.kosmo.mvc.service.member.LoginServiceInter;
 @Controller
 public class IdPwdFindAction {
 	@Autowired

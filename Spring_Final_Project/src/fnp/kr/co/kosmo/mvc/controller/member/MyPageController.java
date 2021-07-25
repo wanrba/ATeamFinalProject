@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 
 import fnp.kr.co.kosmo.mvc.dto.MemberDTO;
-import fnp.kr.co.kosmo.mvc.service.member.inter.MyPageServiceInter;
+import fnp.kr.co.kosmo.mvc.service.member.MyPageServiceInter;
 
 @Controller
 public class MyPageController {
@@ -26,7 +26,6 @@ public class MyPageController {
 	 * @param session, dto
 	 * @return mav
 	 */
-
 	@RequestMapping("/myPage.do")
 	public ModelAndView mypageInfo(HttpSession session) {
 
@@ -89,5 +88,44 @@ public class MyPageController {
 		mav.setViewName("redirect:/index.do");
 		return mav;
 	}
+
+	/**
+	 * 회원탈퇴 폼 이동 - 7/24 김미연
+	 * @return
+	 */
+   @RequestMapping(value = { "/delChkForm.do" })
+   public String delChkForm() {
+      
+      return "mypage/delChkForm";
+   }
+
+   /**
+    * 회원탈퇴 수행 - 7/24 김미연
+    * @param session
+    * @return
+    */
+   @RequestMapping(value = { "/delinfo.do" })
+   public String delInfo(HttpSession session) {
+      
+      //세션 커플넘 받아서 삭제
+      int couple_num=(int) session.getAttribute("sessionCoupleNum");
+      System.out.println("dd"+(Integer)couple_num);
+      //커플이 아직 아닌상태(즉 커플인증 전에 탈퇴할경우)
+      if(couple_num == 0) {
+         myPageServiceInter.delInfo2((int) session.getAttribute("sessionNum"));
+      
+      //커플이 탈퇴할 경우
+      }else {
+         myPageServiceInter.delInfo(couple_num);
+      }
+      
+      
+      //심어놓은 세션 삭제
+      session.removeAttribute("sessionNum");
+       session.removeAttribute("sessionName");
+       session.removeAttribute("sessionID");
+       session.removeAttribute("sessionCoupleNum");
+      return "redirect:/index.do";
+   }
 
 }

@@ -1,4 +1,4 @@
-package fnp.kr.co.kosmo.mvc.dao.calendar.inter;
+package fnp.kr.co.kosmo.mvc.dao.calendar;
 import java.sql.SQLException;
 import java.util.List;
 

@@ -7,7 +7,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-import fnp.kr.co.kosmo.mvc.service.member.inter.MyPageServiceInter;
+import fnp.kr.co.kosmo.mvc.service.member.MyPageServiceInter;
 
 @Controller
 public class IndexController {

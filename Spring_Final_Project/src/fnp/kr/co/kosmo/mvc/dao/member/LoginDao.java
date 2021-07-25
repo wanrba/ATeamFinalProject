@@ -4,7 +4,6 @@ import org.mybatis.spring.SqlSessionTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
-import fnp.kr.co.kosmo.mvc.dao.member.inter.LoginDaoInter;
 import fnp.kr.co.kosmo.mvc.dto.MemberDTO;
 @Repository
 public class LoginDao implements LoginDaoInter{

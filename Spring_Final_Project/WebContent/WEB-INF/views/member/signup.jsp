@@ -8,7 +8,7 @@
     	}else if(txt=="1"){
         	alert("회원가입이 완료되셨습니다");
         	if(confirm('회원가입을 완료했습니다 로그인하시겠습니까?')){
-        		location="login.do";
+        		location="loginForm.do";
     		}else{
     			location="index.do";
     		}
@@ -250,13 +250,6 @@
 			
 		});
 		
-		
-		
-		/* $(".input").on("keyup",function(key){
-        	if(key.keyCode==13) {
-          		alert("엔터키 이벤트");
-        	}
-    	}); */
 	});
 	
 	//연락처 받는것

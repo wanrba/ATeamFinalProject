@@ -66,4 +66,13 @@
 		user_phone=#{user_phone}
 	</select>
 
+	<!-- 커플일 경우 회원탈퇴 0725 미연 -->
+   <delete id="delinfo" parameterType="int">
+   		delete from couple where couple_num=#{couple_num}
+   </delete>
+   
+   <!-- 커플등록 전에 회원탈퇴 0725 미연 -->
+   <delete id="delinfo2" parameterType="int">
+    	delete from member where user_num=#{user_num}
+   </delete>
 </mapper>

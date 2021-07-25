@@ -1,4 +1,4 @@
-package fnp.kr.co.kosmo.mvc.service.member.inter;
+package fnp.kr.co.kosmo.mvc.service.member;
 
 import fnp.kr.co.kosmo.mvc.dto.MemberDTO;
 

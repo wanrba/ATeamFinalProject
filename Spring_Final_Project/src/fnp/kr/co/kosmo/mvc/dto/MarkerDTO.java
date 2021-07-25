@@ -7,7 +7,7 @@ public class MarkerDTO {
 	// 마커 고유번호
 	private int marker_num;
 	//사진
-	private String marker_picturename;
+	private String marker_picture;
 	//제목
 	private String marker_title;
 	//내용
@@ -20,10 +20,21 @@ public class MarkerDTO {
 	private String marker_addr;
 	//추억 날짜 
 	private String marker_date;
+	//좋아요
+	private int marker_likes;
 	
+	public int getMarker_likes() {
+		return marker_likes;
+	}
+
+	public void setMarker_likes(int marker_likes) {
+		this.marker_likes = marker_likes;
+	}
+
 	public int getMarker_num() {
 		return marker_num;
 	}
+	
 	public void setMarker_num(int marker_num) {
 		this.marker_num = marker_num;
 	}
@@ -34,11 +45,12 @@ public class MarkerDTO {
 	public void setMarker_mnum(int marker_mnum) {
 		this.marker_mnum = marker_mnum;
 	}
-	public String getMarker_picturename() {
-		return marker_picturename;
+	
+	public String getMarker_picture() {
+		return marker_picture;
 	}
-	public void setMarker_picturename(String marker_picturename) {
-		this.marker_picturename = marker_picturename;
+	public void setMarker_picture(String marker_picture) {
+		this.marker_picture = marker_picture;
 	}
 	public String getMarker_title() {
 		return marker_title;

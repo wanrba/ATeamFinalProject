@@ -5,9 +5,8 @@ import java.util.Calendar;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import fnp.kr.co.kosmo.mvc.dao.member.inter.SignupDaoInter;
+import fnp.kr.co.kosmo.mvc.dao.member.SignupDaoInter;
 import fnp.kr.co.kosmo.mvc.dto.MemberDTO;
-import fnp.kr.co.kosmo.mvc.service.member.inter.SignupServiceInter;
 
 @Service
 public class SignUpService implements SignupServiceInter {

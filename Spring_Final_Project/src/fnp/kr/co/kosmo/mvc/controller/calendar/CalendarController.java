@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 
 import fnp.kr.co.kosmo.mvc.dto.CalendarDTO;
-import fnp.kr.co.kosmo.mvc.service.calendar.inter.CalendarServiceInter;
+import fnp.kr.co.kosmo.mvc.service.calendar.CalendarServiceInter;
 
 @Controller
 public class CalendarController {

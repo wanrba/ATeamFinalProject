@@ -14,6 +14,9 @@ PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
 		<typeAlias type="fnp.kr.co.kosmo.mvc.dto.CustomerServiceDTO" alias="csDto"/>
 		<typeAlias type="fnp.kr.co.kosmo.mvc.dto.AccountDTO" alias="accountDto"/>
 		<typeAlias type="fnp.kr.co.kosmo.mvc.dto.AccountIODTO" alias="accountIODto"/>
+		<typeAlias type="fnp.kr.co.kosmo.mvc.dto.GalleryDTO" alias="galleryDto"/>
+		<typeAlias type="fnp.kr.co.kosmo.mvc.dto.ExhibitionDTO" alias="exhibitionDto"/>
+		<typeAlias type="fnp.kr.co.kosmo.mvc.dto.Like_mDTO" alias="likeDto"/>
 	</typeAliases>
 </configuration>
 

@@ -43,7 +43,20 @@
                                                <input type="text" class = "ft-20" id="cTitle" name="cTitle" class="calendartext" value="">
                                            </div>
                                            <div class="col-xl-12">
-                                               <input type="text" class = "ft-20" id="cLocal" name="cLocal" class="calendartext" value="">
+                                               <input type="text" class = "ft-20" id="cLocal" name="cLocal" class="calendartext" value="" style = "width : 85%">
+                                               <img src = "resources/views/map/img/map.png" id = "mapTest" style = "height : 50px;">
+                                               <script>
+                                               	$(document).ready(function() {
+                                               		$(function() {
+                                               			$("#mapTest").on("click", function() {
+                                               				var width = window.innerWidth;
+                                               				var height = window.innerHeight;
+                                               				const map = window.open("popupMap.do","_blank","width=" + width + ",height=" + height);
+//                                                				const map = window.open("popupMap.do","_blank","width=" + (width / 2) + ",height=" + (height / 2));
+                                               			});
+                                               		});
+                                               	});
+                                               </script>
                                            </div>
                                            <div class="col-xl-12">
                                                <input type="date" class = "cal-wd-70 ft-20" id="cStartDay" name="cStartDay" value="${startDate}">

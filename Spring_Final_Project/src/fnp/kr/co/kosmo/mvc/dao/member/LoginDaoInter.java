@@ -1,16 +1,16 @@
-package fnp.kr.co.kosmo.mvc.service.member.inter;
+package fnp.kr.co.kosmo.mvc.dao.member;
 
 import fnp.kr.co.kosmo.mvc.dto.MemberDTO;
 
-public interface LoginServiceInter {
+public interface LoginDaoInter {
 
-	// login
 	public MemberDTO login(MemberDTO dto);
-
-
-	// id find
+	
+	public int random(String randomnum);
+	
+	public int seluser(String pk);
+	
 	public MemberDTO memberIdFind(MemberDTO dto);
-
-	// pwd find
+	
 	public MemberDTO memberPwdFind(MemberDTO dto);
 }

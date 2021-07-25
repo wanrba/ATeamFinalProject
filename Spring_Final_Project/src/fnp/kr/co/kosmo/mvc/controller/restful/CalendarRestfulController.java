@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import fnp.kr.co.kosmo.mvc.dto.CalendarDTO;
-import fnp.kr.co.kosmo.mvc.service.calendar.inter.CalendarServiceInter;
+import fnp.kr.co.kosmo.mvc.service.calendar.CalendarServiceInter;
 
 @RestController
 public class CalendarRestfulController {
