@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="EUC-KR"?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="exhibition">
+
+	<!-- 
+		07-23 YoungJin
+		커플상점의 목록리스트 반환 (검색 조건이 있을경우 조건에 맞게 검색 후 반환)
+	-->
+	<select id="contentList" parameterType="hashmap" resultType="exhibitionDto">
+		SELECT EX_INDEX, EX_TITLE, EX_STARTDAY, EX_ENDDAY, EX_THUMB, EX_PAY
+		FROM EXHIBITION
+		<if test="searchType != null">
+			<where>
+				<choose>
+					<when test="ex_startday != null">
+						<![CDATA[
+							TO_DATE(REPLACE(${ex_startday}, '-', '/'), 'yyyy-MM-dd') >= #{ex_startday}
+						]]>
+					</when>
+					<when test="ex_endday != null">
+						<![CDATA[
+							AND TO_DATE(REPLACE(${ex_endday}, '-', '/'), 'yyyy-MM-dd') <= #{ex_endday}
+						]]>
+					</when>
+					<when test="searchKeywordType != null">
+						<choose>
+							<when test="searchKeywordType == t">
+								AND EX_TITLE LIKE TRIM(${searchKeyword})
+							</when>
+							<when test="searchKeywordType == c">
+								AND EX_TIME LIKE TRIM(${searchKeyword})
+							</when>
+						</choose>
+					</when>
+				</choose>
+			</where>
+			<choose>
+				<when test="newList == '1'">
+					ORDER BY EX_ENDDAY ASC
+				</when>
+				<when test="newList == '2'">
+					ORDER BY EX_ENDDAY DESC
+				</when>
+				<otherwise>
+					ORDER BY EX_INDEX ASC
+				</otherwise>
+			</choose>
+		</if>
+	</select>	
+
+	<select id="purchaseDetail"  parameterType="int" resultType="exhibitionDto">
+		SELECT EX_INDEX, EX_TITLE, EX_STARTDAY, EX_ENDDAY, EX_THUMB, EX_PAY
+		FROM EXHIBITION WHERE EX_INDEX = #{EX_INDEX}
+	</select>
+</mapper>

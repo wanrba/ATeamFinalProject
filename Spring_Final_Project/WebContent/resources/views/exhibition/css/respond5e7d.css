@@ -1,0 +1,853 @@
+@charset "utf-8";
+
+.list_event .mobile_only { display: none; }
+
+@media only all and (max-width:1024px) {
+	/* 3depth tab */
+	.depth3_tab {
+		display: none;
+	}
+
+	/* 문화체험 */
+	#container.experience_main {background:none;}
+	.top_slider_wrap .list_type {width:auto;padding:0 30px 0;}
+	.list_slider_wrap .list_type1 li {margin:0 20px;}
+	.list_type {padding:0 25px;}
+	.list_type li {width:calc(33.33333% - 40px);}
+	.list_type1 {padding:0 25px;}
+	.list_type1 li {width:calc(33.33333% - 12px);}
+	.detail_wrap .link_wrap,.detail_wrap.type2 .link_wrap {position:relative;top:auto;right:auto;margin-top:10px;}
+	.detail_wrap .link_wrap a {display:inline-block;width:32.9%;padding:10px 0;text-align:center;}
+	.detail_wrap .link_wrap a.btn_event {background:#4162a3;color:#fff;}
+	.detail_wrap .link_wrap button {display:inline-block;width:32.9%;padding:10px 0;text-align:center;height: 44px;vertical-align:baseline;}
+	.detail_wrap.type2 .link_wrap a {display:inline-block;width:100%;padding:10px 0;text-align:center;}
+	.list_slider_wrap.type2 .list_type2 li {max-height:260px;min-height:260px;}
+	.list_slider_wrap.type2 .list_type2 li .info dd.btn {position:relative;right:auto;bottom:auto;}
+	.list_type2 {padding:0 25px;}
+	.list_type2 li {width:calc(33.33333% - 24px);}	
+	.facility_mark {padding-left:15px;}
+	.relay_wrap .part_list {padding:12px 21px;}
+	.relay_wrap .part_list li {width:20%;margin:0;padding:0 5px 10px;border:0;min-height:100%;}
+	.relay_wrap .part_list li .link_box {border:1px solid #93a6cc;text-align:center;}
+	.relay_wrap .part_list li:hover {border:0}	
+	.relay_wrap .ticket_info p {padding:45px 0 40px 159px;background:url('../images/content/ticket_info.png') no-repeat 35px 40px;}
+	.service_wrap {padding:30px 25px;}
+	.service_wrap .step_search ul {height: 100%}
+	.service_wrap .step_search li {float:left;width:100%;padding:0 10px;}
+	.service_wrap .step_search {padding:20px 0 40px 0;}
+	/*.service_wrap .step_search .btn_search {position:relative;right:0;left:0;bottom:auto;width:100%;height:32px;margin-top:20px;}*/
+	.service_wrap .step_search .btn_search {position:relative;right:0;left:0;bottom:auto;width:100%;height:32px;margin:20px 0 0 0;}
+	.service_result ul li a {margin-left:5px;padding:5px 20px;}	
+	.list_result {padding:0 25px;}
+	.list_result li {width:calc(33.33333% - 16px);}	
+	.publicize_list {padding:0 20px;}
+	.publicize_tab {padding:0 25px;}
+	.publicize_tab ul {margin-right:-5px;}
+	.publicize_tab ul li {width:calc(14.28571% - 5px);margin:0 5px 5px 0;}
+	.publicize_tab.type2 ul li {width:calc(16.66666% - 5px);}
+	.tbl_write td {padding:15px 24px 15px 24px;}
+	.tbl_infoDiv {width: 100%}
+
+	/* 문화공감 */
+	.cultop_tab {padding:0;}
+	.culissue {margin-bottom:35px}
+	.culissue_slide {padding-top:25px;}
+	.culissue_slide li {padding-left:310px;min-height:190px;}
+	.culissue_slide li .btxt {padding-bottom:15px;margin:0 0 15px 0;}
+	.culissue_slide li .thumb {width:290px;height:190px}
+	.culissue_slide .slick-prev{left:-35px;}
+	.culissue_slide .slick-next{right:-35px;}
+	.list_type3 {padding:0 25px;}
+	.list_type3 li {width:calc(33.33333% - 24px);}
+	.sympathy_search {padding:0 25px;}
+	.comment_wrap .tit_wrap {padding:0 25px 10px 25px;}
+	.comment_wrap .comment_list .num {padding:0 25px 13px 25px;}
+	.source_sign {padding:15px;}
+	.source_sign .license {float:none;top:auto;display:block;margin-top:10px;}
+	.detail_culture .issue_month {margin:0 25px 30px 25px}
+	.detail_culture .issue_explan {padding-right:25px;}
+	.list_type4 {padding:0 25px;}
+	.list_type4 li {width:calc(33.33333% - 24px);}
+	.list_organ li {padding:25px 240px 25px 25px;min-height:180px;}
+	.list_organ li .tit {margin-bottom:15px;}
+	.cultv {margin-bottom:35px}
+	.cultv_slide {padding-top:25px;}
+	.cultv_slide li {padding-left:340px;min-height:190px;}
+	.cultv_slide li .btxt {padding-bottom:15px;margin:0 0 15px 0;}
+	.cultv_slide li .thumb {width:320px;height:190px}
+	.cultv_slide .slick-prev{left:-35px;}
+	.cultv_slide .slick-next{right:-35px;}	
+	.detail_culture.type2 .detail_img {padding:25px;}
+	.detail_culture.type2 .detail_img img {width:100%;}
+	.detail_culture.type2 .detail_cont .cont {padding:25px;}
+	.close_cardnews {right:20px;top:20px;}	
+	.webzine_wrap {padding:0 25px;}
+	.webzine_header dl {padding:25px 0;}
+	.webzine_header dt {margin-bottom:10px;font-size:28px;}
+	.webzine_cont .webzine_box {padding:40px 30px;}
+	.webzine_cont .list_webzine2 {margin:0 -28px 0 0;}
+	.webzine_cont .list_webzine2 li {width:calc(33.333333% - 28px);margin:0 28px 0 0;}
+	.webzine_cont .inner_box .list_webzine2 .list_item  {width:calc(33.333333% - 28px);margin:0 28px 0 0;}
+	.webzine_cont .inner_box .tit {right:0;}
+
+	/* 문화지식 */
+	.trad_tab3.item03 li {width:33.33333%;}
+	.trad_tab3.item07 li {width:33.33333%;}
+	.trad_tab3.item06 li {width:50%;}
+	.trad_tab3.item07 li:last-child {width:100%;}
+
+	.trad_tab,.depth_tab1,.depth_tab2 {margin:0 25px;}
+	.trad_tab.item06 li {width:33.33333%;}
+	.trad_tab.item09 li {width:20%;}
+	.trad_tab.item09 li:last-child {width:40%;}
+	.trad_tab.item10 li {width:20%;}
+	.trad_tab.item13 li {width:14.2857%;}
+	.trad_tab.item13 li:last-child {width:28.5714%;}	
+	.trad_list_header {margin:40px 25px 0;}
+	.list_type5 {padding:0 25px;}
+	.list_type5 li {width:calc(33.33333% - 24px);}
+	.list_type5 li .mobile_no { display: none; }
+	.tradtit_wrap .txt_btn .txt {display:block;margin-bottom:10px;}
+	.public_sign {margin:30px 25px 0;}
+	.pattern_list {padding:15px 19px 0;}
+	.pattern_list li {width:calc(14.28571% - 6px);margin:15px 6px 0;}
+	.design_guide {padding:0 25px 0 250px;}
+	.design_guide .img {left:25px;}
+	.pattern_prolist {margin:0 25px;}
+	.pattern_prolist li .in_con .img_list {width:100%;display:block;padding-bottom:3px;border-bottom:1px solid #d5d8de;}
+	.pattern_prolist li .in_con .img_list:last-child {padding-bottom:0;padding-top:3px;border-bottom:0;}
+	.trad_use {margin:50px 25px 0;padding-left:260px;}
+	.trad_order {margin:30px 25px 0;}
+	.trad_order li {line-height:50px;text-align:left;}
+	.trad_order li .num_btxt {margin-left:15px;}
+	.trad_order li:first-child {width:100%;}
+	.trad_order li:first-child:before {display:none;}
+	.trad_order li:first-child:after {display:none;}
+	.trad_order li {width:100%;}
+	.trad_order li:before {display:none;}
+	.trad_order li:last-child {width:100%;}
+	.trad_order li:last-child:before {display:none;}
+	.trad_cont {margin:30px 25px 0;}
+	.auth_agree {margin:20px 25px 0;}
+	.agree_chk {margin:10px 25px 0;}
+	.term_wrap {margin:0 25px;}
+	.term_wrap .term_right {padding:20px;}
+	.open_head .thumb {right:25px;}
+	.area_list,.list_case {padding:0 25px;}
+	.list_case li {width:calc(20% - 15px);}
+	.api_img1 img {width:100%;}	
+	.policy_info {margin:40px 25px 30px;}
+	.publictxt {margin:40px 25px 0;}
+	.searestxt {margin:40px 25px 0;}
+	.pattern_table {height:400px;background:url(../images/content/bg_pattern.jpg) no-repeat 25px 0;background-size:contain;}
+	.card_slide li .thumb {width:300px;height:170px;}
+	.card_organ li {width:calc(50% - 12px);margin-bottom:12px;}
+
+	/* 문화광장 */
+	.list_event .mobile_no { display: none; }
+	.list_event .mobile_only { display: block; }
+
+	/* 회원서비스 */
+	#wrap.member #container.join {background:url('../images/content/bg_line.png') repeat-x 0 235px;}
+	
+	/* 인쇄, 스크랩 기능 제외 */
+	.content_link .mobile_no {display:none;}
+	#footer .fmenu_wrap .fmenu .mobile_no {display:none;}
+
+	.mypage_button {margin: 0 25px 0 0;}
+
+	/* 집콕 문화생활 */
+	.hc_listV{padding:0 20px 60px 20px;}
+	.hc_listV .hc_box ul li{width:23.5%; margin-right:2%;}
+
+	/* 집콕 문화생활 show*/
+	.hc_show{padding:0 20px;}
+	.hc_show .hcshow_list ul li{width:calc(33.33333% - 24px);}
+
+	/* 집콕 문화생활 view*/
+	.hc_view{padding:0 20px;}
+	.hc_view .tbl_info td a{top:95%;}
+}
+@media only all and (max-width:960px) {
+	.card_guide dl {float:none;width:auto;}
+	.card_guide dl dt {width:15%;}
+	.card_guide dl dd {width:85%;}
+	.card_guide .right {float:none;width:auto;margin-top:40px;}
+}
+@media only all and (max-width:890px) {	
+	/* 문화체험 */
+	.tbl_write .chk_wrap.type2 {display:block;margin:5px 0 0 0;}
+	.tbl_infoDiv {width: 100%}
+	
+	/* 문화공감 */
+	.sympathy_search .search_sel.type2 .left {position:relative;top:auto;left:auto;margin-top:0;margin-bottom:10px;}
+	.sympathy_search .search_sel.type2 {padding:15px;}
+	.sympathy_search .search_sel.type2 .form_category {margin-left:0;}
+	.sympathy_search .search_sel.type2 .input_group {display:block;width:auto;margin:5px 0 0 0;}
+	.card_slide li .thumb {width:280px;height:160px;}
+}
+@media only all and (max-width:767px) {	
+	/* 문화체험 */
+	.top_slider_wrap {margin-bottom:40px;}
+	.top_slider_wrap .list_type li {margin:0 10px;}
+	.list_type {padding:0 15px;}
+	.list_type ul {margin:-24px -20px 0 0;}
+	.list_type li {width:calc(50% - 20px);margin:24px 20px 0 0;}
+	.list_slider_wrap .list_type1 li {margin:0 15px;}
+	.list_type1 {padding:0 15px;}
+	.list_type1 li {width:calc(50% - 12px);}
+	.detail_wrap,.detail_wrap.type2 {padding:0 15px 0 15px;min-height:auto;}
+	.detail_wrap .thumb {position:relative;top:auto;left:auto;width:auto;height:auto;}	
+	.tbl_detail th {padding:12px 0;}
+	.tbl_detail td {padding:15px 0;}
+	.tbl_detail td.tleft strong {font-weight:600;}
+	.list_type2 {padding:0 15px;}
+	.list_type2 ul {margin:-24px -12px 0 0;}
+	.list_type2 li {width:calc(50% - 12px);margin:24px 12px 0 0;}
+	.detail_wrap.type2 .thub_code {width:auto;margin-bottom:10px;}
+	.detail_wrap.type2 .thub_code .inner {min-height:auto;padding:10px 15px 20px;}
+	.detail_info2 {padding:0 15px 0 15px;}
+	.detail_info2 dt {font-size:16px;margin:25px 0 10px;}
+	.detail_info2 dt:before {width:3px;height:15px;margin:0 15px 4px 0;}
+	.detail_info2 dd {padding-left:20px;}
+	.detail_info2 dd img {width:100%;margin-top:15px;}
+	.detail_info2 .list li {padding-left:80px;}
+	.detail_wrap2 h4 {padding-left:15px;font-size:18px;}
+	.detail_wrap2 h4:before {width:3px;height:15px;margin:0 15px 4px 0;}
+	.detail_wrap2 .info_wrap {padding:15px;}
+	.detail_wrap2 .info_wrap .thumb {position:relative;top:auto;right:auto;width:auto;height:auto;}
+	.detail_wrap2 .info_wrap .thumb img {margin-top:15px;}
+	.detail_wrap2.type2 .info_wrap {padding:10px 15px 0 15px;}	
+	.detail_wrap2 .down_link {padding:11px 15px;}
+	.detail_wrap2 .down_link li {width:50%;float: left;margin:0;padding:2px;}
+	.detail_wrap2 .down_link li a {width:100%;}
+	.facility_mark li {height:35px;line-height:35px;margin-right:20px;}
+	.relay_wrap h4 {padding:10px 12px;font-size:16px;}
+	.relay_wrap .ticket_info .caution {right:15px;}
+	.relay_wrap .part_list {padding:12px 10px;}
+	.relay_wrap .howto_ticket {padding:12px 15px 24px;}
+	.relay_wrap .howto_ticket li{width:100%;height:auto;border-right:0;text-align:center;padding:14px 18px;}
+	.relay_wrap .howto_ticket li h5 {text-align:center;}
+	.relay_wrap .howto_ticket li .bg01,.relay_wrap .howto_ticket li .bg02 {position:absolute;top:100%;right:50%;margin-right:-5px;margin-top:-5px;
+	-webkit-transform: rotate(90deg);-ms-transform: rotate(90deg);transform: rotate(90deg);}
+	.relay_wrap .part_list li {width:50%;}
+	.relay_wrap .ticket_info p {padding:45px 0 20px 120px;background:url('../images/content/ticket_info.png') no-repeat 10px 40px;}
+	.relay_wrap .ticket_info .caution_info {right:0;width:auto;padding:10px;}
+	.relay_wrap .ticket_info .caution_info span {right:210px;}	
+	.service_wrap {padding:30px 15px;}
+	.list_category li {width:calc(33.33333% - 10px);}
+	.service_result span {padding-left:15px;}
+	.service_result {padding:0 0 25px;}
+	.service_result ul {float:none;margin-top:10px;padding-left:10px;padding-right:0;}	
+	.list_result {padding:0 15px;}
+	.list_result li {width:calc(50% - 16px);}
+	.publicize_list {padding:0 12px;}
+	.publicize_list ul li {width:calc(50% - 10px);height:150px;}
+	.publicize_list ul li span {padding-top:70px;}
+	.publicize_tab {padding:0 15px;}
+	.publicize_tab ul li {width:calc(20% - 5px);height:60px;margin:0 5px 5px 0;}
+	.publicize_txt {padding:0 25px 25px 28px;}
+	.publicize_txt:before {left:15px;}
+	.write_header {padding:25px 0 13px;}
+	.write_header h4 {padding-left:15px;}
+	.tbl_write th,.tbl_write td {height:auto;display:block;}
+	.tbl_write th {padding:6px 5px 6px 15px;}
+	.tbl_write td {padding:12px 15px;}
+	.tbl_write .form_text {height:200px;}
+	.tbl_write .lsp {margin-left:0;display:inline-block;}
+	.tbl_write .input_lsp {margin-left:0;margin-top:10px;}
+	.tbl_write .input_wrap2 {width:auto;}
+	.tbl_infoDiv {width: 100%}
+
+	/* 문화공감 */
+	.culissue {padding:0 35px;margin-bottom:35px;}
+	.list_type3 {padding:0 15px;}
+	.list_type3 ul {margin:-12px -6px 0 0;}
+	.list_type3 li {width:calc(50% - 6px);margin:12px 6px 0 0;}
+	.sympathy_search {padding:0 15px;}
+	.sympathy_search .subject_sel {padding:15px;}
+	.sympathy_search .subject_sel .tit {position:relative;top:0;left:0;margin-top:0;margin-bottom:10px;}
+	.sympathy_search .subject_sel select{width:100%;}
+	.sympathy_search .left {position:relative;top:auto;left:auto;margin-top:0;margin-bottom:10px;}
+	.sympathy_search .sel_group {display:-webkit-box;display:-ms-flexbox;display:-moz-box;}
+	.sympathy_search .search_sel {padding:15px;}
+	.sympathy_search .form_category {width:100%;margin-left:0;}
+	.sympathy_search .sel_group select + select {margin-left:4px;}
+	.sympathy_search .search_sel.type2 .sel_group select + select {margin-left:4px;}
+	/*.sympathy_search .input_group {width:auto;margin:5px 0 0 0;} 2019-02-26*/
+	.sympathy_search .input_group {width:100%;margin:5px 0 0 0;}
+	.detail_title {height:auto;padding:15px 0;}
+	.detail_title h4 {font-size:22px;display:block;line-height:120%;padding:0 15px;margin-bottom:5px;}
+	.detail_title .txt {font-size:18px;display:block;line-height:120%;padding:0 15px;}
+	.detail_title .txt:before {display:none;}
+	.detail_culture {padding-top:25px;margin-bottom:30px;}
+	.detail_culture .top_writer_wrap {background:none;}
+	.detail_culture .top_writer_wrap .belong_date {padding:0 15px 0 15px;}
+	.detail_culture .top_writer_wrap .belong_date .belong {padding-left:40px;margin-right:5px;}
+	.detail_culture .top_writer_wrap .belong_date .date {padding-left:10px;color:#4f5561;}
+	.detail_culture .top_writer_wrap .belong_date .date strong {padding-left:2px;}
+	.detail_culture .top_writer_wrap .cont_writer {padding:25px 15px 25px 15px;}
+	.detail_culture .top_writer_wrap .cont_writer .cont {margin-bottom:20px;}
+	.detail_culture .top_writer_wrap .cont_writer .writer {position:relative;top:0;right:0;padding-left:123px;}
+	.detail_culture .top_writer_wrap .cont_writer .writer .year {padding:5px 0 5px 0;}
+	.detail_culture .top_writer_wrap .cont_writer .writer .belong {padding:0;}
+	.detail_culture .top_writer_wrap .cont_writer .writer .name {font-size:30px;}
+	.detail_culture .substance {padding:30px 15px;}
+	.detail_culture .bbs_nav{padding:15px;}
+	.detail_culture .bbs_nav .link{display:none;}
+	.comment_wrap {margin-bottom:20px;}
+	.comment_wrap .tit_wrap {padding:0 15px 10px 15px;}
+	.comment_wrap .tit_wrap .sns_group li {margin-left:5px;}
+	.comment_wrap .comment_write textarea{padding:15px;}
+	.comment_wrap .comment_write .byte {bottom:15px; right:120px;}
+	.comment_wrap .comment_list .num {padding:0 15px 13px 15px;}
+	.comment_wrap .comment_list .list li {padding:20px 140px 25px 15px;}
+	.comment_wrap .comment_list .list li .btn {position:absolute;top:50%;right:25px;}
+	.cultv {padding:0 35px;margin-bottom:35px;}	
+	.detail_culture .issue_month {margin:0 15px 30px 15px;padding:16px;}
+	.detail_culture .issue_month .tit {position:relative;top:auto;left:auto;margin-top:0;margin-bottom:10px;}
+	.detail_culture .issue_month .input_group {display:block;width:auto;margin:5px 0 0 0;}
+	.detail_culture .issue_explan {padding-left:150px;padding-right:15px;}
+	.detail_culture .issue_explan .date {left:25px;}
+	.list_type4 {padding:0 15px;}
+	.list_type4 ul {margin:-12px -6px 0 0;}
+	.list_type4 li {width:calc(50% - 6px);margin:12px 6px 0 0;}	
+	.list_organ {padding:0;}
+	.list_organ li {padding:15px 20px;min-height:auto;}
+	.list_organ li .tit {font-size:20px;margin-bottom:10px;}
+	.list_organ li .txt {font-size:13px;line-height:140%;margin-bottom:15px;}
+	.list_organ li .organ_date {position:relative;top:0;left:0;height:auto;margin-top:0;padding:0;text-align:left;border-left:none;}
+	.list_organ li .organ_date .organ em {display:inline-block;margin-bottom:5px;}
+	.list_organ li .organ_date .date {padding-left:26px;}
+	.detail_culture.type2 .detail_img {padding:15px;}
+	.detail_culture.type2 .detail_cont .tit_wrap .tit span {padding-left:0;display:block;margin:10px 0;}
+	.cardnews_slide {padding:0 30px;}
+	.cardnews_slide li .tit {font-size:18px;}
+	.modal_wrap .modal_content.cardnews {width:640px;margin:9% auto;}
+	.cardnews .tit_writer {width:450px;}
+	.cardnews .tit_writer .tit {font-size:24px;}
+	.cardnews_for {width:450px;height:450px;}
+	.cardnews_for li img {width:450px;}
+	.cardnews_nav {width:450px;}
+	.cardnews_nav li {width:63px;height:68px;border:3px solid #fff;}
+	.cardnews_nav li.slick-current {border:3px solid #4162a3;}	
+	.webzine_wrap {padding:0 15px;}
+	.webzine_header .thumb {padding-top:40%;}
+	.webzine_header dl {padding:15px 0;}
+	.webzine_header dt {margin-bottom:10px;padding:0 15px;font-size:22px;line-height:26px;}
+	.webzine_header dd {padding:0 15px;line-height:20px;max-height:3.0em;}
+	.webzine_cont .webzine_left {float:none;width:auto;padding-right:0;border-right:0;}
+	.webzine_cont .webzine_right {float:none;width:auto;}
+	.webzine_wrap h4 {margin:25px 0 15px;font-size:20px;}
+	.webzine_cont {margin-top:30px;}
+	.webzine_cont .webzine_left h4:first-child {margin-top:0;}
+	.webzine_cont .webzine_right h4:first-child {margin-top:25px;}
+	.webzine_cont .list_webzine {margin:0 -15px 0 0;}
+	.webzine_cont .list_webzine li {width:calc(33.333333% - 15px);margin:0 15px 0 0;}
+	.webzine_cont .list_webzine dt {font-size:16px;}
+	.webzine_cont .webzine_box {margin-top:30px;padding:25px 15px;}
+	.webzine_cont .list_webzine2 {margin:0 -15px 0 0;}
+	.webzine_cont .list_webzine2 li {width:calc(33.333333% - 15px);margin:0 15px 0 0;}
+	.webzine_cont .list_webzine2 p {font-size:16px;}
+	.webzine_cont .inner_box {margin-top:25px;padding-top:25px;}
+	.webzine_cont .inner_box .list_webzine2 .list_item  {width:calc(33.333333% - 15px);margin:0 15px 0 0;}
+	.webzine_cont .webzine_img1 {padding-bottom:0;}
+	.webzine_cont .webzine_img1 dt {font-size:16px;}
+	.webzine_cont .webzine_img2 {padding-bottom:0;border-bottom:0;}
+	.webzine_cont .webzine_list {margin-top:-5px;}
+	.webzine_cont .webzine_list li a {font-size:14px;}
+	.card_slide li .thumb {width:236px;height:134px;}
+	.card_slide {padding:0 30px;}
+	.card_slide li .tit {font-size:18px;}
+	.card_guide {margin-top:40px;padding-bottom:40px;}
+	.card_guide dl {padding-left:15px;}
+	.card_guide dl dt {width:20%;}
+	.card_guide dl dd {width:80%;}
+	.card_guide .right {margin-top:20px;}
+	.card_service {margin-top:30px;padding-bottom:0;}
+	.card_organ li {float:none;width:calc(100%);height:auto;margin-right:0;padding-bottom:20px;}
+	.card_organ li dt {margin-top:20px;}
+	.card_organ li dd {margin-top:20px;}
+	.card_organ li dd.btn {position:relative;bottom:auto;left:auto;}
+
+	/* 문화지식 */
+	.trad_tab3.item03 li {width:33.33333%;}
+	.trad_tab3.item07 li {width:50%;}
+	.trad_tab3.item06 li {width:50%;}
+	.trad_tab3.item07 li:last-child {width:100%;}
+
+	.trad_tab,.depth_tab1,.depth_tab2 {margin:0 15px;}
+	.depth_tab1 {padding:10px 8px;}
+	.depth_tab2 {padding:13px 8px;}
+	.trad_tab li {line-height:38px;}
+	.trad_tab.item03 li{width:50%;}
+	.trad_tab.item04 li{width:50%;}
+	.trad_tab.item05 li{width:33.33333%;}
+	.trad_tab.item08 li{width:25%;}
+	.trad_list_header {margin:25px 15px 0;}
+	.list_type5 {padding:0 15px;}
+	.list_type5 ul {margin:0 -10px 0 0;}
+	.list_type5 li {width:calc(50% - 10px);margin:10px 10px 0 0;}
+	.tradtit_wrap {margin:25px 0 15px;padding:0 15px;}
+	.tradtit_wrap h4 span {display:block;line-height:22px;}
+	.trad_detail {padding:22px 0 0 285px;}
+	.trad_detail .thumb_wrap {left:15px;}	
+	.trad_info {margin-top:20px;}
+	.trad_info li {padding:15px;}
+	.trad_info li .tit {position:relative;top:0;left:0;margin-bottom:10px;}
+	.public_sign {margin:30px 15px 0;}
+	.pattern_list {padding:15px 10px 0;}
+	.pattern_list li {width:calc(20% - 6px);}
+	.design_guide {padding:0 15px 0 170px;margin-top:30px;}
+	.design_guide .img {left:15px;width:140px;}	
+	.design_guide .tit_wrap .tit {font-size:24px;margin-bottom:0;}
+	.design_guide .tit_wrap .btxt {font-size:16px;}	
+	.pattern_prolist.first {margin-top:20px;}
+	.pattern_prolist {margin:0 15px;border-bottom:3px solid #e7e7e8;}
+	.pattern_prolist li {padding:20px 0;border-left:3px solid #e7e7e8;}
+	.pattern_prolist li .step_tit {position:relative;top:0;left:0;margin:0 0 10px 15px;}
+	.pattern_prolist li .step_tit .step span em {line-height:40px;font-size:20px;}
+	.pattern_prolist li .in_con {margin-left:10px;}
+	.pattern_prolist li .in_con .img_list .img {height:auto;}
+	.pattern_prolist li .in_con .img_list .list li {padding:0 0 3px 0;}
+	.trad_use {margin:30px 15px 0;padding-left:200px;background:url(../images/content/tradpatt-use-img.jpg) no-repeat 0 0;background-size:180px;}
+	.trad_use .tit {font-size:22px;}
+	.trad_order {margin:30px 15px 0;}
+	.trad_order li .num_btxt .btxt {font-size:14px;}
+	.trad_cont {margin:30px 15px 0;}
+	.trad_cont .tel_email {float:none;font-size:14px;margin-bottom:15px;line-height:120%;}
+	.trad_cont .tel_email:before {top:4px;}
+	.trad_cont .btn {float:none;display:inline-block;line-height:28px;padding:0 15px;}
+	.auth_agree {margin:10px 15px 0;}
+	.auth_agree {padding:10px;}
+	.auth_agree h5 {font-size:15px;}
+	.auth_agree h6 {font-size:14px;}
+	.agree_chk {margin:10px 15px 0;}
+	.summary_wrap .btn_detail {right:15px;}
+	.trad_tit {margin:15px 0 -15px 15px;}
+	.trad_tit em {display:block;margin-top:5px;}
+	.term_wrap {margin:0 15px;}
+	.list_book li {padding:15px;margin-top:15px;}
+	.list_book li dl {padding:0 15px 0 160px;}
+	.list_book li .txt_wrap {margin-top:15px;}
+	.list_book li .btn_detail {position:relative;right:auto;bottom:auto;margin-left:160px;}
+	.list_board li {padding:15px;margin-top:15px;}
+	.list_board li .thumb {width:110px;height:85px;margin-right:15px;}
+	.list_board li dt {font-size:16px;}
+	.trad_head {min-height:auto;margin-top:20px;padding:5px 110px 20px 0;background:url(../images/content/tradipat-under-tit-img02.jpg) no-repeat 98% 100%;background-size:142px;}
+	.trad_head .txt {padding:0 15px;}
+	.trad_head.type2 {background:url(../images/content/tradipat-under-tit-img04.jpg) no-repeat 98% 100%;background-size:142px;}
+	.trad_head.type3 {padding:5px 150px 20px 0;}
+	.trad_head.type3 {background:url(../images/content/tradipat-under-tit-img03.jpg) no-repeat 98% 100%;background-size:142px;}
+	.trad_head.type4 .thumb img {width:100%;padding:0 15px;}
+	.trad_imglist li {padding:20px 15px;}
+	.trad_process {padding:15px;}
+	.trad_process .list1 li {padding:10px 0 45px 140px;}
+	.trad_process .list1 li .tit .num {height:30px;padding:0 25px;line-height:28px;font-size:16px;}
+	.trad_process .list1 li .tit .btxt {font-size:16px;line-height:28px;}
+	.trad_process .trad_thumb img {width:100%;}
+	.area_list,.list_case {padding:0 15px;}
+	.area_list li {width:calc(25% - 6px);margin-bottom:6px;}
+	.list_case li {width:calc(25% - 15px);}
+	.tbl_scroll {overflow-x:auto;}
+	.tbl_scroll table {width:700px;}
+	.tbl_scroll.type2 table {width:800px;}
+	.pattern_table {height:300px;background:url(../images/content/bg_pattern.jpg) no-repeat 15px 0;background-size:contain;}
+
+	/* 문화광장 */
+	.list_event > li {padding:15px;margin-top:15px;}
+	.list_event li dl {padding:0 15px 0 160px;}
+	.list_event li dt {font-size:18px;margin-bottom:12px;}
+	.list_event li .btn_type1,.list_event li .btn_type2,.list_event li .event_end {position:relative;right:auto;top:auto;width:160px;margin-top:10px;height:32px;line-height:30px;}
+	.list_event.type2 li dl {padding:0 15px 0 195px;}
+	.list_review > li {padding:15px;margin-top:15px;}
+	.list_review li dl {padding:0 0 0 160px;}
+	.cont_img {padding:20px 15px 0;}
+	.cont_img img {width:100%;}
+	.siteinfo_list li {padding:15px;}
+	.siteinfo_list li .num_txt {position:relative;top:0;left:0;padding-left:35px;margin-bottom:10px;}
+	.siteinfo_list li .num_txt .num {width:28px;height:28px;line-height:26px;font-size:14px;}
+	.siteinfo_list li .num_txt .txt {width:auto;}
+	.siteinfo_list li .btxt {border-left:0;padding-left:35px;}
+	.major_service .list1 {float:none;width:auto;}
+	.major_service .list2 {float:none;width:auto;}
+	.major_service .list1 li,.major_service .list2 li {width:46%;}
+	.major_list {margin-top:30px;}
+	.major_list dt {margin:20px 0 5px;padding:0 15px;}
+	.major_list dd {padding:0 15px;}
+	.policy {padding:0 15px;}
+	.policy h4 {margin:25px 25px 10px 0;}
+	.policy h5 {margin:15px 0 5px;}
+	.policy_info {margin:25px 15px 20px;}
+	.publictxt {margin:25px 15px 0;}
+	.searestxt {margin:25px 15px 0;}
+	.qna_list {margin-top:25px;}
+	.qna_list li a {padding:15px 15px 15px 55px;}
+	.qna_list li .answer {display:none;position:relative;padding:15px 15px 15px 85px;}
+	.serve_info {margin:25px 0;padding-right:0;}
+	.serve_info .link {position:relative;right:auto;bottom:auto;margin-top:10px;display:inline-block;margin-left:15px;}
+	.mypage_header {margin-bottom:25px;}
+	.mypage_desc {margin-bottom:25px;}
+	.state_list {margin-top:35px;}
+	.mypage_box .more,.mypage_box .right {right:15px;}
+	.tbl_write.type2 .btn_wrap {float:none;margin-top:10px;display:block;}
+
+	/* 집콕 문화생활*/
+	.hc_listV{padding:0 15px 60px 15px;}
+	.hc_listV .hc_box ul li{width:48.5%; margin-right:3%;}
+	.hc_listV .hc_box ul li:first-child{margin:0 3% 20px 0;}
+	.hc_listV .hc_box ul li:nth-child(2){margin:0 0 20px 0}
+
+	/* 집콕 문화생활 show*/
+	.hc_show{padding:0 15px;}
+	.hc_show .hcshow_list ul li{width:calc(50% - 20px); margin:0 20px 40px 0;}
+
+	/* 집콕 문화생활 view*/
+	.hc_view{padding:0 15px;}
+	.hc_view .detail_wrap.type2{padding:0;}
+	.hc_view .detail_wrap .thumb{left:auto; width:auto; height:auto; margin-bottom:20px;}
+	.hc_view .tbl_info td a{position: absolute;}
+	.hc_view .hc_file p{font-size: 14px;}
+	.hc_view .hc_file ul li{font-size: 14px;}
+}
+@media only all and (max-width:760px) {
+	/* 회원서비스 */
+	.login_wrap {width:auto;padding:0 15px;}
+	.login_wrap .id_login {float:none;width:auto;}
+	.login_wrap .id_login .idsave {margin:5px 0 30px;}
+	.login_wrap .sns_login {float:none;width:auto;height:auto;margin-top:30px;padding-left:0;margin-left:0;border-left:0;border-top:1px solid #d2d2d6;}
+	.login_wrap .sns_login h3 {padding-top:30px;}
+	.login_wrap .sns_login li {float:left;width:33.33333%;margin-bottom:0;} 
+	.login_wrap .sns_login li a {padding-top:64px;padding-left:0;line-height:normal;height:auto;text-align:center;font-size:13px;letter-spacing:-1px;}
+	.login_wrap .sns_login li:nth-child(1) a {background:url('../images/content/icon_nv.png') center top no-repeat;}
+	.login_wrap .sns_login li:nth-child(2) a {background:url('../images/content/icon_ca.png') center top no-repeat;}
+	.login_wrap .sns_login li:nth-child(3) a {background:url('../images/content/icon_face.png') center top no-repeat;}
+	.login_info {width:auto;margin:20px 15px 0;padding-top:20px;}
+	.join_info {width:auto;padding:0 15px;margin-bottom:30px;}
+	.login_wrap .join_sel li {margin-bottom:30px;}
+	.login_wrap .join_sel li span {float:none;display:block;text-align:center;}
+	.login_wrap .join_sel .btn {float:none;display:block;width:auto;margin-top:10px;}
+	.join_step {width:auto;}
+	.join_step li span.num {margin-bottom:15px;}
+	.join_step li .txt {font-size:15px;line-height:16px;}
+	.join_step li .txt span {font-size:14px;}
+	.join_step li.on span.num {font-size:18px;}
+	.join_wrap {width:auto;padding:0 15px;}
+	.join_wrap .agree_box h3 {padding:15px;}
+	.join_wrap .agree_box h3 label {font-size:16px;}
+	.join_wrap .agree_box .agree_content {height:250px;padding:15px;}
+	.btn_join_wrap a {padding:10px 30px;min-width:auto;}
+	.join_wrap .join_input {width:auto;}
+	.join_info.type2 {padding:0;}
+	.join_info.type3 {padding:0;margin-top:30px;}
+	.join_info.type4 {padding:0;}	
+	.agree_wrap {padding:15px 0;}
+	.agree_wrap li {display:block;width:auto;margin-left:0;margin-bottom:5px;}
+	.join_wrap .overlap_box .tit {padding:30px 15px;}
+	.join_wrap .overlap_box .cont {padding:50px 15px 20px;}
+	.join_wrap .join_id {margin-top:20px;padding:30px 5px 0 5px;}
+	.join_input_wrap {width:auto;}
+	.tbl_join th,.tbl_join td {height:auto;display:block;}
+	.tbl_join th {padding:10px 5px 10px 15px;background:#dce8f4;}
+	.tbl_join td {padding:15px;}
+	.tbl_join .input_wrap {width:auto;}
+	.tbl_join .input_wrap2 {width:auto;}
+	.tbl_join .form_half {width:100%;}
+	.tbl_join .desc {margin:8px 0 0 0;display:block;}
+	.idpw_wrap {width:auto;padding:0 15px;}
+	.idpw_tab li a {font-size:16px;}
+}
+@media only all and (max-width:640px) {	
+	/* 문화체험 */
+	.detail_info li {padding-left:130px;}
+	.detail_info li span {left:10px;width:100px;}
+	.detail_wrap .link_wrap a {width:100%;}
+	.detail_wrap .link_wrap button {width:100%;}
+	.detail_wrap .label_info span {margin-bottom:4px;}
+	.tbl_info th {padding:7px 10px 4px 0;display:block;border-bottom:1px solid #ededed;font-size:15px;}
+	.tbl_info td {padding:4px 10px 7px 0;display:block;}
+	.tbl_infoDiv {width: 100%}
+	.write_header .req {float:none;display:block;margin:0 0 0 15px;}
+	.write_header h4:before {margin:0 10px 4px 0;}
+	.tbl_write .chk_wrap {display:block;margin-bottom:6px;}	
+	.publicize_tab.type2 ul li {width:calc(20% - 5px);}
+
+	/* 문화공감 */
+	.culissue .recom {line-height:20px;height:auto;padding:0 0 10px 0;}
+	.culissue .recom .btxt{position:relative;top:auto;left:auto;display:inline-block;margin-bottom:5px;}	
+	.culissue_slide {padding-top:0;}
+	.culissue_slide li{padding-left:0;}
+	.culissue_slide li .thumb {position:relative;width:100%;height:auto;}
+	.culissue_slide li .btxt {font-size:24px;margin:15px 0 20px 0;}
+	.subject_tab {height:75px;}
+	.subject_tab.type2 {height:93px;}
+	.subject_tab li {width:25%;}
+	.subject_tab.item8 li {width:25%;}
+	.subject_tab li a {line-height:36px;font-size:13px;}
+	.subject_tab li.on a {line-height:36px;margin-top:0;}
+	.subject_tab.type2 li.on a {line-height:19px;margin-top:0;padding:5px 0 2px;}
+	.subject_tab li:nth-child(n+5) a {border-top:0;}
+	.subject_tab li:nth-child(n+5) a:hover {border-top:1px solid #93a6cc;margin-top:-1px;}
+	.subject_tab li:nth-child(7) a:after {content:"";display:block;width:1px;height:100%;position:absolute;right:-1px;top:0;background:#d5d8de;}
+	.cultv_slide {padding-top:0;}
+	.cultv_slide li{padding-left:0;}
+	.cultv_slide li .thumb {position:relative;width:100%;height:auto;}
+	.cultv_slide li .btxt {font-size:24px;margin:15px 0 20px 0;}
+	.detail_culture.type2 .info_head {padding:0 110px 15px 58px;}
+	.detail_culture.type2 .info_head:before {left:15px;}
+	.detail_culture.type2 .info_head li {float:none;padding-left:0;margin-left:0;}
+	.detail_culture.type2 .info_head li:before {display:none;}
+	.detail_culture.type2 .info_head li.count {padding-left:15px;}
+	.detail_culture.type2 .info_head li.count .btxt:before {padding:0;}
+	.detail_culture.type2 .info_head .reply {top:0;right:15px;}
+	.detail_culture.type2 .detail_cont .tit_wrap {padding:15px;}
+	.detail_culture.type2 .detail_cont .tit_wrap .tag {line-height:22px;}
+	.detail_culture.type2 .detail_cont .tit_wrap .tag .btxt {display:block;}
+	.detail_culture.type2 .detail_cont .tit_wrap .link {line-height:22px;margin-top:10px;}
+	.detail_culture.type2 .detail_cont .tit_wrap .link .btxt {display:block;}
+	.detail_culture.type2 .detail_cont .tit_wrap .more {position:relative;top:auto;right:auto;width:100px;margin-top:10px;line-height:28px;}	
+	.webzine_header dt {margin-bottom:5px;padding:0 15px;font-size:20px;line-height:24px;}
+	.card_slide li .thumb {width:320px;height:180px;}
+
+	/* 문화지식 */
+	.desc_txt {margin:25px 15px 15px 15px;}
+	.trad_tab.item15 li {width:20%;}
+	.tradtit_wrap h4 {float:none;padding-left:15px;}
+	.tradtit_wrap .txt_btn {float:none;text-align:left;}
+	.tradtit_wrap .txt_btn .txt {margin:10px 0;}
+	.tradtit_wrap .txt_btn .btn {height:30px;padding:0 15px;margin-left:0;line-height:30px;font-size:13px;}
+	.tradtit_wrap .req {float:none;display:block;}
+	.trad_detail {padding:22px 15px 0 215px;min-height:300px;}
+	.trad_detail .thumb_wrap {top:15px;left:15px;}
+	.trad_detail .thumb_wrap .thumb {width:180px;height:180px;}
+	.trad_detail .list {margin-bottom:20px;}
+	.trad_detail .list li {margin-bottom:8px;}
+	.trad_detail .btn_imgdown {width:auto;}
+	.trad_detail.type2 .inner {width:420px;}
+	.trad_detail.type2 .thumb_wrap {width:180px;}
+	.artinfo_list li {width:50%;height:42px;line-height:42px;}
+	.term_wrap {padding-left:180px;}
+	.term_wrap .term_left {width:180px;}
+	.trad_process .list2 li{width:38%;margin-bottom:10px;}
+	.trad_process .list2 li:nth-child(2) {margin-right:0;}
+	.trad_imglist2 {margin:0 15px;}
+	.trad_imglist2 li .img {width:80%;height:auto;margin-bottom:10px}
+	.trad_imglist2 li .btxt {font-size:13px;}
+	.open_head {min-height:auto;margin-top:20px;padding:5px 0 30px 0;}
+	.open_head .thumb {position:relative;right:auto;bottom:auto;width:241px;margin:10px auto 0;}
+	.list_case li {width:calc(33.33333% - 15px);}
+	.modal_wrap .modal_content.cardnews {width:460px;margin:15% auto;padding:20px 0 30px;}
+	.cardnews .tit_writer {width:320px;margin-bottom:15px;}
+	.cardnews .tit_writer .tit {float:none;font-size:20px;}
+	.cardnews .tit_writer .writer_date {float:none;color:#4f5561;margin-top:10px;}
+	.cardnews_for {width:320px;height:320px;}
+	.cardnews_for li img {width:320px;}
+	.cardnews_nav {width:320px;}
+	.cardnews_nav li {width:48px;height:48px;}
+	.cardnews_for .slick-prev {left:-60px;width:50px;height:50px;background:url(../images/content/arr-left-type02.jpg) no-repeat 50% 50%;background-size:20px;}
+	.cardnews_for .slick-next {right:-60px;width:50px;height:50px;background:url(../images/content/arr-right-type02.jpg) no-repeat 50% 50%;background-size:20px;}
+	.pattern_table {height:200px;}
+	
+	/* 문화광장 */
+	.list_review li dd.dd01 {margin-top:10px;}
+	.list_review li dd .point_wrap {float:none;display:block;}
+	.list_review li dd .writer_date {float:none;display:block;margin-top:10px;}
+	.waimg {margin:25px 0;padding:25px;}
+	.waimg img {width:100%;}
+	.mypage_desc {padding:20px 15px;}
+	.state_list {margin-top:25px;padding:20px 15px;}
+	.mileage_header p {float:none;}
+	.mileage_header select {float:none;margin-top:10px;}
+
+	/* 회원서비스 */
+	#wrap.member #container.join {background:url('../images/content/bg_line.png') repeat-x 0 225px;}
+	.idcheck {padding:10px 0 0;}
+	.idpw_wrap.idsearch {padding:10px 0;}
+
+	/* 집콕 문화생활 view*/
+	.hc_view .tbl_info td a{position: static;}
+
+}
+@media only all and (max-width:480px) {
+	/* 문화체험 */
+	.top_slider_wrap .list_type {padding:0 20px 0;}
+	.top_slider_wrap .list_type li {padding:0 8px 10px 8px;margin:0 3px;}
+	.top_slider_wrap .list_type li .info dt {font-size:15px;}
+	.top_slider_wrap .slick-prev {left:-20px;width:20px;background-size:20px;}
+	.top_slider_wrap .slick-next {right:-20px;width:20px;background-size:20px;}
+	.list_slider_wrap .list_type1 {padding:0 30px 35px;}
+	.list_slider_wrap .slick-prev {left:-30px;}
+	.list_slider_wrap .slick-next {right:-30px;}
+	.list_slider_wrap .list_type1 li {margin:0 5px;}
+	.list_type li {width:calc(100%);}
+	.list_type ul {margin-right:0;}
+	.list_type1 li {width:calc(100%);}
+	.list_type1 ul {margin-right:0;}	
+	.list_slider_wrap.type2 .list_type2 {padding:0 20px 35px;}
+	.list_slider_wrap.type2 .slick-prev {left:-30px;}
+	.list_slider_wrap.type2 .slick-next {right:-30px;}
+	.list_slider_wrap.type2 .list_type2 li {margin:0 5px;}
+	.list_slider_wrap.type2 .list_type2 li .info dd.date {margin-top:20px;padding-bottom:14px;}
+	.list_type2 ul {margin-right:0;}
+	.list_type2 li {width:calc(100%);}
+	.detail_wrap2 .down_link li a {font-size:13px;}
+	.detail_tab li {width:30%;}
+	.detail_tab li:nth-child(2) {width:40%;}
+	.detail_tab li.on a {font-size:14px;}
+	.list_category li {width:calc(50% - 10px);}
+	.service_result ul li a {margin-left:2px;padding:5px 12px;font-size:13px;}	
+	.list_result ul {margin:-10px 0 0 0;}
+	.list_result li {width:calc(100%);}
+	.list_result li {width:calc(100%);max-height:none;min-height:auto;padding:20px 15px 15px;margin:10px 10px 0 0;}
+	.list_result li .sort {margin-bottom:25px;}
+	.list_result li .info .btn {margin-top:20px;}
+	.publicize_tab ul li {width:calc(50% - 5px);height:50px;}
+	.publicize_tab.type2 ul li {width:calc(50% - 5px);}
+	
+	/* 문화공감 */
+	.comment_wrap .comment_list .list li {padding:15px;}
+	.comment_wrap .comment_list .list li .id_date {margin-bottom:10px;}
+	.comment_wrap .comment_list .list li .comment {margin-bottom:15px;}
+	.comment_wrap .comment_list .list li .btn {position:relative;top:auto;right:auto;margin-top:0;padding-left:35px;}
+	.comment_wrap .comment_list .list li .btn li {display:inline-block;}
+	.comment_wrap .tooltip {left:-200px;}
+	.detail_culture .issue_explan {padding-left:15px;}
+	.detail_culture .issue_explan .date {position:relative;top:auto;left:auto;margin-bottom:15px;}
+	.detail_culture .issue_explan .date .year {font-size:22px;display:inline-block;}
+	.detail_culture .issue_explan .date .day {font-size:34px;display:inline-block;}
+	.culture_slider_wrap .list_type4 {padding:0 20px 35px;}
+	.culture_slider_wrap .slick-prev {left:-20px;}
+	.culture_slider_wrap .slick-next {right:-20px;}
+	
+	.webzine_header .thumb {padding-top:55%;}
+	.webzine_header dl {padding:10px 0;}
+	.webzine_header dt {margin-bottom:5px;font-size:16px;line-height:20px;}
+	.webzine_header dd {font-size:13px;line-height:18px;}
+	.webzine_cont .list_webzine {margin:0;}
+	.webzine_cont .list_webzine li {width:calc(100%);margin:15px 0 0;}
+	.webzine_cont .list_webzine li:first-child {margin-top:0;}
+	.webzine_cont .webzine_box {margin-top:30px;padding:25px 15px;}
+	.webzine_cont .list_webzine2 {margin:0;}
+	.webzine_cont .list_webzine2 li {width:calc(100%);margin:20px 0 0;}
+	.webzine_cont .list_webzine2 li:first-child {margin-top:0;}
+	.webzine_cont .inner_box {margin-top:25px;padding-top:25px;}
+	.webzine_cont .inner_box .list_webzine2 .list_item {width:calc(100%);margin:0 0 20px;}
+	.webzine_cont .inner_box .list_webzine2 .list_item:last-child {margin-bottom:0;}
+	.webzine_cont .inner_box .tit {position:relative;right:auto;top:auto;}
+	.card_slide li .thumb {width:240px;height:140px;}
+	.card_guide dl dt {width:25%;}
+	.card_guide dl dd {width:75%;}
+	.card_guide .right {padding:0 15px;}
+	.card_guide .right img {width:100%;}
+
+	/* 문화지식 */
+	.trad_tab3.item03 li {width:33.33333%;}
+	.trad_tab3.item07 li {width:50%;}
+	.trad_tab3.item06 li {width:50%;}
+	.trad_tab3.item07 li:last-child {width:100%;}
+
+	.trad_tab.item05 li {width:50%;}
+	.trad_tab.item06 li {width:50%;}
+	.trad_tab.item09 li {width:50%;}
+	.trad_tab.item09 li:last-child {width:100%;}
+	.trad_tab.item10 li {width:50%;}
+	.trad_tab.item13 li {width:20%;}
+	.trad_tab.item13 li:last-child {width:60%;}
+	.trad_list_header .btn {position:relative;right:auto;top:auto;display:block;text-align:right;margin-top:10px;}
+	.trad_list_header .btn .btn_type01 {min-width:140px;}
+	.trad_list_header .btn .btn_type02 {min-width:140px;}
+	.trad_list_header .btn.type2 {position:absolute;right:0;top:0;display:inline-block;margin-top:0;}
+	.trad_detail {padding:15px;min-height:auto;}
+	.trad_detail .thumb_wrap {position:relative;top:auto;left:auto;margin-bottom:10px;}
+	.trad_detail .thumb_wrap .thumb {width:auto;height:auto;margin-bottom:10px;}
+	.trad_detail .thumb_wrap .btn .btn_type1 {width:39%;}
+	.trad_detail .thumb_wrap .btn .btn_type2 {width:60%;}
+	.trad_detail.type2 {padding:10px 0 0 0;}
+	.trad_detail.type2 .inner {width:auto;}
+	.trad_detail.type2 .thumb_wrap {width:auto;float:none;margin:20px 15px 10px;}
+	.public_sign {padding:15px;}
+	.public_sign .license {position:relative;left:auto;top:auto;margin-top:0;display:block;margin-bottom:10px;}
+	.pattern_list li {width:calc(33.33333% - 6px);}
+	.design_guide{padding:0px 15px}
+	.design_guide .img {position:relative;top:auto;left:auto;margin:0 auto 15px;text-align:center;}
+	.design_guide .btn {width:100%;padding:0;text-align:center;}
+	.pattern_prolist li .in_con .img_list .img {width:75px;}
+	.pattern_prolist li .in_con .img_list .list {margin-left:5px;}
+	.pattern_prolist li .in_con .img_list .list li {font-size:13px;}
+	.pattern_prolist li .in_con .img_list .list li.btxt {font-size:14px;}
+	.trad_use {margin:30px 15px 0;padding-left:0;padding-top:200px;background:url(../images/content/tradpatt-use-img.jpg) no-repeat 50% 0;background-size:180px;}
+	.term_wrap {padding-left:0;}
+	.term_wrap .term_left {position:relative;left:auto;top:auto;width:auto;height:170px;border-right:0;border-bottom:1px solid #d5d8de;}
+	.term_wrap .term_right h5 {font-size:16px;}
+	.term_wrap .term_right dt {padding:20px 0 3px 5px;font-size:15px;}
+	.term_wrap .term_right dd {padding:0 0 20px 5px;}
+	.list_book li .thumb {float:none;width:auto;height:auto;}
+	.list_book li .thumb img {width:100%;height:100%;}
+	.list_book li dl {padding:0;}
+	.list_book li dt {padding-top:18px;}
+	.list_book li .btn_detail {display:block;margin-left:0;}
+	.trad_imglist li .thumb {display:block;vertical-align:top;text-align:center;}
+	.trad_imglist li .txt {display:block;padding-left:0;margin-top:15px;}	
+	.trad_head {padding:5px 0 20px 0;}
+	.trad_head.type3 {padding:5px 0 20px 0;}
+	.trad_head,.trad_head.type2,.trad_head.type3 {background:none;}
+	.trad_process .list1 li {padding:10px 0 65px 0;min-height:100px;}
+	.trad_process .list1 li:before {left:50%;top:auto;bottom:15px;margin-left:-18px;}
+	.trad_process .list1 li .img {position:relative;left:auto;top:auto;width:170px;height:auto;margin:0 auto 15px;}	
+	.area_list li {width:calc(50% - 6px);}
+	.list_case ul {margin:-10px -10px 0 0;}
+	.list_case li {width:calc(50% - 10px);margin:10px 10px 0 0;}
+	.modal_wrap .modal_content.cardnews {width:300px;margin:25% auto;padding:5px 0 10px;}
+	.cardnews .tit_writer {width:210px;margin-bottom:10px}
+	.cardnews .tit_writer .tit {font-size:18px;}
+	.cardnews_for {width:210px;height:210px;}
+	.cardnews_for li img {width:210px;}
+	.cardnews_nav {width:210px;}
+	.cardnews_nav li {width:35px;height:35px;margin:0;}
+	.cardnews_for .slick-prev {left:-40px;width:40px;height:40px;background:url(../images/content/arr-left-type02.jpg) no-repeat 50% 50%;background-size:18px;}
+	.cardnews_for .slick-next {right:-40px;width:40px;height:40px;background:url(../images/content/arr-right-type02.jpg) no-repeat 50% 50%;background-size:18px;}
+	.tbl_scroll2 {overflow-x:auto;}
+	.tbl_scroll2 table {width:600px;}
+	.pattern_table {height:180px;}
+
+	/* 문화광장 */
+	.list_event li .thumb {float:none;width:auto;height:auto;}
+	.list_event li .end span {position: absolute; color: #fff; font-weight: bold; font-size: 25px; line-height: 22; margin: 0 0 0 140px;}
+	.list_event li dl {padding:0;}
+	.list_event li dt {margin-top:18px;}	
+	.list_event li .btn_type1,.list_event li .btn_type2,.list_event li .event_end {display:inline-block;width:100%;}
+	.modal_wrap .modal_content.event li {padding-left:0;}
+	.modal_wrap .modal_content.event li .tit {position:relative;top:auto;left:auto;display:block;margin-bottom:5px;}
+	.list_event.type2 li .thumb {width:auto;height:auto;}
+	.list_event.type2 li dl {padding:0;}
+	.list_review li .thumb {float:none;width:auto;height:auto;}
+	.list_review li dl {padding:0;}
+	.list_review li dt {margin-top:18px;}
+	.publictxt {padding:15px;}
+	.publictxt img {position:relative;left:auto;top:auto;display:block;margin:0 auto 10px;}
+	.searestxt {padding:15px 15px 15px 100px;background:url(../images/content/seares-icon.jpg) no-repeat 10px 50%;}
+
+	/* 회원서비스 */
+	.btn_join_wrap a {padding:10px 15px;font-size:15px;}
+	.idpw_tab li a {font-size:14px;letter-spacing:-1px;}
+
+	/* 집콕 문화생활 */
+	.hc_listV .hc_box ul li{width:100%; margin:0 0 20px 0;}
+	.hc_listV .hc_banner img.banner-pc{display:none;}
+	.hc_listV .hc_banner img.banner-mobile{display:inline;}
+
+	/* 집콕 문화생활 view*/
+	.hc_show .hcshow_list ul{margin-right:0;}
+	.hc_show .hcshow_list ul li{width:calc(100%);}
+
+}
+@media only all and (max-width:360px) {	
+	/* 문화체험 */
+	.list_type .label_wrap span {padding:5px 3px;}
+	.pattern_table {height:150px;}
+
+	/* 문화공감 */
+	.cardnews_slide {padding:0 15px;}
+	.cardnews_slide li .thumb {width:220px;height:220px;}
+	.card_slide {padding:0 15px;}
+}

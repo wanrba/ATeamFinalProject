@@ -1,0 +1,110 @@
+/* Sub nav */
+.sub_wrap{min-height:390px}
+.sub_wrap nav{display:none}
+.sub_wrap nav ul li{margin-bottom:26px}
+.sub_wrap nav ul li a{display:block;font-size:18px;color:rgba(0,0,0,0.56)}
+.sub_wrap nav ul li a.active{font-size:18px;font-weight:bold;color:rgb(230,28,81)}
+.sub_wrap .sub_title{position:relative;height:44px;background:#fff;font-size:18px;line-height:44px;text-align:center}
+.sub_wrap .sub_title button{position:absolute;top:0;right:16px;height:44px;padding:0;border:none;background:none;font-size:14px;font-weight:bold}
+@media all and (min-width:1024px){
+	.sub_wrap nav{display:block;float:left;width:238px;padding-left:31px}
+	.sub_wrap .align_rt{float:right;width:724px;margin-right:31px}
+	.sub_wrap .sub_title{display:none}
+}
+
+
+.more_wrap{background:rgb(235,235,235)}
+.bd_b{border-bottom:1px solid rgba(0,0,0,0.08)}
+.mobile_top{position:relative;height:44px;font-size:18px;line-height:44px;text-align:center}
+.notice{background:#fff}
+.tab{height:48px}
+.tab a,.tab .tab_btn{display:inline-block;position:relative;float:left;position:relative;width:50%;height:48px;font-size:14px;line-height:48px;color:rgba(0,0,0,0.56);text-align:center;cursor:pointer}
+.tab .active,.tab .tab_btn.active{color:#000;font-weight:bold;color:rgb(242,17,76)}
+.tab .active:after,.tab .tab_btn.active:active{display:block;content:'';position:absolute;bottom:0;left:0;width:100%;height:2px;background:rgb(242,17,76)}
+.show_list{margin-bottom:8px;padding:0 16px;background:#fff}
+.show_list li{border-bottom:1px solid rgba(0,0,0,0.08)}
+.show_list li:last-child{padding-bottom:8px;border-bottom:none}
+.show_list li a{display:block;position:relative;height:80px;padding:24px 24px 0 0;font-size:16px;line-height:normal;color:rgba(0,0,0,0.87);box-sizing:border-box}
+.show_list li a:after{display:inline-block;content:'';position:absolute;top:50%;right:0;width:12px;height:8px;margin-top:-4px;background:#fff url('//image.goodchoice.kr/images/web_v3/ico_arr_3.png') 0 0 no-repeat;background-size:12px auto}
+.show_list li .open:after{background-position:0 -8px}
+.show_list li a p{overflow:hidden;width:100%;padding-bottom:3px;white-space:nowrap;text-overflow:ellipsis}
+.show_list li a span{display:block;position:relative;font-size:13px;color:rgba(0,0,0,0.56)}
+.show_list li a i{display:inline-block;width:14px;height:14px;margin:0 0 0 5px}
+.show_list li > div{display:none;margin-bottom:12px;padding:12px 16px;border-radius:4px;background:#fafafa;font-size:14px;line-height:22px}
+.ico_new{display:inline-block;position:relative;top:11px;width:12px;height:12px;margin:0 0 0 -4px;background:#fff url('//image.goodchoice.kr/images/web_v3/ico_new.png') 0 0 no-repeat;background-size:12px auto;text-indent:-9999px;vertical-align:top}
+li .ico_new{top:1px}
+.show_list li div div{display:block !important;}
+.show_list li div .title{display:inline-block;padding-right:8px;color:rgba(0,0,0,0.87)}
+.show_list li div .date{font-size:13px}
+.show_list li .ans{margin-top:31px;padding-left:28px;background:url('//image.goodchoice.kr/images/web_v3/ico_reply.png') 0 -5px no-repeat;background-size:24px auto}
+.news_list li a{height:auto;padding:24px 24px 24px 0}
+.news_list li a p{overflow:visible;white-space:normal;text-overflow:initial;line-height:normal}
+.news_list li a:after{display:inline-block;content:'';position:absolute;top:50%;right:0;width:9px;height:13px;margin-top:-4px;background:#fff url('//image.goodchoice.kr/images/web_v3/ico_arr_gt_3.png') 0 0 no-repeat;background-size:9px auto}
+
+@media all and (min-width:1024px){
+	.more_wrap{padding-top:54px;background:#fff}
+	.mobile_top{display:none}
+	.mobile_top{height:auto;font-size:18px;line-height:normal;text-align:left}
+	.tab{height:auto;border-bottom:1px solid rgba(0,0,0,0.2)}
+	.tab span.tab_btn{display:inline-block;float:none;position:relative;width:auto;height:40px;margin-right:22px;font-size:18px;line-height:normal;color:rgba(0,0,0,0.56);text-align:left;cursor:pointer}
+	.tab .active,.tab span.active{color:#000;font-weight:bold;color:rgb(242,17,76)}
+	.tab .active:after{bottom:-1px}
+	.show_list{margin-bottom:0;padding:0 0}
+	.show_list li:last-child{padding-bottom:0;border-bottom:1px solid rgba(0,0,0,0.08)}
+	.show_list li .list_que{display:block;position:relative;height:auto;margin-bottom: 0;padding:38px 24px 35px 0;border-radius:0;background: #fff;font-size:18px;line-height:normal;cursor:pointer}
+	.show_list li .list_que:after{display:inline-block;content:'';position:absolute;top:50%;right:0;width:14px;height:9px;margin-top:-5px;background:#fff url('//image.goodchoice.kr/images/web_v3/ico_arr_3.png') 0 0 no-repeat;background-size:14px auto}
+	.show_list li .open:after{background-position:0 -9px}
+	.show_list li .list_que p{padding-bottom:7px;overflow:visible;white-space:normal;text-overflow:initial;line-height:normal;word-wrap:break-word}
+	.show_list li .list_que span{font-size:16px;color:rgba(0,0,0,0.38)}
+	.show_list li .list_que i{display:inline-block;position:relative;top:4px;right:auto;width:14px;height:14px;margin:0}
+	.show_list li .list_ans{display:none;margin-bottom:0;padding:35px 32px 73px 32px;border-radius:0;background:#fafafa;font-size:16px;line-height:26px}
+	.show_list li .list_ans table{width:100% !important;}
+	.ico_new{display:inline-block;position:absolute;top:-1px;right:-13px;width:12px;height:12px;margin:0 0 0 0;background:#fff url('//image.goodchoice.kr/images/web_v3/ico_new.png') 0 0 no-repeat;background-size:12px auto;text-indent:-9999px;vertical-align:top}
+	.show_list li .list_ans div{padding:0;background:none}
+	.show_list li .list_ans div.ans{margin-top:65px;padding-left:44px;background:url('//image.goodchoice.kr/images/web_v3/ico_reply.png') 11px -2px no-repeat;background-size:24px auto}
+	.news_list li a{height:auto;padding:38px 24px 35px 0;font-size:18px}
+	.news_list li a p{padding-bottom:7px}
+	.news_list li a:after{display:inline-block;content:'';position:absolute;top:50%;right:0;width:9px;height:13px;margin-top:-4px;background:#fff url('//image.goodchoice.kr/images/web_v3/ico_arr_gt_3.png') 0 0 no-repeat;background-size:9px auto}
+	.news_list li a span{font-size:16px;color:rgba(0,0,0,0.38)}
+	.more_wrap .paging{border-top:none;margin-top:0}
+}
+
+
+.faq{background:#fff}
+.mobile_top .top_btn{display:inline-block;position:absolute;top:0;right:0;height:44px;padding:0 16px;border:none;background:none;font-size:14px;font-weight:bold;line-height:44px;color:rgba(0,0,0,0.87)}
+.faq .top_link{overflow:hidden;border-top:1px solid rgba(0,0,0,0.08);background:rgb(235,235,235)}
+.faq .top_link li{float:left;width:33%;background:#fff;}
+.faq .top_link li:nth-child(2),.faq .top_link li:nth-child(5),.faq .top_link li:nth-child(8){width:34%}
+.faq .top_link li:nth-child(3) a,.faq .top_link li:nth-child(6) a,.faq .top_link li:nth-child(9) a{border-right:none}
+.faq .top_link li:last-child{margin-right:0}
+.faq .top_link li a{display:block;padding:16px 0 15px 0;border-right:1px solid rgba(0,0,0,0.08);border-bottom:1px solid rgba(0,0,0,0.08);font-size:14px;color:rgba(0,0,0,0.87);text-align:center}
+.faq .top_link li a.on{background:#f2114c;color:#fff}
+.faq_list{padding:0 16px 8px 16px;background:#fff}
+.faq_list .title{display:block;padding:23px 0 4px 0;font-size:18px;line-height:normal !important}
+.faq_list .list li{border-top:1px solid #e6e6e6}
+.faq_list .list li:first-child{border-top:none}
+.faq_list .list li .link{position:relative;height:56px;font-size:15px;line-height:56px}
+.faq_list .list li .link span{display:block;overflow:hidden;height:56px;margin-right:30px;white-space:nowrap;text-overflow:ellipsis;cursor: pointer;}
+.faq_list .list li .link:after{content:"";position:absolute;top:50%;right:0;display:inline-block;width:12px;height:8px;margin-top:-4px;background:#fff url('//image.goodchoice.kr/images/web_v3/ico_arr_3.png') 0 0 no-repeat;background-size:12px auto}
+.faq_list .list li .link.on:after{background-position:0 -8px}
+.faq_list .list li .ans{overflow:hidden;height:0;padding:0;border-radius:4px;background:rgba(0,0,0,0.04);font-size:14px;line-height:22px;opacity:0;word-wrap:break-word;word-break:break-all}
+.faq_list .list li .ans.on{height:auto;margin-bottom:12px;padding:12px 16px 13px 16px;opacity:1}
+
+@media all and (min-width:1024px){
+	.faq .top_link{overflow:visible;height:40px;border-top:none;border-bottom:1px solid rgba(0,0,0,0.2);background:#fff}
+	.faq .top_link li{width:auto;margin-right:18px;background:none;letter-spacing:-1px;}
+	.faq .top_link li:nth-child(2),.faq .top_link li:nth-child(5),.faq .top_link li:nth-child(8){width:auto}
+	.faq .top_link li:last-child{margin-right:0;}
+	.faq .top_link li a{display:block;position:relative;height:40px;padding:0;border:none;font-size:16px;color:rgba(0,0,0,0.87);text-align:center}
+	.faq .top_link li a.on{background:#fff;font-weight:bold;color:rgb(242,17,76)}
+	.faq .top_link li a.on:after{display:block;content:'';position:absolute;bottom:0;left:0;z-index:1;width:100%;height:2px;background:rgb(242,17,76)}
+	.faq_list{clear:both;margin-top:0;padding:0}
+	.faq_list .title{display:none}
+	.faq_list .list li{border-top:none;border-bottom:1px solid #e6e6e6}
+	.faq_list .list li:first-child{border-top:none}
+	.faq_list .list li .link{position:relative;height:auto;padding:34px 0;font-size:18px;line-height:normal}
+	.faq_list .list li .link span{display:block;overflow:hidden;height:auto;margin-right:30px;white-space:nowrap;text-overflow:ellipsis;cursor: pointer;}
+	.faq_list .list li .ans.on{margin-bottom:0;border-radius:0;background:rgba(0,0,0,0.08);font-size:16px;line-height:26px}
+}
+
+

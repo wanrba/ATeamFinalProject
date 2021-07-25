@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="gallery">
+
+	<!-- 갤러리 사진 출력 -->
+	<select id="galleryform" parameterType="int"
+		resultType="galleryDto">
+		select couple_num, picture, to_char(p_date,'YYYY/MM/DD') p_date, p_title
+		from gallery where couple_num = #{couple_num}
+	</select>
+
+	<!-- usage = 2는 갤러리에서 넣을 때 -->
+	<insert id="galleryup" parameterType="galleryDto">
+		insert into gallery(picture_index,couple_num,p_title,picture,usage)
+		values(GALLERY_SEQ.nextval,#{couple_num},#{p_title},#{picture},2)
+	</insert>
+
+</mapper>

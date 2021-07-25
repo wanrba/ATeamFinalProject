@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="EUC-KR"?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="account">
+	<!-- 0724 최형우 거래목록 리스트,페이징처리 -->
+	<select id="accountList" resultType="map" parameterType="map">
+		select *
+		from (
+		select rownum r_num, i.accountio_date, i.withdraw, i.deposit,
+		a.account_name,
+		a.account_num, a.account_bal, m.user_name from account
+		a, accountio i
+		, member m
+		where a.couple_num = #{coupleNum} and
+		m.user_num = i.accountio_usernum order by i.accountio_date) where
+		r_num
+		between #{dto.start} and #{dto.end}
+	</select>
+
+
+	<!-- 거래내역 총 갯수 -->
+	<select id="accountTotalCount" resultType="int"
+		parameterType="int">
+		select count(*) from account a, accountio i where
+		a.couple_num = #{coupleNum}
+	</select>
+
+<!-- 	 7/22김미연-커플통장 개설 -->
+	<insert parameterType="accountDto" id="makeAccount">insert into
+		account(couple_num, account_name, account_index, account_num,
+		account_pwd)
+		values(#{couple_num},#{account_name},account_seq.nextVal,account_seq.nextVal,#{account_pwd})
+	</insert>
+
+</mapper>

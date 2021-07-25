@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="likes">
+	<!-- 좋아요 추가기능 -->
+	<insert id="addLike" parameterType="likeDto">
+		insert into like_m(l_num,l_couplenum,l_markernum) values(#{l_num},#{l_couplenum},#{l_markernum})
+	</insert>
+	
+	<!-- 좋아요 삭제기능 -->
+	<delete id="deleteLike" parameterType="likeDto">
+		delete from like_m where l_markernum=#{l_markernum} and l_couplenum=#{l_couplenum}
+	</delete>
+</mapper>
